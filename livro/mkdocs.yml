@@ -1,0 +1,34 @@
+site_name: Algoritmos e Programação de Computadores
+site_author: Guilherme N. Ramos
+copyright: <p><a href="https://gnramos.github.com/APC">Livro de APC</a> por <a href="https://gnramos.github.io">Guilherme N. Ramos</a> <a href="https://github.com/gnramos/APC/blob/main/LICENSE" target="_blank" style="display:inline-block;"><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/license-MIT-green"></a></p>
+docs_dir: docs
+site_dir: html
+# repo_url: https://github.com/gnramos/APC
+theme:
+    name: material
+    features:
+        - content.code.copy
+        - content.tabs.link
+        # - navigation.instant
+        - navigation.footer
+        - search.highlight
+        - search.suggest
+        - toc.integrate
+    language: pt
+    logo: assets/unb.png
+    favicon: assets/unb.ico
+extra:
+    generator: false
+    mailto: gnramos@unb.br
+extra_css:
+    - assets/stylesheets/extra.css
+extra_javascript:
+    - assets/javascripts/mathjax.js
+hooks:
+    - hooks.py
+markdown_extensions:
+    - admonition
+nav:
+    - Início: index.md
+plugins:
+    - search
