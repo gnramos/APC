@@ -5,6 +5,7 @@ build:
 
 clean:
 	rm -rf html
+	find . -type d -name "__pycache__" | xargs rm -rf {};
 
 install:
 	pip3 install --upgrade pip
