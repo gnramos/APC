@@ -14,5 +14,5 @@ requirements:
 	pip3 install --upgrade setuptools
 	pip3 install -r requirements.txt
 
-serve: requirements
+serve:
 	mkdocs serve

@@ -55,6 +55,7 @@ nav:
     - Início: index.md
     - Pensamento Computacional: pensamento_computacional.md
     - Computadores: computadores.md
+    - Algoritmos: algoritmos.md
 plugins:
     - search
     - markdown-exec
