@@ -4,7 +4,7 @@ Generalizar é criar modelos, regras, princípios ou teorias que se adequem à u
 
 Por exemplo, um triângulo equilátero tem os 3 ângulos internos iguais a 60° e as 3 linhas com o mesmo comprimento. A partir disso, é relativamente simples definir um algoritmo que desenhe um. Da mesma forma, um quadrado tem os 4 ângulos internos iguais a 90° e as 4 linhas com o mesmo comprimento, e também é simples desenhar um, basta criar linhas com os ângulos adequados. Considerando o pentágono regular, é possível perceber que as soluções são muito similares... A solução proposta constrói o desenho de modo que cada linha continua a partir do fim da linha anterior, usando o ângulo externo do polígono para a rotação.
 
-![Ângulos interno/externo](/assets/img/AnguloExterno.png "Ângulos interno/externo"){ width="50%" } |
+![Ângulos interno/externo](assets/img/AnguloExterno.png "Ângulos interno/externo"){ width="50%" } |
 :------:|
 Propriedade dos ângulos interno/externo |
 

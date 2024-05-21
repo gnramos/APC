@@ -6,6 +6,6 @@ Por exemplo, o problema de cultivar uma rosa vermelha. Como buscamos o processo 
 
 A abstração é um processo inerente no contexto de pensamento computacional, pois é preciso transformar o problema e sua solução em representações abstratas em um programa de computador. Por exemplo, podemos ter todos os inúmeros detalhes de uma cidade, como distribuição de casas e lojas, tamanhos de construções, cores, população, consumo energético, formas de movimentação, etc. Entretanto, para descobrir a rota da sua posição até uma loja, podemos abstrair quase tudo e considerar apenas com uma representação de certas localizações e dos acesso entre elas.
 
-![UnB "Real"](/assets/img/unb_mapa.png "Mapa da UnB") | ![Abstração do mapa da UnB](/assets/img/unb_modelo.png "Abstração do mapa da UnB")
+![UnB "Real"](../assets/img/unb_mapa.png "Mapa da UnB") | ![Abstração do mapa da UnB](assets/img/unb_modelo.png "Abstração do mapa da UnB")
 :---------:|:---------:
 UnB "Real" | Abstração
