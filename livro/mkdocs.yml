@@ -54,6 +54,7 @@ markdown_extensions:
 nav:
     - Início: index.md
     - Pensamento Computacional: pensamento_computacional.md
+    - Computadores: computadores.md
 plugins:
     - search
     - markdown-exec
