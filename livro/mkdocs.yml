@@ -15,8 +15,8 @@ theme:
         - search.suggest
         - toc.integrate
     language: pt
-    logo: assets/unb.png
-    favicon: assets/unb.ico
+    logo: assets/img/unb.png
+    favicon: assets/img/unb.ico
 extra:
     generator: false
     mailto: gnramos@unb.br
