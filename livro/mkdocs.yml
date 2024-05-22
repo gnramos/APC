@@ -57,6 +57,13 @@ nav:
     - Computadores: computadores.md
     - Algoritmos: algoritmos.md
     - Programação: programacao.md
+    - Tipos de Dados: programacao/tipos_de_dados.md
+    - Fluxo de Controle:
+        - Sequencial: programacao/fluxo_de_controle/sequencial.md
+        - Funções: programacao/fluxo_de_controle/funcoes.md
+        - Condicional: programacao/fluxo_de_controle/condicional.md
+        - Repetição: programacao/fluxo_de_controle/repeticao.md
+            # - Recursividade: programacao/funcoes_recursivas.md
 plugins:
     - search
     - markdown-exec
