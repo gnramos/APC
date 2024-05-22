@@ -7,8 +7,7 @@ ANCHOR_PATTERN = re.compile(r'\[id> +(.*?)\](\(.*?\))?')
 CODE_BLOCK_NL_PATTERN = re.compile(r'``` +linguagem_natural +title="(.*?)".*?[\s\S]([.\s\S]*?)```')
 INCLUDE_PATTERN = re.compile(r'[\s\S]{! +(.*?) +!}(?=[\s\S])')
 MERMAID_PATTERN = re.compile(r'``` +mermaid +title="(.*?)"([.\s\S]*?)```')
-# MY_ADMONITION_PATTERN = re.compile(r'!!! +(\w+) *')
-MY_ADMONITION_PATTERN = re.compile(r'(!!! +(\w+)(.*)[\s\S])')#(.*$))')
+MY_ADMONITION_PATTERN = re.compile(r'(([!?]{3}) +(\w+)(.*)[\s\S](\s {4}[.\s\S]*?))(?=\n{2}[^\s])')
 
 
 def add_anchor_to_admonitions(markdown):
@@ -30,14 +29,29 @@ def code_block_NL(markdown):
 
 def my_admonitions(markdown):
     def repl(match):
-        full, admonition, extra = match.groups()
-        if admonition == 'info' and not extra:
-            return '!!! info "Definição"'
-        if admonition == 'note' and not extra:
-            return '!!! note "Dica"'
-        if admonition == 'warning' and not extra:
-            return '!!! warning "Atenção"'
-        return full
+        full, block_start, block_type, title, body = match.groups()
+
+        types = {'info': 'Definição',
+                 'note': 'Dica',
+                 'warning': 'Atenção',
+                 'llm': 'Chat-bot',
+                 }
+
+        if block_type not in types or title:
+            return full
+
+        if block_type == 'llm':
+            llms = ', '.join(["[ChatGPT](https://openai.com/chatgpt/)",
+                              "[Gemini](https://gemini.google.com/)",
+                              "[Claude](https://www.anthropic.com/claude)",
+                              "[Llama](https://www.llama2.ai/)",
+                              ])
+            footer = (f'\n    Algumas opções são {llms}. **Estes modelos '
+                      'podem cometer erros!** Verifique as informações '
+                      'em fontes confiáveis.')
+            body = f'{body}\n{footer}'
+
+        return f'{block_start} {block_type} "{types[block_type]}"{body}'
 
     return MY_ADMONITION_PATTERN.sub(repl, markdown)
 
@@ -55,11 +69,11 @@ def set_anchors(markdown):
 
 def on_page_read_source(page, config):
     def repl(match):
-        with open(os.path.join('docs', match.group(1).strip())) as f:
+        with open(os.path.join(docs_dir, match.group(1).strip())) as f:
             content = f.read()
         return f'\n{content}\n'
 
-    with open(os.path.join('docs', page.file.src_uri)) as f:
+    with open(os.path.join(docs_dir, page.file.src_uri)) as f:
         source = f.read()
 
     if page.file.src_uri.endswith('.md'):
@@ -69,17 +83,15 @@ def on_page_read_source(page, config):
 
 
 def assert_sections(markdown, src_uri):
-    quote = r'!!! quote "\[.*?\]\(http.*?\)"[\s\S]{2}( {4}\*\w.*?\*)[\s\S]{2}'
-    assert re.search(quote, markdown), f'"{src_uri}" sem citação.'
+    sections = {'citação': r'!!! quote "\[.*?\]\(http.*?\)"[\s\S]{2}( {4}\*\w.*?\*)[\s\S]{2}',
+                'introdução': r'---[\s\S]{2}(\*\w.*?\*)[\s\S]{2}---',
+                'resumo': r'<h2>Resumo</h2>',
+                'exercícios': r'<h2>Exercícios</h2>',
+                'LLM': r'!!! llm',
+                }
 
-    intro = r'---[\s\S]{2}(\*\w.*?\*)[\s\S]{2}---'
-    assert re.search(intro, markdown), f'"{src_uri}" sem introdução.'
-
-    resumo = r'<h2>Resumo</h2>'
-    assert re.search(resumo, markdown), f'"{src_uri}" sem exercícios.'
-
-    exercicios = r'<h2>Exercícios</h2>'
-    assert re.search(exercicios, markdown), f'"{src_uri}" sem exercícios.'
+    for section, regex in sections.items():
+        assert re.search(regex, markdown), f'"{src_uri}" sem {section}.'
 
 
 def on_page_markdown(markdown, page, config, files):
@@ -109,7 +121,9 @@ def mermaid_title(markdown):
 
 
 with open('mkdocs.yml') as f:
-    index_uri = re.search(r'nav:[\s\S].*?: (.+)', f.read()).group(1)
+    content = f.read()
+    docs_dir = re.search(r'docs_dir: (.*)', content).group(1)
+    index_uri = re.search(r'nav:[\s\S].*?: (.+)', content).group(1)
 
 # <script src="plugin/markdown/markdown.js"></script>
 # <script>

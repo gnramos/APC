@@ -41,11 +41,12 @@ Essencialmente, o pensamento computacional envolve habilidades de converter prob
 
 Lorem ipsum.
 
+??? llm
+
+    * O que é pensamento computacional?
+    * O que é pensamento algorítmico?
+    * De forma simplificada, o que é corretude de um algoritmo?
+    * De forma simplificada, o que é eficiência de um algoritmo?
+    * De forma simplificada, o que é usabilidade de um algoritmo?
+
 {! pensamento_computacional/exercicios.md !}
-
-<!-- https://www.iste.org/explore/computational-thinking
-https://files.eric.ed.gov/fulltext/EJ1214682.pdf
-
-
-markdown/pensamento_computacional/ciencia_da_computacao.md
- -->

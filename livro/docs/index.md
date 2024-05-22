@@ -24,6 +24,10 @@ Este livro usa as seguintes convenções para destacar algumas informações.
 
     Apresenta um aviso sobre uma situação recorrente no contexto.
 
+!!! llm "Chat-bot"
+
+    Indica pontos que podem ser melhor desenvolvidos com algum tipo de inteligência artificial.
+
 ``` linguagem_natural title="Algoritmo / Programa"
 Apresenta um algoritmo ou programa.
 ```
