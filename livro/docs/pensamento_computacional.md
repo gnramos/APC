@@ -39,7 +39,7 @@ Essencialmente, o pensamento computacional envolve habilidades de converter prob
 
 <h2>Resumo</h2>
 
-Lorem ipsum.
+<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red">
 
 ??? llm
 

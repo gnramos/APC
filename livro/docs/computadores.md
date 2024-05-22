@@ -4,6 +4,12 @@
 
     *Um computador é como um gênio travesso. Te dá exatamente o que você pede dele, mas nem sempre o que você quer.*
 
+---
+
+*<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Introdução-red">*
+
+---
+
 A humanidade é engenhosa, e sempre buscou criar e aprimorar ferramentas para auxiliar nas realização de tarefas. Assim como o fogo e a roda, o computador é uma ferramenta que revolucionou o mundo, e hoje em dia é difícil encontrar algum tipo de atividade que não seja (ou possa ser) auxiliada por esta máquina que substituiu pessoas no esforço de processar dados e transformá-los em resultados. A [história da computação](https://pt.wikipedia.org/wiki/Hist%C3%B3ria_da_computa%C3%A7%C3%A3o) é antiga e está entrelaçada com as histórias dos [números](http://pt.wikipedia.org/wiki/N%C3%BAmero#Hist.C3.B3ria_dos_n.C3.BAmeros), do [hardware](http://pt.wikipedia.org/wiki/Hardware#Hist.C3.B3ria_do_Hardware), de [algoritmos](http://pt.wikipedia.org/wiki/Algoritmo) e [lógica](http://pt.wikipedia.org/wiki/L%C3%B3gica_matem%C3%A1tica), e da [programação](http://pt.wikipedia.org/wiki/Linguagem_de_programa%C3%A7%C3%A3o#Hist.C3.B3ria)
 
 De forma simplificada, um computador é uma máquina que:
@@ -109,6 +115,18 @@ Os programas de *desenvolvimento* auxiliam o desenvolvimento de programas, como 
 
 São os programas com fins específicos, como [navegadores](http://pt.wikipedia.org/wiki/Navegador_%28inform%C3%A1tica%29), [programa para escritório](http://pt.wikipedia.org/wiki/Su%C3%ADte_de_escrit%C3%B3rio), [entretenimento](http://pt.wikipedia.org/wiki/Jogo_de_computador), e muitos, muitos mais.
 
+<h2>Resumo</h2>
+
+<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red">
+
+??? llm
+
+    * Explique a arquitetura Von Neumann.
+    * O que é hardware em um computador?
+    * O que é software?
+    * Explique os níveis de memória de um computador.
+    * Explique as camadas de software de um computador.
+    * Explique o conceito de linguagem de programação
 
 <h2>Exercícios</h2>
 

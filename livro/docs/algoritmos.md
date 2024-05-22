@@ -49,6 +49,13 @@ Existem diversas formas de representar de um algoritmo e não há consenso de qu
 
 Um algoritmo é uma sequência de instruções bem definidas para realização uma tarefa. Algoritmos representados como linguagens de programação podem ser fornecidos a computadores para execução.
 
+??? llm
+
+    * Explique o algoritmo PageRank.
+    * Qual o processo para resolução de problemas computacionais?
+    * O que é pseudocódigo?
+    * Quais as etapas da programação de computadores?
+
 
 {! algoritmos/exercicios.md !}
 

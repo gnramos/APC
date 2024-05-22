@@ -7,7 +7,7 @@ ANCHOR_PATTERN = re.compile(r'\[id> +(.*?)\](\(.*?\))?')
 CODE_BLOCK_NL_PATTERN = re.compile(r'``` +linguagem_natural +title="(.*?)".*?[\s\S]([.\s\S]*?)```')
 INCLUDE_PATTERN = re.compile(r'[\s\S]{! +(.*?) +!}(?=[\s\S])')
 MERMAID_PATTERN = re.compile(r'``` +mermaid +title="(.*?)"([.\s\S]*?)```')
-MY_ADMONITION_PATTERN = re.compile(r'(([!?]{3}) +(\w+)(.*)[\s\S](\s {4}[.\s\S]*?))(?=\n{2}[^\s])')
+MY_ADMONITION_PATTERN = re.compile(r'(([!!!|???]) +(\w+)(.*)[\s\S](\s {4}[.\s\S]*?))(?=\n{2}[^\s])')
 
 
 def add_anchor_to_admonitions(markdown):
@@ -84,10 +84,10 @@ def on_page_read_source(page, config):
 
 def assert_sections(markdown, src_uri):
     sections = {'citação': r'!!! quote "\[.*?\]\(http.*?\)"[\s\S]{2}( {4}\*\w.*?\*)[\s\S]{2}',
-                'introdução': r'---[\s\S]{2}(\*\w.*?\*)[\s\S]{2}---',
+                'introdução': r'---\n\n[.\s\S]*?\n---[\s\S]',
                 'resumo': r'<h2>Resumo</h2>',
                 'exercícios': r'<h2>Exercícios</h2>',
-                'LLM': r'!!! llm',
+                'LLM': r'[!!!|???] llm',
                 }
 
     for section, regex in sections.items():
@@ -102,9 +102,9 @@ def on_page_markdown(markdown, page, config, files):
     markdown = code_block_NL(markdown)
     markdown = mermaid_title(markdown)
     src_uri = page.file.src_uri
-    if src_uri != index_uri:
-        pass
-        # assert_sections(markdown, src_uri)
+    # print(src_uri)
+    if src_uri != index_uri and '/' not in src_uri:
+        assert_sections(markdown, src_uri)
     return markdown
 
 
@@ -114,20 +114,8 @@ def mermaid_title(markdown):
            r'``` mermaid\2```\n\n</div>'
     return MERMAID_PATTERN.sub(repl, markdown)
 
-# # # with open('markdown/pensamento_computacional.md') as f:
-# with open('markdown/index.md') as f:
-#     markdown = f.read()
-#     print(my_admonitions(markdown))
-
 
 with open('mkdocs.yml') as f:
     content = f.read()
     docs_dir = re.search(r'docs_dir: (.*)', content).group(1)
     index_uri = re.search(r'nav:[\s\S].*?: (.+)', content).group(1)
-
-# <script src="plugin/markdown/markdown.js"></script>
-# <script>
-#   Reveal.initialize({
-#     plugins: [ slides.md ]
-#   });
-# </script>

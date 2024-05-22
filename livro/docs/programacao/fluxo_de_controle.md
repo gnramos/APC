@@ -1,8 +1,8 @@
-# Estruturas de Dados
+# Fluxo de Controle
 
-!!! quote "[David Jones](http://www0.cs.ucl.ac.uk/staff/D.Jones/)"
+!!! quote "[](http://www)"
 
-    Acerte as estruturas de dados primeiro, e o resto do programa se escreverá sozinho.
+    <img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Quote-red">
 
 ---
 
