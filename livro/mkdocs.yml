@@ -16,8 +16,8 @@ theme:
         - search.suggest
         - toc.integrate
     language: pt
-    logo: assets/img/unb.png
-    favicon: assets/img/unb.ico
+    logo: assets/img/UnB/marca.png
+    favicon: assets/img/UnB/favicon.ico
     custom_dir: theme
 
 reveal:
