@@ -1,3 +1,5 @@
+import logging
+import mkdocs.plugins
 import os
 import re
 
@@ -83,15 +85,16 @@ def on_page_read_source(page, config):
 
 
 def assert_sections(markdown, src_uri):
-    sections = {'citação': r'!!! quote "\[.*?\]\(http.*?\)"[\s\S]{2}( {4}\*\w.*?\*)[\s\S]{2}',
-                'introdução': r'---\n\n[.\s\S]*?\n---[\s\S]',
+    sections = {'citação': r'(!!! quote "\[(.*)\]\(.*\)"[\s\S])\n {4}\*(.*?)\*(?=\n\n)',
+                'introdução': r'---\n\n([.\s\S]*?)(?=\n---\n)',
                 'resumo': r'<h2>Resumo</h2>',
                 'exercícios': r'<h2>Exercícios</h2>',
-                'LLM': r'[!!!|???] llm',
+                'LLM': r'[!!!|???] llm ',
                 }
 
     for section, regex in sections.items():
-        assert re.search(regex, markdown), f'"{src_uri}" sem {section}.'
+        if not re.search(regex, markdown):
+            log.warning(f'"{src_uri}" sem {section}.')
 
 
 def on_page_markdown(markdown, page, config, files):
@@ -102,8 +105,7 @@ def on_page_markdown(markdown, page, config, files):
     markdown = code_block_NL(markdown)
     markdown = mermaid_title(markdown)
     src_uri = page.file.src_uri
-    # print(src_uri)
-    if src_uri != index_uri and '/' not in src_uri:
+    if src_uri != index_uri:  # and '/' not in src_uri:
         assert_sections(markdown, src_uri)
     return markdown
 
@@ -115,6 +117,7 @@ def mermaid_title(markdown):
     return MERMAID_PATTERN.sub(repl, markdown)
 
 
+log = logging.getLogger('mkdocs')
 with open('mkdocs.yml') as f:
     content = f.read()
     docs_dir = re.search(r'docs_dir: (.*)', content).group(1)

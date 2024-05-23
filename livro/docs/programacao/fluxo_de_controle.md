@@ -10,43 +10,93 @@
 
 ---
 
-Todo processo no computador gerencia a execução de um programa armazenado, a implementação de um algoritmo computacional nãos sendo, portanto, possível dissociar um algoritmo de dados manipulados - o próprio programa é um conjunto de dados (as instruções). Além disso, praticamente todos os programas manipulas dados fornecidos e gerados no processamento, na forma de variáveis ou constantes, que são os objetos de dados básicos manipulados em um programa[@Kernighan1989].
+## Sequencial
 
-O forma como organizamos estes dados tem impacto direto no desempenho do computador. Ao executar um algoritmo computacional, estamos exigindo esforço da máquina para realizar o trabalho de processamento. Este esforço depende da quantidade de instruções sendo executadas, e do custo de cada instruções (podemos ter instruções mais simples e baratas, e instruções mais complexas e caras). A organização dos dados tem impacto direto neste esforço, e buscamos deixá-los organizados de forma a tornar o processo menos custoso. Por exemplo, imagine que seu problema é interpretar números e somá-los, é muito mais fácil[^1] fazer isso se lhe forem apresentados os números estruturados como $49$ e $1$ (com resultado $50$) que se fossem como $XLIX$ e $I$ (também com resultado $L$).
+# Funções
 
-A memória do computador é um conjunto ordenado de bits, ou seja, toda informação é armazenada como zeros e uns e há uma ordem posicional entre eles (existe um primeiro bit, que pode ser `0/1`, um segundo bit que também pode ser `0/1`, e assim sucessivamente até um último bit). Para facilitar, há uma [nomenclatura específica](http://pt.wikipedia.org/wiki/Byte) para lidar com a quantidade de bits sendo 1 byte (8 bits) a unidade mais comum para quantificá-lo. A composição de bits permite representar mais estados; 2 bits são 4 estados (<code>00/01/11/10</code>), 3 bits definem 8 estados, e assim sucessivamente - havendo $n$ bits podemos definir $2^n$ estados distintos. O significado da informação armazenada depende da forma de interpretar estes bits, um mesmo conjunto de bits tem significados diferentes se for interpretado como um número, um símbolo ou outra coisa. Por exemplo, um byte pode assumir um de 256 valores numéricos diferentes, mas também pode representar inúmeras informações diferentes se mudarmos a forma de interpretá-lo.
+!!! quote "[Joe Sondow](https://www.linkedin.com/in/joesondow)"
 
-![Diferentes interpretações para 1 byte](../assets/img/byte_interpretacao.png "Diferentes interpretações para 1 byte"){ width="75%" }
+    *Um computador é como um gênio travesso. Te dá exatamente o que você pede dele, mas nem sempre o que você quer.*
 
-A representação do dado é necessariamente binária mas a interpretação dos bits é o que define a informação. Esta interpretação é determinada pelo *tipo de dado*, e cada tipo tem suas características específicas definidas pela linguagem de programação. Por exemplo, o conjunto de bits <code>01000001001000000000000000000000</code> pode ser interpretado como o valor numérico do tipo inteiro 1092616192, como o valor numérico do tipo real 10.0 ou como um tipo simbólico <code>A</code> ([ASCII](https://pt.wikipedia.org/wiki/ascii)). Estes três tipos de dados, entre outros, geralmente estão presentes em qualquer linguagem de programação.
 
-!!! note
+Programas de computadores geralmente usam procedimentos que especificam como fazer algo[@Cormen2013]. Nas linguagens de programação, estes são chamados de funções (ou métodos), e são chamados para serem executados. Ao chamar um procedimento, pode-se fornecer informações necessárias para a computação ao definir parâmetros, e receber (ou não) resultados como um valor de retorno.
 
-    Como um mesmo conjunto de bits pode ser interpretado de diferentes formas, é preciso saber que tipo de dado foi armazenado na memória para interpretá-lo corretamente.
+## Condicional
 
-Um *[id> tipo abstrato de dado]* (TAD) determina um tipo de dado e as operações definidas sobre ele, delimitando assim a quantidade de informação necessária para manipulação dos valores pelo computador e, consequentemente, facilitando a programação. Por exemplo, o conjunto de números naturais $\mathbb{N}$ e suas operações (como $+, -, /, *$) é um TAD.
+exemplo do imc (implicações matemáticas de se não é < x, necessariamente é >= x)
 
-!!! info "Estrutura de Dados"
+``` python title="Índice de Massa Corporal"
+--8<-- "imc.py:5:16"
+```
 
-    Forma concreta de se implementar um tipo abstrato de dados em uma linguagem de programação, de modo a organizar os dados na memória para facilitar o acesso e a manipulação destes.
+O uso de condicionais é baseado no valores booleanos $verdadeiro$ e $falso$. Estes são os valores verdade da lógica matemática, e indicam o grau de verdade de uma proposição. Por exemplo, considerando os números inteiros 42 e 100, podemos a propor que $42 < 100$ e verificar que isto é verdadeiro.
+As linguagens de programação podem oferecer um tipo de dado específico para estes valores ou interpretar outros tipos de dados como um dos dois resultados possíveis. Por exemplo, a linguagem C não tem um tipo primitivo e interpreta o valor numérico zero como o valor booleano $falso$, e qualquer valor diferente disso como $verdadeiro$. Já Python tem o tipo [bool](https://docs.python.org/pt-br/3/c-api/bool.html), mas também interpreta uma série de outros tipos de dados.
 
-Portanto, para cada linguagem de programação específica, o tipo do dado determina:
+`<expr>` é uma expressão cujo valor resultante tem um significado booleano, ou seja, é **verdadeiro** ou **falso**.
 
-1. o significado do valor armazenado;
-1. como o valor é armazenado nos bits;
-1. quais os possíveis valores que podem ser armazenados; e
-1. quais as operações podem ser realizadas com o valor.
+Se `<expr>` é **verdadeiro** ("truthy"), então `<instr>` é executada; caso contrário, `<instr>` é ignorada.
 
-!!! note
+=== "Python"
 
-    As características de uma estrutura de dados específica são importantes pois determinam o que pode e também o que **não** pode ser feito com ela.
+    ``` python title="Estrutura condicional"
+    if <expr>:
+    	<instr>
+    ```
 
-{! programacao/tipos_de_dados/numericos.md !}
+=== "C"
 
-{! programacao/tipos_de_dados/simbolicos.md !}
+    ``` C title="Estrutura condicional"
+    if (<expr>) {
+    	<instr>;
+    }
+    ```
 
-{! programacao/tipos_de_dados/booleanos.md !}
+## Repetição
 
-{! programacao/tipos_de_dados/exercicios.md !}
+<h2>Resumo</h2>
 
-[^1]: Exceto se você for um antigo romano...
+<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red">
+
+??? llm "Chat-bot Fluxo de Controle"
+
+    * O que é o fluxo de controle de um programa?
+
+??? llm "Chat-bot Funções"
+
+    * O que é uma função em programação?
+    * Quais as vantagens de usar funções em um programa?
+    * O que é o escopo de uma função?
+    * Quais os componentes de uma função em Python?
+    * Quais as funções mais úteis em Python?
+    * O que são módulos em Python?
+
+??? llm "Chat-bot Condicionais"
+
+    * Explique a estrutura condicional no fluxo de controle de um programa.
+    * Explique os operadores lógicos em Python.
+    * Como portas lógicas compõem uma CPU?
+    * O que é curto-circuito em Python?
+
+??? llm "Chat-bot Repetição"
+
+    * Explique as estruturas de repetição no fluxo de controle de um programa.
+    * Quais as diferenças entre while e for em Python?
+    * Dê um exemplo de código em que while seja preferível ao for.
+    * Dê um exemplo de código em que for seja preferível ao while
+
+
+<h2>Exercícios</h2>
+
+??? question "Implemente o código que leia a quantidade máxima N de elefantes e apresente a letra da música até que N (≥1) elefantes incomodem muita gente. Por exemplo, para N = 4: **1 elefante incomoda muita gente... 2 elefantes incomodam, incomodam muito mais! 2 elefantes incomodam muita gente... 3 elefantes incomodam, incomodam, incomodam muito mais! 3 elefantes incomodam muita gente... 4 elefantes incomodam, incomodam, incomodam, incomodam muito mais!**"
+
+    Uma possível solução é:
+    ```python title="Elefantes"
+    --8<-- "exercicios/programacao/fluxo_de_controle/repeticao/elefantes.py:14"
+    ```
+
+??? question "Considerando um comprimento *L*, implemente o código que desenha um quadrado de lado *L*."
+
+    Uma possível solução é:
+    ```python title="Quadrado"
+    --8<-- "exercicios/programacao/fluxo_de_controle/repeticao/quadrado.py:10:15"
+    ```
