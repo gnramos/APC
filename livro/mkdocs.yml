@@ -4,6 +4,7 @@ copyright: <p><a href="https://gnramos.github.com/APC">Livro de APC</a> por <a h
 docs_dir: docs
 site_dir: html
 # repo_url: https://github.com/gnramos/APC
+site_url: https://github.com/gnramos/APC/
 theme:
     name: material
     features:
@@ -17,6 +18,17 @@ theme:
     language: pt
     logo: assets/img/unb.png
     favicon: assets/img/unb.ico
+    custom_dir: theme
+
+reveal:
+  path: reveal.js/dist
+  transition: slide
+  theme:
+    name: white.css
+    path: theme
+  plugin:
+    path: reveal.js/plugin
+
 extra:
     generator: false
     mailto: gnramos@unb.br
@@ -60,6 +72,8 @@ nav:
     - Tipos de Dados: programacao/tipos_de_dados.md
     - Fluxo de Controle: programacao/fluxo_de_controle.md
     - Recursão: programacao/funcoes_recursivas.md
+    - Slides:
+          - Pensamento Computacional: slides/pensamento_computacional.md
 plugins:
     - search
     - markdown-exec
