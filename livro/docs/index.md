@@ -26,13 +26,13 @@ Este livro usa as seguintes convenções para destacar algumas informações.
 
 !!! llm "Chat-bot"
 
-    Indica pontos que podem ser melhor desenvolvidos com algum tipo de inteligência artificial.
+    Indica pontos que podem ser melhor desenvolvidos com o apoio de inteligência artificial.
 
 ``` linguagem_natural title="Algoritmo / Programa"
 Apresenta um algoritmo ou programa.
 ```
 
-Além disso, palavras importantes são *destacadas* e código fonte é apresentado em fonte <code>mono espaçada</code>.
+Além disso, palavras importantes são *destacadas* e código fonte é apresentado em fonte `mono espaçada`.
 
 <h2>Por fim...</h2>
 

@@ -1,0 +1,66 @@
+### Símbolos
+
+Símbolos são uma forma extremamente versátil de comunicar informações; o [alfabeto](https://pt.wikipedia.org/wiki/Alfabeto) define um pequeno conjunto de símbolos que, juntos, podem expressar [quase](https://pt.wikipedia.org/wiki/Emoticon) tudo que se deseja. Símbolos, como toda informação no computador, são representados por bits.
+
+<h5>ASCII</h5>
+
+O padrão ASCII[@ASCII] (*American Standard Code for Information Interchange*) foi desenvolvido nos anos 60, sendo composto por 95 símbolos gráficos (letras do alfabeto latino, algarismos arábicos, sinais de pontuação e sinais matemáticos) e 33 de controle.
+
+<center>
+
+<h6>Controle</h6>
+
+| bits | Símbolo | bits | Símbolo | bits | Símbolo | bits | Símbolo |
+|------|---------|------|---------|------|---------|------|---------|
+| 0x00 | NUL     | 0x08 | BS      | 0x10 | DLE     | 0x18 | CAN     |
+| 0x01 | SOH     | 0x09 | HT      | 0x11 | DC1     | 0x19 | EM      |
+| 0x02 | STX     | 0x0A | LF      | 0x12 | DC2     | ⋮   | ⋮      |
+| 0x03 | ETX     | 0x0B | VT      | 0x13 | DC3     | ⋮   | ⋮      |
+| 0x04 | EOT     | 0x0C | FF      | 0x14 | DC4     | ⋮   | ⋮      |
+| 0x05 | ENQ     | 0x0D | CR      | 0x15 | NAK     | ⋮   | ⋮      |
+| 0x06 | ACK     | 0x0E | SO      | 0x16 | SYN     | ⋮   | ⋮      |
+| 0x07 | BEL     | 0x0F | SI      | 0x17 | ETB     | 0x7F | DEL     |
+
+<h6>Gráficos (Parcial)</h6>
+
+| bits | Símbolo | bits | Símbolo | bits | Símbolo | bits | Símbolo |
+|------|---------|------|---------|------|---------|------|---------|
+| 0x20 | espaço  | 0x30 | 0       | 0x41 | A       | 0x61 | a       |
+| 0x21 | !       | 0x31 | 1       | 0x42 | B       | 0x62 | b       |
+| 0x22 | "       | 0x32 | 2       | 0x43 | C       | 0x63 | c       |
+| 0x23 | #       | 0x33 | 3       | 0x44 | D       | 0x64 | d       |
+| 0x24 | $       | 0x34 | 4       | 0x45 | E       | 0x65 | e       |
+| 0x25 | %       | 0x35 | 5       | ⋮   | ⋮      | ⋮   | ⋮      |
+| 0x26 | &       | 0x36 | 6       | 0x57 | W       | 0x77 | w       |
+| 0x27 | '       | 0x37 | 7       | 0x58 | X       | 0x78 | x       |
+| 0x28 | (       | 0x38 | 8       | 0x59 | Y       | 0x79 | y       |
+| 0x29 | )       | 0x39 | 9       | 0x5A | Z       | 0x7A | z       |
+| ⋮   | ⋮      | ⋮   | ⋮      | ⋮   | ⋮      | ⋮   | ⋮      |
+
+</center>
+
+Cada um dos 128 símbolos é associado à uma sequência arbitrária e única de 7 de bits. É bem comum associar esta sequência a um número inteiro, por exemplo o número 65 ao símbolo 'A' ("um mesmo conjunto de bits pode ser interpretado de diferentes formas"). Além disso, o padrão ASCII tem algumas características interessantes. Os algarismos são listados em ordem de valor, e as letras são organizadas em ordem alfabética, o que facilita os processos de comparação entre eles. As letras minúsculas estão deslocadas em 32 posições em relação às maiúsculas, então a diferença entre os bits que as representam é apenas no sexto bit!
+
+Por conta de como as máquinas eram construídas, era muito comum usar um byte para armazenar cada símbolo, o que viabilizou definir outros 128 símbolos arbitrários. Entretanto, não houve maior consenso em quais seriam os símbolos, afinal cada grupo tinha seus próprios interesses. No Brasil, o mais comum era o [ISO/IEC 8859-1](https://pt.wikipedia.org/wiki/ISO/IEC_8859-1). Com o avanço da internet, a necessidade de comunicação entre máquinas e grupos distintos forçou a incorporação de um padrão internacional. Entretanto, algumas dificuldades deveriam ser consideradas...
+
+Uma solução "simples" seria usar mais bits e ampliar o tamanho da tabela, mas isso implicaria que toda informação já representada num padrão como ASCII ocuparia mais memória que o necessário. Por exemplo, supondo que fossem usados 3 bytes (possibilitando mais de 16 milhões de símbolos), uma mensagem com 10 símbolos ASCII passa a ocupar 30 bytes, 200% a mais do que necessário. Também seria necessário lidar com informações armazenadas que usam o símbolo `NUL` para indicar o término de uma sequência de símbolos - uma sequência de 8 bits com valor 0 não seria rara considerando 3 bytes. Outro ponto relevante era lidar com os documentos existentes, gerar uma cópia de todo arquivo existente com esta nova codificação seria uma tarefa inviável. A solução encontrada foi uma forma elegante de lidar com tudo isso, além de viabilizar a incorporação de quaisquer novos símbolos que possam ser criados.
+
+<h5>Unicode</h5>
+
+Uma vez estabelecido um padrão de *codificação de caracteres* (associação [arbitrária] de bits a certos caracteres), pode-se armazenar estes símbolos na memória (e recuperá-los). Há diversar formas de se codificar caracteres: [EBCDIC](https://pt.wikipedia.org/wiki/Extended_Binary_Coded_Decimal_Interchange_Code), [Unicode](https://pt.wikipedia.org/wiki/Unicode) (veja [isso](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)), ente outros.
+
+<h3>Resumo</h3>
+
+<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red">
+
+??? llm
+
+    * Explique o conceito de tipo de dados em programação.
+    * Explique o padrão ASCII.
+    * Explique o padrão UniCode.
+    * Quais as vantagens do padrão UTF-8?
+    * Como compactar dados UTF-8  para comunicação em rede?
+
+<h3>Exercícios</h3>
+
+<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red">

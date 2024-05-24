@@ -37,93 +37,13 @@ Há discussões interessantes sobre a definição precisa do conceito de um algo
 
 Existem diversas formas de representar de um algoritmo e não há consenso de qual é a melhor delas. Independentemente, o algoritmo deve ser representado da forma mais clara possível para facilitar seu entendimento por quem vai executá-lo. Apresentamos a seguir algumas possibilidades.
 
-## Descrição Narrativa
+{! algoritmos/narrativa.md. !}
 
-A forma mais intuitiva de apresentar uma sequência de instruções, pois usa linguagem natural para fazê-lo, como no algoritmos de média aritmética. Apesar de parecer simples por ser a forma que estamos acostumados a usar para comunicação, é extremamente complexa pois considera a enorme capacidade humana de inferir coisas a partir de informação incompleta.
+{! algoritmos/fluxograma.md. !}
 
-Essa "facilidade" inerente tem um contraponto: as instruções que usamos não são muito bem definidas e, portanto, o resultado obtido pode ser diferente do esperado dependendo de quem as interpreta. Por exemplo, considere o seguinte algoritmo:
+{! algoritmos/pseudocodigo.md. !}
 
-``` linguagem_natural title="Receita de Bolo"
-Bata as claras em neve. Reserve. Bata bem as gemas com a margarina e o açúcar. Acrescente o leite e farinha aos poucos sem parar de bater. Por último agregue as claras em neve e o fermento. Coloque em forma grande de furo central untada e enfarinhada. Asse em forno médio, pré-aquecido, por aproximadamente 40 min. Quando espetar um palito e sair limpo estará assado.
-```
-
-Para alguém que não esteja acostumado a atividades na cozinha, o algoritmo é ambíguo e impreciso. Como bater as claras? Por quanto tempo? Reservar o que? Onde? O que é "bater bem"? Acrescentar o leite a que? Bater o que sem parar? Se não parar como posso fazer as outras coisas? Colocar o que na forma? O que é "enfarinhada"? Assar a quantos graus? "Aproximadamente" são quantos minutos? Espetar o palito onde? O que é "limpo"? O palito estará assado?
-
-Uma descrição narrativa detalhada o suficiente para evitar qualquer falha na interpretação tende a ser bem mais extensa (e menos natural) do que estamos acostumados a utilizar em nossas conversas do dia a dia.
-
-## Fluxograma
-
-Outro jeito bastante intuitivo com o uso de figuras geométricas, como pode ser vista nos diagramas abaixo.
-
-```mermaid
-flowchart TD
-    I([Início]) --> EF{Entende<br>fluxogramas?}
-    EF -->|Sim| O[/Ótimo!/] --> F([Fim])
-    EF -->|Não| VLS{Vê a linha<br>com 'Sim'?}
-    VLS -->|Sim| VLN{E a com<br>'Não'?} -->|Sim| O
-    VLS -->|Não| ES[É a outra<br>linha...]  --> VLS
-    VLN -->|Não| MJ[/Mas já<br>seguiu várias?!/] --> SS[Siga a seta.] --> VLS
-```
-
-Cada forma geométrica tem um significado especifico mas, para facilitar, usaremos apenas as a seguir:
-
-* Terminal: que indica onde o algoritmo inicia e onde termina.
-* Dado(s): que indica a comunicação (entrada/saída) de dado(s) com o algoritmo.
-* Processo: que indica a execução de uma instrução/tarefa.
-* Decisão: que indica a necessidade de se escolher uma (e apenas uma!) das diversas possíveis ações subsequentes.
-* Seta: que indica a sequência em que as instruções serão executadas.
-
-``` mermaid
-flowchart TD
-    I([Terminal]) -->|seta| P[Processo] & D{Decisão} & IO[/Entrada<br>Saída/]
-```
-
-Geralmente se usa instruções mais diretas e simples que na descrição narrativa, também em função da limitação das figuras utilizadas. Isso tem dois efeitos muito interessantes: o uso de fluxograma restringe muito a amplitude do entendimento das instruções, facilitando a construção de instruções bem definidas para o algoritmo; mas também restringe o tipo de instruções utilizáveis, dificultando a construção do processo desejado - podem ser necessárias mais instruções para descrever adequadamente um pedaço mais complexo do comportamento.
-
-## Pseudocódigo
-
-Outra abordagem bem interessante, pois visa diminuir o esforço de traduzir um algoritmo computacional em instruções que um computador possa usar. Utiliza termos simples e estruturas de uma linguagem de programação, mas com sintaxe e regras menos restritivas. Por exemplo, o algoritmo abaixo em pseudocódigo.
-
-``` title="Média Aritmética"
-Início
-    Leia [nota_1]
-    Leia [nota_2]
-    Leia [nota_3]
-    Leia [nota_4]
-    média  = (nota_1 + nota_2 + nota_3 + nota_4) ÷ 4
-    Escreva o valor da [média]
-Fim
-```
-
-Note que o algoritmo da média em pseudocódigo começa e termina com duas palavras, `Início` e `Fim`. Estas, como as palavras `Leia` e `Escreva`, pertencem ao que chamamos de *vocabulário controlado*. O uso deste um conjunto mais restrito de palavras possibilita maior precisão e eficácia na comunicação das instruções.
-
-Outro diferencial é a consideração de nomear as informações, de modo a poder recuperá-las em passos subsequentes. Por exemplo, a segunda instrução obtém um valor (comunicação de um dado) e lhe atribui um nome (`nota_1`); que é recuperado no momento de calcular a soma dos números, na sexta instrução.
-
-Por fim, note também que as linhas com as instruções de cada passo do algoritmo estão deslocadas para a direita em relação às palavras destacadas, ressaltando o conjunto de instruções dentro do bloco definido por elas. Este deslocamento é denominado *endentação*, e facilita a visualização da estrutura do algoritmo.
-
-Este detalhamento das instruções implica que o algoritmo com [média em pseudocódigo](#alg-media4-pseudo) ficou mais extenso e menos "natural" que o mesmo processo descrito no da [média detalhada](#alg-media4-natural-detalhado), mas é bem melhor definido e continua sendo de fácil entendimento. Além disso, se aproxima mais da forma de representar um algoritmo como uma linguagem de programação.
-
-## Código
-
-A representação mais interessante de um algoritmo, pois pode ser diretamente aplicada a um computador. O algoritmo é descrito como um *programa de computador*, ou seja, utilizando o vocabulário controlado e as regras de sintaxe de uma *linguagem de programação* específica para definir cada passo. Neste caso, as instruções devem ser escritas cautelosamente de acordo com a linguagem, no nível de complexidade determinado pelo projeto desta. Abaixo mostramos possíveis formas de apresentar a média aritmética de quatro números.
-
-=== "Python"
-
-    ``` python title="Média Aritmética"
-    --8<-- "media_aritmetica.py"
-    ```
-
-=== "C"
-
-    ``` c title="Média Aritmética"
-    --8<-- "media_aritmetica.c"
-    ```
-
-=== "Rust"
-
-    ``` rust title="Média Aritmética"
-    --8<-- "media_aritmetica.rs"
-    ```
+{! algoritmos/codigo.md. !}
 
 <h2>Resumo</h2>
 
@@ -136,55 +56,4 @@ Um algoritmo é uma sequência de instruções bem definidas para realização u
     * O que é pseudocódigo?
     * Quais as etapas da programação de computadores?
 
-
-<h2>Exercícios</h2>
-
-??? question "Faça um algoritmo em descrição narrativa para trocar uma lâmpada queimada de um abajur já tendo outra lâmpada nova disponível."
-
-    ``` linguagem_natural title="Trocar Lâmpada"
-    Desligue o abajur da tomada e retire a lâmpada queimada desenroscando-a em sentido anti-horário (separe para descartar no local apropriado). Pegue a lâmpada nova e a coloque no abajur, rosqueando-a no sentido horário. Ligue o abajur na tomada.
-    ```
-
-??? question "Represente o algoritmo para cálculo da média aritmética de quatro números usando fluxograma."
-
-    ``` mermaid
-    flowchart TD
-        I([Início]) --> L4[/Leia 4 notas/] --> M["µ = notas ÷ 4"] --> A[Apresente µ] --> T([Fim])
-    ```
-
-??? question "Monte um fluxograma para um algoritmo que leia os três coeficientes de uma equação de segundo grau e diga se as raízes são reais ou complexas, e se são iguais. $ax^2+bx+c = 0 \Rightarrow r = \frac{-b\pm\sqrt{b^2-4ac}}{2a}$"
-
-    ``` mermaid
-    flowchart TD
-        I([Início]) --> L4[/Leia 4 notas/] --> D["Δ = b² - 4ac"] --> M0{"Δ < 0?"} -->|Sim| RC[/Raízes complexas/] --> F([Fim])
-        M0 --> |Não| RR[/Raízes reais/] --> D0{"Δ = 0?"} -->|Sim| VR[/Raízes iguais/] --> F
-        D0 -->|Não| F
-    ```
-
-??? question "Descreva, em pseudocódigo, um algoritmo para ler dois números e apresentar o resultado da divisão do primeiro pelo segundo."
-
-    ``` title="Divisão"
-    Início
-        Escreva "Digite o numerador: "
-        Leia [numerador].
-        Escreva "Digite o denominador: "
-        Leia o [denominador].
-        divisão = numerador ÷ denominador
-        Escreva "O resultado é [divisão]."
-    Fim
-    ```
-
-??? question "Descreva, em pseudocódigo, o algoritmo para ler a idade de uma pessoa (em anos, meses e dias), e escrever a quantidade de horas vividas por ela. Assuma que todo ano tem 365 dias e todo mês tem 30 dias."
-
-    ``` title="Dias vividos"
-    Início
-        Escreva "Digite quantos anos você tem: "
-        Leia [anos].
-        Escreva "Digite quantos meses você tem: "
-        Leia [meses].
-        Escreva "Digite quantos dias você tem: "
-        Leia [dias].
-        total = ((anos * 365) + (meses * 30) + dias) * 24
-        Escreva "Você já viveu [total] horas."
-    Fim
-    ```
+{! algoritmos/exercicios.md. !}

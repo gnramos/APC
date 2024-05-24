@@ -6,6 +6,8 @@ site_dir: html
 # repo_url: https://github.com/gnramos/APC
 theme:
     name: material
+    custom_dir: overrides
+    favicon: assets/images/unb.ico
     features:
         - content.code.copy
         - content.tabs.link
@@ -15,8 +17,7 @@ theme:
         - search.suggest
         - toc.integrate
     language: pt
-    logo: assets/img/unb.png
-    favicon: assets/img/unb.ico
+    logo: assets/images/unb.png
 extra:
     generator: false
     mailto: gnramos@unb.br
@@ -42,7 +43,7 @@ markdown_extensions:
         pygments_lang_class: true
     - pymdownx.inlinehilite
     - pymdownx.snippets:
-        base_path: docs/assets/src
+        base_path: src
         check_paths: true
     - pymdownx.superfences:
         custom_fences:
@@ -57,9 +58,7 @@ nav:
     - Computadores: computadores.md
     - Algoritmos: algoritmos.md
     - Programação: programacao.md
-    - Tipos de Dados: programacao/tipos_de_dados.md
-    - Fluxo de Controle: programacao/fluxo_de_controle.md
-    - Recursão: programacao/funcoes_recursivas.md
+    - Estruturas de Dados: estruturas_de_dados.md
 plugins:
     - search
     - markdown-exec

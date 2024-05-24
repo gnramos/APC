@@ -87,8 +87,8 @@ def on_page_read_source(page, config):
 def assert_sections(markdown, src_uri):
     sections = {'citação': r'(!!! quote "\[(.*)\]\(.*\)"[\s\S])\n {4}\*(.*?)\*(?=\n\n)',
                 'introdução': r'---\n\n([.\s\S]*?)(?=\n---\n)',
-                'resumo': r'<h2>Resumo</h2>',
-                'exercícios': r'<h2>Exercícios</h2>',
+                'resumo': r'<h\d>Resumo</h\d>',
+                'exercícios': r'<h\d>Exercícios</h\d>',
                 'LLM': r'[!!!|???] llm ',
                 }
 

@@ -1,0 +1,21 @@
+## Software
+
+O software é a parte lógica do sistema computacional, que define quais instruções devem ser executadas pelo hardware. Pode ser dividido em dois tipos, *programas de sistema* que possibilitam a interação com o hardware (computador e periféricos) e fornecem uma plataforma para execução das *aplicações*, que realizam tarefas mais específicas como edição de documentos, organização de dados, entretenimento, educacional, manipulação de mídia, e outros.
+
+<h3>Programas de Sistema</h3>
+
+O *[sistema operacional](http://pt.wikipedia.org/wiki/Sistema_operativo)* é o conjunto de programas que gerencia o hardware e fornece serviços comuns às aplicações. Podem ser de [tempo-real](http://pt.wikipedia.org/wiki/Tempo_real), [multi-usuário](http://pt.wikipedia.org/wiki/Multiusu%C3%A1rio), [multi-tarefas](http://pt.wikipedia.org/wiki/Multitarefa), [embarcado](http://pt.wikipedia.org/wiki/Sistema_embarcado), entre outros. Possibilita a comunicação com os componentes de [núcleo](https://pt.wikipedia.org/wiki/N%C3%BAcleo_(sistema_operacional)), que controla execução, interrupções, gerenciamento de memória [virtual], acesso a disco e arquivos, comunicação com dispositivos, etc., bem como de comunicação, segurança, interface gráfica, entre outros.
+
+Os sistemas mais conhecidos são: Unix ([BSD](http://www.bsd.org/), [GNU-Linux](http://www.gnu.org/gnu/linux-and-gnu.pt-br.html), [OS X](https://www.apple.com/br/osx/)), [Microsoft Windows](http://windows.microsoft.com/pt-br/windows/home), [Plan 9](http://plan9.bell-labs.com/plan9/), [Android](https://www.android.com/), etc. É possível ter uma ideia da utilização de cada sistema por sua [fatia de mercado](https://gs.statcounter.com/os-market-share/desktop/worldwide). Atualmente, o Windows domina o mercado de desktops, e o de dispositivos móveis é dividido entre Android e iOS. Mas a [computação de alto desempenho é praticamente toda em Unix](https://www.top500.org).
+
+Os *utilitários* são os programas que auxiliam a analisar e configurar o computador, como análise/manutenção de disco, análise de memória, anti-vírus, armazenamento de dados, cifragem, compressão, conectividade com a rede, cópia de segurança, gerenciador de arquivos, monitoração do processador, sincronização de dados/arquivos, entre muitos outros. Alguns exemplos são análise/manutenção de disco, análise de memória, anti-vírus, armazenamento de dados, cifragem, compressão, conectividade com a rede, cópia de segurança, gerenciador de arquivos, monitoração do processador, sincronização de dados/arquivos.
+
+Os *controladores de dispositivos*, também conhecidos como *[drivers](http://pt.wikipedia.org/wiki/Driver_de_dispositivo)* de dispositivos, são os programas que gerenciam um hardware específico do computador, como barramento, impressora, máquinas digitais, placa de rede/áudio/vídeo/aquisição de sinais, scanner, smartphones, etc.
+
+As *interfaces com usuário* são programas que interagem com o usuário, geralmente divididos em função do uso via [linha de comando](http://pt.wikipedia.org/wiki/Interpretador_de_comandos) ou [interface gráfica](http://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador).
+
+Os programas de *desenvolvimento* auxiliam o desenvolvimento de programas, como [compiladores](http://pt.wikipedia.org/wiki/Compilador), [interpretadores](http://pt.wikipedia.org/wiki/Interpretador), [IDEs](http://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado), [montadores](http://pt.wikipedia.org/wiki/Assembly#Montador), [depuradores](http://pt.wikipedia.org/wiki/Depurador), etc.
+
+<h3>Aplicações</h3>
+
+São os programas com fins específicos, como [navegadores](http://pt.wikipedia.org/wiki/Navegador_%28inform%C3%A1tica%29), [programa para escritório](http://pt.wikipedia.org/wiki/Su%C3%ADte_de_escrit%C3%B3rio), [entretenimento](http://pt.wikipedia.org/wiki/Jogo_de_computador), e muitos, muitos mais.
