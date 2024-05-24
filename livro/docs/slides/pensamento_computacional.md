@@ -16,13 +16,13 @@ Facilita a forma como tratar um problema.
 
 ### Como pensam que é
 
-![Abstração do mapa da UnB](assets/img/unb_modelo.png "Abstração do mapa da UnB")
+![Abstração do mapa da UnB](/assets/img/unb_modelo.png "Abstração do mapa da UnB")
 
 --
 
 ### Como realmente é
 
-![UnB "Real"](assets/img/unb_mapa.png "Mapa da UnB")
+![UnB "Real"](/assets/img/unb_mapa.png "Mapa da UnB")
 
 ---
 
@@ -40,7 +40,7 @@ Criar modelos/regras/princípios genéricos a partir de padrões observados em i
 
 --
 
-![Ângulos interno/externo](assets/img/AnguloExterno.png "Ângulos interno/externo"){ height="50%" }
+![Ângulos interno/externo](/assets/img/AnguloExterno.png "Ângulos interno/externo"){ height="50%" }
 
 ---
 

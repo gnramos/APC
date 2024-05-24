@@ -105,7 +105,7 @@ def on_page_markdown(markdown, page, config, files):
     markdown = code_block_NL(markdown)
     markdown = mermaid_title(markdown)
     src_uri = page.file.src_uri
-    if src_uri != index_uri:  # and '/' not in src_uri:
+    if src_uri != index_uri and not src_uri.startswith('slides/'):
         assert_sections(markdown, src_uri)
     return markdown
 
