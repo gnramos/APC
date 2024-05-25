@@ -84,17 +84,20 @@ def on_page_read_source(page, config):
     return source
 
 
-def assert_sections(markdown, src_uri):
-    sections = {'citação': r'(!!! quote "\[(.*)\]\(.*\)"[\s\S])\n {4}\*(.*?)\*(?=\n\n)',
-                'introdução': r'---\n\n([.\s\S]*?)(?=\n---\n)',
-                'resumo': r'<h\d>Resumo</h\d>',
-                'exercícios': r'<h\d>Exercícios</h\d>',
-                'LLM': r'[!!!|???] llm ',
+def check_content(markdown, src_uri):
+    sections = {'Citação': r'(!!! quote "\[(.*)\]\(.*\)"[\s\S])\n {4}\*(.*?)\*(?=\n\n)',
+                'Introdução': r'---\n\n([.\s\S]*?)(?=\n---\n)',
+                'Resumo': r'<h\d>Resumo</h\d>',
+                'Exercícios': r'<h\d>Exercícios</h\d>',
+                'Chat-bot': r'[!!!|???] llm ',
                 }
 
     for section, regex in sections.items():
         if not re.search(regex, markdown):
-            log.warning(f'"{src_uri}" sem {section}.')
+            log.warning(f'"{src_uri}" sem seção "{section}".')
+
+    for missing in re.findall(r'https://img\.shields\.io/badge/TODO-(.*?)-', markdown):
+        log.warning(f'"{src_uri}" sem {missing}.')
 
 
 def on_page_markdown(markdown, page, config, files):
@@ -106,7 +109,7 @@ def on_page_markdown(markdown, page, config, files):
     markdown = mermaid_title(markdown)
     src_uri = page.file.src_uri
     if src_uri != index_uri:  # and '/' not in src_uri:
-        assert_sections(markdown, src_uri)
+        check_content(markdown, src_uri)
     return markdown
 
 
