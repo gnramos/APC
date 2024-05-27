@@ -2,6 +2,10 @@
 
 O livro é gerado com o [mkdocs](https://www.mkdocs.org/).
 
+# ATENÇÃO!
+
+O conteúdo está em sendo construído, este material está incompleto e não é apropriado para ser uma referência bibliográfica (ainda).
+
 ## Desenvolvimento do conteúdo
 
 O conteúdo é dividido em uma estrutura de diretórios:
@@ -12,7 +16,7 @@ O conteúdo é dividido em uma estrutura de diretórios:
 │   ├── diretório # markdown
 │   ├── img       # imagens
 │   └── src       # código
-└── overrides     # sobreposição de configurações básicas
+└── overrides     # configurações
 
 Para melhor organizar os arquivos, tópicos de primeiro nível estão organizados em arquivos Markdown, e podem incluir (recursivamente) outros arquivos. Para evitar os avisos do mkdocs de arquivos processados mas não inclusos no menu de navegação, os arquivos de segundo nível em diante têm um `.` extra ao final do nome.
 ```
