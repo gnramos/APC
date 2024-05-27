@@ -24,15 +24,20 @@
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="{{ config.reveal.plugin.path }}/highlight/monokai.css" id="highlight-theme">
 
-  <!-- Theme changes -->
+  <!-- (gnramos) Theme changes -->
   <style type="text/css">
   :root {
     .reveal h1, .reveal h2, .reveal h3 {
       color: #003A7A;  /* blue UnB */
+      text-transform: none;
+    }
+    .reveal h4 {
+      color: #00822E;  /* green UnB */
+      text-transform: none;
     }
   }
   </style>
-  <!-- /Theme changes -->
+  <!-- /(gnramos) Theme changes -->
 </head>
 <body>
 
@@ -55,6 +60,7 @@
 <script src="{{ config.reveal.plugin.path }}/highlight/highlight.js"></script>
 <script src="{{ config.reveal.plugin.path }}/zoom/zoom.js"></script>
 <script src="{{ config.reveal.plugin.path }}/notes/notes.js"></script>
+<script src="{{ config.reveal.plugin.path }}/math/math.js"></script>
 
 <script>
   // Full list of configuration options available here:
@@ -71,10 +77,12 @@
 
     transition: '{{ config.reveal.transition }}', // default/cube/page/concave/zoom/linear/fade/none
     // Learn about plugins: https://revealjs.com/plugins/
-    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
   });
 </script>
 
+
+<!-- (gnramos) -->
 <!-- From https://github.com/hakimel/reveal.js/issues/806#issuecomment-222417787 -->
 <style type="text/css">
     /* 1. Style header/footer <div> so they are positioned as desired. */
@@ -92,6 +100,16 @@
         position: absolute;
         bottom: 0%;
         left: 0%;
+        padding: 10px;
+    }
+    #footer-center {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        color #595959;
     }
 </style>
 <!-- 2. Create hidden header/footer <div> -->
@@ -99,7 +117,8 @@
     <div id="header">
         <!-- <div id="header-left">HEADER-LEFT</div>
         <div id="header-right">HEADER-RIGHT</div> -->
-        <div id="footer-left"><img src="assets/img/UnB/CIC.png" style="max-width: 25%; padding: 20px;"></div>
+        <div id="footer-left"><img src="assets/img/UnB/CIC.png" style="max-width: 25%;"></div>
+        <div id="footer-center"><a href="mailto:&#103;&#110;&#114;&#97;&#109;&#111;&#115;&#64;&#117;&#110;&#98;&#46;&#98;&#114;" style="font-size:1.5vw">gnramos@unb.br</div>
     </div>
 </div>
 
@@ -116,6 +135,6 @@
         $('div.reveal').append(header);
    }
 </script>
-<!-- From https://github.com/hakimel/reveal.js/issues/806#issuecomment-222417787 -->
+<!-- /(gnramos) https://github.com/hakimel/reveal.js/issues/806#issuecomment-222417787 -->
 </body>
 </html>
