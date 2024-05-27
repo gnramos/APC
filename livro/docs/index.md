@@ -12,13 +12,9 @@ O conteúdo apresentado envolve alguns conceitos e práticas envolvidos nesta at
 
 Este livro usa as seguintes convenções para destacar algumas informações.
 
-!!! info
-
-    Apresenta a definição de um conceito.
-
-!!! note
-
-    Apresenta uma informação ou sugestão relevante no contexto.
+``` linguagem_natural title="Algoritmo / Programa"
+Apresenta um algoritmo ou programa.
+```
 
 !!! warning
 
@@ -28,11 +24,13 @@ Este livro usa as seguintes convenções para destacar algumas informações.
 
     Indica pontos que podem ser melhor desenvolvidos com o apoio de inteligência artificial.
 
-``` linguagem_natural title="Algoritmo / Programa"
-Apresenta um algoritmo ou programa.
-```
+!!! info
 
-Além disso, palavras importantes são *destacadas* e código fonte é apresentado em fonte `mono espaçada`.
+    Apresenta a definição de um conceito.
+
+!!! note
+
+    Apresenta uma informação ou sugestão relevante no contexto.
 
 <h2>Por fim...</h2>
 

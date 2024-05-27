@@ -6,11 +6,13 @@
 
 ---
 
-*Este capítulo apresenta as principais ideias do pensamento computacional e como elas podem ser aplicadas. Ao final do texto, espera-se que se tenha uma noção de como eles podem são utilizados na resolução de problemas diferentes.*
+*Este capítulo apresenta as principais ideias do pensamento computacional e como elas podem ser aplicadas. Ao final do texto, espera-se que se tenha uma noção de como elas podem ser utilizadas na resolução de problemas diferentes.*
 
 ---
 
-Um aspecto da vida cotidiana é o fluxo de atividades, muitas destas com um propósito específico. Nelas, é muito comum se ter um objetivo em mente e ponderar sobre como atingi-lo para, então, elaborar uma sequência de passos que levem ao mesmo. Pode-se considerar que chegar ao objetivo é um *problema* a ser resolvido, e que os passos adequados compõem sua *solução*. Uma vez determinada a solução para um problema específico, espera-se que ela funcione para toda instância do problema. Por exemplo, uma receita é uma solução adequada para se ter um bolo, e toda vez que se quiser o bolo, bastaria seguir a receita. Esta solução resolve até o problema de outras pessoas! Desde que elas queiram este mesmo bolo...
+No dia a dia é muito comum lidar com algum problema inesperado cuja solução é desconhecida. Nesse caso, uma abordagem comum é considerar os diversos aspectos do problema para tentar reconhecer as ações necessárias para resolver cada, organizar essas ações em uma ordem que faça sentido de modo que se tenha uma plano para resolvê-lo. Por exemplo, se estiver em uma cidade desconhecida e quiser chegar a casa de um parente, você pode obter um mapa, identificar a sua posição e a rua onde ele mora e, com isso, definir uma sequência de movimentações para sair da origem e chegar ao destino. A melhor parte é que essa rota deve servir para qualquer pessoa que queira ir desse ponto de partida para o mesmo local de chegada.
+
+Esse fluxo de atividades, de se ter um objetivo em mente, ponderar sobre como atingi-lo para, então, elaborar uma sequência de passos que o atinjam é uma situação cotidiana. Pode-se considerar que chegar ao objetivo é um *problema* a ser resolvido, e que os passos adequados compõem sua *solução*. Uma vez determinada a solução para um problema específico, espera-se que ela funcione para toda instância do problema. Por exemplo, uma receita é uma solução para se obter um bolo, e toda vez que se quiser o bolo, bastaria seguir a receita. Esta solução resolve até o problema de outras pessoas! Desde que elas queiram este mesmo bolo...
 
 A obtenção de uma solução pode ser um processo criativo complexo, com etapas de elaboração, implementação e verificação. Quando funciona, este processo pode ser muito satisfatório, afinal quem não gosta de bolo? Claro, esta ideia também se aplica a outros problemas. É possível definir os passos para montar um móvel (manual de instruções), para conseguir lidar com a demanda de clientes em uma instituição (filas e prioridades), e muito mais.
 
