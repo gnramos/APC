@@ -27,6 +27,8 @@
   <!-- (gnramos) Theme changes -->
   <style type="text/css">
   :root {
+    --r-link-color: #003A7A;  /* blue UnB */
+    --r-link-color-hover: #00822E;
     .reveal h1, .reveal h2, .reveal h3 {
       color: #003A7A;  /* blue UnB */
       text-transform: none;
@@ -98,7 +100,7 @@
     }
     #footer-left {
         position: absolute;
-        bottom: 0%;
+        bottom: -4%;
         left: 0%;
         padding: 10px;
     }
@@ -114,7 +116,7 @@
 </style>
 <!-- 2. Create hidden header/footer <div> -->
 <div id="hidden" style="display:none;">
-    <div id="header">
+    <div id="header_footer">
         <!-- <div id="header-left">HEADER-LEFT</div>
         <div id="header-right">HEADER-RIGHT</div> -->
         <div id="footer-left"><img src="assets/img/UnB/CIC.png" style="max-width: 25%;"></div>
@@ -125,14 +127,14 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script type="text/javascript">
     // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
-    var header = $('#header').html();
+    var header_footer = $('#header_footer').html();
     if ( window.location.search.match( /print-pdf/gi ) ) {
         Reveal.addEventListener( 'ready', function( event ) {
-            $('.slide-background').append(header);
+            $('.slide-background').append(header_footer);
         });
     }
     else {
-        $('div.reveal').append(header);
+        $('div.reveal').append(header_footer);
    }
 </script>
 <!-- /(gnramos) https://github.com/hakimel/reveal.js/issues/806#issuecomment-222417787 -->

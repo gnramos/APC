@@ -48,9 +48,9 @@ Identificar e focar apenas nas similaridades entre coisas, ignorando as especifi
 
 --
 
-Realidade → Abstração
+###### Realidade → Abstração
 
-![UnB "Real"](assets/img/unb_mapa.png "Mapa da UnB") <!-- .element height="45%" width="45%" -->![Abstração do mapa da UnB](assets/img/unb_modelo.png "Abstração do mapa da UnB")<!-- .element height="45%" width="45%" -->
+![UnB "Real"](assets/img/unb_mapa.png "Mapa da UnB") <!-- .element height="49%" width="49%" -->![Abstração do mapa da UnB](assets/img/unb_modelo.png "Abstração do mapa da UnB")<!-- .element height="49%" width="49%" -->
 
 ---
 
