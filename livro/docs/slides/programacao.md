@@ -23,7 +23,7 @@ Processo de expressar um algoritmo como instruções em uma linguagem de program
 ### Linguagens
 
 | Animal | Humana       | Programação |
-| ------ | ------------ | ----------- |
+|:------:|:------------:|:-----------:|
 | 👁      | Português    | Python |
 | 👋      | English      | C / C++ |
 | 👃      | 日本語 | Assembly |
@@ -115,7 +115,7 @@ Usa um vocabulário mais rico para facilitar programação.
 
 --
 
-![UnB "Real"](slides/img/python_os.svg)<!-- .element width="75%" -->
+![UnB "Real"](slides/img/python_os.svg)<!-- .element width="60%" -->
 
 --
 
@@ -138,11 +138,10 @@ Unidades válidas de código.
 
 ## Expressões
 
-Uma expressão é uma instrução que resulta em um **valor**.
+Instruções que resultam em um **valor**.
 
 --
 
-<<<<<<< HEAD
 ```python
 >>> 2       # Expressão
 2
@@ -268,7 +267,6 @@ O **identificador** associado a cada valor faz muita diferença no entendimento 
 O **identificador** associado a cada valor faz muita diferença no entendimento do programa.
 
 ```python
->>> xou87623 = 1000
 >>> xou87623 = xou87623 * xou37623
 >>> xou87632 = xou37638 + xou37623 + xou87234 + xou87888
 >>> f'Sobrou R${xou87623 - xou87632}!'
