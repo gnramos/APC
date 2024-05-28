@@ -121,7 +121,7 @@ Usa um vocabulário mais rico para facilitar programação.
 
 ## Interpretador Python
 
-```bash
+```python
 Python 3.8.10 (default, Nov 22 2023, 10:22:35)
 [GCC 9.4.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -142,13 +142,13 @@ Uma expressão é uma instrução que resulta em um **valor**.
 
 --
 
+<<<<<<< HEAD
 ```python
 >>> 2       # Expressão
 2
 >>> 2 + 40  # Expressão
 42
 >>> x = 2 + 3 / 5  # Instrução
->>>
 ```
 
 ---
@@ -343,7 +343,7 @@ SyntaxError: invalid syntax
 
 Causados por uma instrução válida mas em um contexto logicamente incorreto.
 
-```bash
+```python
 42 / 0
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
