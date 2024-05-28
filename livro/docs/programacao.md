@@ -109,7 +109,7 @@ Uma expressão pode ser composta por apenas um valor, como `<Pedro>` ou `<42>`, 
 
 === "Instruções"
 
-    ``` python title="Python"
+    ```python title="Python"
     pass
     ```
 
