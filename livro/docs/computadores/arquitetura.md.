@@ -4,7 +4,7 @@ A arquitetura do computador busca projetar a máquina de tal forma a maximizar d
 
 Na arquitetura mais comum, as instruções são vistas como informações que armazenadas, ou seja, conhecimento descritivo, e são tratadas como dados que o computador processa. Este modelo de "computador de programa armazenado", em que as instruções e os dados existem em um mesmo meio físico, é conhecido como Arquitetura de von Neumann[@Godfrey1993], e é a forma mais comum dos computadores modernos. Nela, a solução de um problema é obtida por um ciclo de execução simples: *busca* (a próxima instrução), *decodificação* (em instruções primitivas) e *execução* (das primitivas realizando a computação).
 
-![Arquitetura Von Neumann](img/von_newmann.svg){ width="75%" }
+![Arquitetura Von Neumann](img/von_newmann.svg "Arquitetura Von Neumann"){ width="75%" }
 
 Este modelo representa os principais componentes necessários para o processo de ler a instrução, interpretá-la e executá-la. A memória armazena as instruções (conhecimento procedural) e os resultados intermediários (conhecimento descritivo). Novos dados podem ser fornecidos ao computador por algum dispositivo de *entrada* ou obtidos dele por um dispositivo de *saída*. O processador gerencia quais instruções devem ser realizadas e suas execuções, além de movimentar as informações entre os componentes. Para isso, tem dispositivos que realizam operações de aritmética e lógica, testes simples, e manipulação de dados.
 

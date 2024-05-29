@@ -88,7 +88,7 @@ def check_content(markdown, src_uri):
     sections = {'Citação': r'(!!! quote "\[(.*)\]\(.*\)"[\s\S])\n {4}\*(.*?)\*(?=\n\n)',
                 'Introdução': r'---\n\n([.\s\S]*?)(?=\n---\n)',
                 'Resumo': r'<h\d>Resumo</h\d>',
-                'Exercícios': r'<h\d>Exercícios</h\d>',
+                'Exercícios': r'^#+ Exercícios$',
                 'Chat-bot': r'[!!!|???] llm ',
                 }
 
