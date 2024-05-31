@@ -2,13 +2,22 @@
 
 A decomposição é o processo de separar o problema em partes, ou subproblemas, de modo que cada um deles seja menor e mais simples - portanto mais fácil de ser resolvido. Esse processo pode ser repetido até que se tenha um problema simples o suficiente para elaborar uma solução. Depois, basta juntar as soluções de cada subproblema de forma coesa para obter a solução do problema original.
 
+Por exemplo, é mais fácil entender isoladamente o funcionamento de cada um dos diversos sistemas do corpo humano para depois analisar como eles trabalham em conjunto do que tentar entender o seu funcionamento considerando todos os órgãos em ação de uma só vez. Também é mais fácil organizar sua coleção de músicas se ela for reestruturada em gêneros musicais - e a organização de cada gênero é mais simples ao lidar com um estilo de cada vez.
+
 O primeiro passo para decompor um problema é entendê-lo corretamente de modo a identificar e descrever os processos (e subproblemas) envolvidos na sua resolução. Com essa informação, é possível particionar os processos (e subproblemas) em passos distintos, que então são organizados de forma estruturada para que possam ser executados.
-O primeiro passo para decompor um problema é entendê-lo corretamente de modo a identificar e descrever os processos (e subproblemas) envolvidos na sua resolução. Com essa informação, é possível particionar os processos (e subproblemas) em passos distintos, que então são organizados de forma estruturada para que possam ser executados.
 
-Por exemplo, para calcular a trajetória de um foguete, é mais fácil decompor o movimento dele nas componentes aceleração, velocidade e deslocamento e considerar o efeito de cada uma. Este efeito pode ser decomposto em componentes específicos do sistema de coordenadas sendo utilizado. Em um sistema cartesiano, a aceleração é tratada como a variação da velocidade ao longo do tempo nos eixos, portanto a análise pode ser decomposta para cada eixo $x$, $y$ e $z$.
+Considere a seguinte equação: $213 \times 21$. A multiplicação é uma repetição de somas, então o resultado pode ser obtido somando o primeiro 21 vezes (ou o segundo 213 vezes). Entendendo como o sistema de numeração funciona, pode-se decompor esta operação complexa como um conjunto de operações de soma mais simples, basta considerar que 21 é, na verdade, a soma de 20 com 1. Buscando um processo mais simples, podemos considerar ainda que $20 = 10 + 10$, e resolver a multiplicação da seguinte forma:
 
-![Foguete](img/foguete_1.png "Foguete") | ![Componentes do movimento](img/foguete_2.png "Componentes do movimento") | ![Componentes da aceleração](img/foguete_3.png "Componentes da aceleração")
-:------:|:------------------------:|:-------------------------:
-Foguete | Componentes do movimento | Componentes da aceleração
+$$
+\begin{align}
+21 \times 213 & = (20 + 1) \times 213 \\
+& = (20 \times 213) + (1 \times 213) \\
+& = ((10 + 10) \times 213) + (1 \times 213) \\
+& = ((10 \times 213) + (10 \times 213)) + (1 \times 213) \\
+& = (2130 + 2130) + 213 \\
+& = 4260 + 213 \\
+& = 4473
+\end{align}
+$$
 
-E o processo pode continuar até que as tarefas seja exequíveis.
+Apesar da impressão de que esta decomposição cria um processo mais longo, as tarefas que são efetivamente resolvidas são bem mais simples que a tarefa original.

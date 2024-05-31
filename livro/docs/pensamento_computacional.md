@@ -27,30 +27,12 @@ O *pensamento computacional* é o processo envolvido na formulação de problema
 
 Essencialmente, o pensamento computacional envolve habilidades de converter problemas reais, que são complexos, confusos e mal definidos, em algo que um autômato sem inteligência (o computador) consiga resolver sem auxílio de alguém[@BCS2014]. Há muitos conceitos envolvidos[@Google], como coleta e análise de dados, representação de dados e paralelização - vale a pena procurar saber mais sobre eles! Os principais conceitos do processo são apresentados a seguir.
 
-{! pensamento_computacional/abstracao.md. !}
-
 {! pensamento_computacional/decomposicao.md. !}
 
-{! pensamento_computacional/generalizacao.md. !}
+{! pensamento_computacional/reconhecimento.md. !}
+
+{! pensamento_computacional/abstracao.md. !}
 
 {! pensamento_computacional/algoritmos.md. !}
 
 {! pensamento_computacional/avaliacao.md. !}
-
-{! pensamento_computacional/automacao.md. !}
-
-{! pensamento_computacional/avaliacao.md. !}
-
-<h2>Resumo</h2>
-
-<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red">
-
-??? llm
-
-    * O que é pensamento computacional?
-    * O que é pensamento algorítmico?
-    * De forma simplificada, o que é corretude de um algoritmo?
-    * De forma simplificada, o que é eficiência de um algoritmo?
-    * De forma simplificada, o que é usabilidade de um algoritmo?
-
-{! pensamento_computacional/exercicios.md. !}
