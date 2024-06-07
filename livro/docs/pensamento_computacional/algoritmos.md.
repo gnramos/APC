@@ -1,40 +1,31 @@
 ## Projeto de Algoritmos
 
-O passo final do pensamento computacional é criar uma sequência de instruções que resolve o problema. O ponto chave é guiar o raciocínio. Para tanto, é preciso considerar uma série de coisas. Qual o objetivo principal? Como abstrair o contexto? Como decompô-lo em partes mais acessíveis? Em que ordem estas partes devem ser tratadas?
+O passo final do pensamento computacional é criar uma sequência de instruções que resolve o problema. O ponto chave é guiar o raciocínio para construir a solução. Para tanto, é preciso considerar uma série de coisas. Qual o objetivo principal? Como abstrair o contexto? Como decompô-lo em partes mais acessíveis? Em que ordem estas partes devem ser tratadas?
 
 !!! info "Pensamento Algorítmico"
 
     Processo de construir uma sequência de passos ordenados que pode ser seguida para obter uma solução para todos os problemas constituintes necessários para resolver o problema original[@Cansu2019].
 
-A aplicação do pensamento algorítmico depende de certas informações sobre o problema. Quais as informações fornecidas? O que se espera como resultado? O que se deve fazer depende de certas condições? Há alguma parte que precisa ser repetida?
+A aplicação do pensamento algorítmico depende de um bom entendimento do problema. É preciso saber claramente quais as informações fornecidas e o que se espera como resultado. Considere se há alguma parte que precisa ser repetida ou se há comportamentos diferentes dependendo de certas condições. São ponderações necessárias para desenvolver uma solução.
 
 !!! note
 
     Duas ideias que ajudam este processo são: 1) se perguntar "E se eu fizesse desse jeito?" (explorando formas diferentes de resolver o problema); e 2) explicar a sua solução a alguém (ou a um [pato de borracha](https://pt.wikipedia.org/wiki/Debug_com_Pato_de_Borracha)), ao tentar ensinar uma solução [você estará efetivamente aprendendo sobre ela](https://degraucultural.com.br/noticia/ensinar-e-uma-das-melhores-formas-de-aprender-entenda).
 
-Com um entendimento adequado do problema e seu contexto, pode-se projetar o algoritmo. Mais detalhes sobre isso serão discutidos no próximo capítulo, mas o grande [Richard Feynman](https://pt.wikipedia.org/wiki/Richard_Feynman) tem um abordagem praticamente infalível para isso:
+Com um entendimento adequado do problema e seu contexto, pode-se projetar o algoritmo. O grande [Richard Feynman](https://pt.wikipedia.org/wiki/Richard_Feynman) tem um abordagem muito interessante para a resolução de problemas:
 
-``` mermaid title="Abordagem Feyman de Resolução de Problemas"
-flowchart TD
-    I([Início]) --> P[/Obtenha as informações do problema./] --> E[/Escreva o problema/] --> P2[Pense muito sobre o problema] --> E2[/Escreva a solução do problema/] --> F([Fim])
-```
+![Abordagem Feynman de Resolução de Problemas](img/feynman.svg) <!-- .element width="75%" -->
 
-É claro, alguns problemas [não têm solução](https://pt.wikipedia.org/wiki/Lista_de_problemas_em_aberto) e outra abordagem seria "consigo mostrar que ele não pode ser resolvido?" (e assim determinar a solução que é "não é possível resolver"). Independentemente, a parte mais importante do pensamento computacional é, obviamente, o raciocínio aplicado no projeto da solução.
+Alguns problemas [não têm solução](https://pt.wikipedia.org/wiki/Lista_de_problemas_em_aberto), neles geralmente se aplica a abordagem "consigo mostrar que ele não pode ser resolvido?". Se sim, efetivamente ele está resolvido: não há solução possível. Mesmo assim, a parte mais importante do processo é o raciocínio aplicado no projeto do algoritmo.
 
+<h3>Automação</h3>
 
+Considerando que muitas das atividades cotidianas são repetitivas e poderiam ser realizadas por um computador dadas as instruções corretas[@Sweigart2020], o uso de mecanismos para automação de um algoritmo possibilita uma série de vantagens. Pode aumentar a eficiência na produção dos resultados e a uniformidade destes, reduzir a incidência de erros e liberar recursos humanos para lidar com outras atividades.
 
+Parte importante deste processo é o entendimento do que pode ou não ser computado. O computador existe como entidade física e opera dentro de certos limites. Portanto, apesar de podermos planejar soluções lógica e matematicamente corretas, é possível que estas não possam ser executadas na máquina. Por exemplo, é preciso compor um algoritmo baseado em instruções existentes no computador, algo como *realize estas operações matemáticas sobre números* é viável enquanto *faça uma pizza* não é. Mas pode ser mais complicado do que isso.
 
-
-
-
-## Automação
-
-O uso de mecanismos para realização de um processo específico tem uma série de vantagens. Provavelmente aumenta a eficiência na produção dos resultados e a uniformidade destes, reduz a incidência de erros e viabiliza o recurso humano para lidar com outras atividades. Além disso, muitas tarefas cotidianas são repetitivas e poderiam ser realizadas por um computador dadas as instruções corretas[@Sweigart2020].
-
-Parte importante deste processo é o entendimento do que pode ser computado e também do que não pode ser. O computador existe como entidade física e opera dentro de certos limites. Portanto, apesar de podermos planejar soluções matematicamente corretas, é possível que estas não possam ser executadas na máquina. Por exemplo, há [métodos para calcular o valor exato de π](https://pt.wikipedia.org/wiki/Pi#M%C3%A9todos_de_s%C3%A9ries_infinitas), mas o resultado é um valor irracional e o processo para calcular o valor exato também é infinitamente demorado!
+Considere o problema de computar o valor de $\pi$. Há [métodos para calcular o valor exato](https://pt.wikipedia.org/wiki/Pi#M%C3%A9todos_de_s%C3%A9ries_infinitas), mas ainda assim o resultado é um valor irracional , ou seja, um número infinamente longo que a máquina não consegue processar. Ainda que conseguisse, seria necessário armazenar todos estes dígitos, o que impossível em um dispositivo com memória limitada. Além disso, este processo envolve uma quantidade infinitamente grande de operações, algo que a máquina não poderá realizar (nem o usuário esperar o resultado).
 
 $$\pi = 4\cdot\sum\limits_{n=0}^{\infty}\frac{(-1)^n}{2n+1}$$
 
-Além disso, certas operações podem demandar que uma quantidade inviável de informações seja armazenada, ou que sejam realizados tantos processos que se torna impraticável aguardar o término da computação (se ocorrer). O processo de formulação de uma solução algorítmica necessariamente deve considerar essas limitações de modo a chegar a uma opção que seja realizável.
-
-Outro aspecto relevante neste processo é que, para ser realizada por um computador, a tarefa e deve ser programada de tal modo que os padrões de interação envolvidos escondam, mas não retirem os detalhes do contexto. Em Ciência da Computação, essa abstração é o processo de eliminar especificidades ao ignorar certas características e de esconder informações que não sejam necessárias[@Colburn2007], o que permite que os padrões de interações entre processos sejam aplicáveis em diversos contextos.
+O processo de formulação de uma solução algorítmica para ser automatizada necessariamente deve considerar essas limitações de modo a chegar a uma opção que seja realizável.

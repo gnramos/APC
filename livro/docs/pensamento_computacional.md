@@ -36,3 +36,10 @@ Essencialmente, o pensamento computacional envolve habilidades de converter prob
 {! pensamento_computacional/algoritmos.md. !}
 
 {! pensamento_computacional/avaliacao.md. !}
+
+{! pensamento_computacional/resumo.md. !}
+
+{! pensamento_computacional/llm.md. !}
+
+{! pensamento_computacional/exercicios.md. !}
+

@@ -1,6 +1,6 @@
 ## Abstração
 
-Abstrair é o processo de identificar um conjunto de características invariantes fundamentais a algo[@Burgoon2013]. É reconhecer similaridades entre objetos ou situações de um problema e focar apenas nelas, ignorando as especificidades para facilitar a forma como tratar o problema[@Cansu2019].
+Abstrair é o processo de identificar um conjunto de características invariantes fundamentais a algo[@Burgoon2013]. É reconhecer similaridades entre objetos ou situações de um problema e focar apenas nelas, ignorando as especificidades para facilitar a forma como tratar o problema[@Cansu2019], escondendo informações que não sejam necessárias[@Colburn2007],
 
 Por exemplo, o problema de cultivar uma rosa vermelha. Como buscamos o processo de mantê-la saudável, podemos assumir que este processo independe da cor e, portanto, abstrair este detalhe para cultivar uma rosa. Se for uma espécie de rosa mais robusta, podemos abstrair novamente e simplificar o problema para o cultivo de uma flor. Dependendo da espécie, talvez possamos dar um passo além e reduzir o problema para "como cultivar uma planta?" (dar mais um passo e considerar como manter um ser vivo é possível, mas excessivo neste contexto).
 
