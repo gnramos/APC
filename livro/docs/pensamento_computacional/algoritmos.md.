@@ -14,7 +14,7 @@ A aplicação do pensamento algorítmico depende de um bom entendimento do probl
 
 Com um entendimento adequado do problema e seu contexto, pode-se projetar o algoritmo. O grande [Richard Feynman](https://pt.wikipedia.org/wiki/Richard_Feynman) tem um abordagem muito interessante para a resolução de problemas:
 
-![Abordagem Feynman de Resolução de Problemas](img/feynman.svg) <!-- .element width="75%" -->
+![Abordagem Feynman de Resolução de Problemas](images/feynman.svg){ width="50%" }
 
 Alguns problemas [não têm solução](https://pt.wikipedia.org/wiki/Lista_de_problemas_em_aberto), neles geralmente se aplica a abordagem "consigo mostrar que ele não pode ser resolvido?". Se sim, efetivamente ele está resolvido: não há solução possível. Mesmo assim, a parte mais importante do processo é o raciocínio aplicado no projeto do algoritmo.
 

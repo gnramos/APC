@@ -4,10 +4,11 @@ copyright: <p><a href="https://gnramos.github.com/APC">Livro de APC</a> por <a h
 docs_dir: docs
 site_dir: html
 # repo_url: https://github.com/gnramos/APC
+# site_url: https://github.com/gnramos/APC/
 theme:
     name: material
-    custom_dir: overrides
-    favicon: images/favicon.ico
+    custom_dir: assets
+    favicon: images/UnB/favicon.ico
     features:
         - content.code.copy
         - content.tabs.link
@@ -17,7 +18,15 @@ theme:
         - search.suggest
         - toc.integrate
     language: pt
-    logo: images/unb.png
+    logo: images/UnB/marca_unb.png
+reveal:
+  path: reveal.js/dist
+  transition: slide
+  theme:
+    name: white.css
+    path: theme
+  plugin:
+    path: reveal.js/plugin
 extra:
     generator: false
     mailto: gnramos@unb.br
@@ -43,7 +52,7 @@ markdown_extensions:
         pygments_lang_class: true
     - pymdownx.inlinehilite
     - pymdownx.snippets:
-        base_path: docs/src
+        base_path: assets/src
         check_paths: true
     - pymdownx.superfences
     #     custom_fences:
@@ -59,6 +68,9 @@ nav:
     # - Algoritmos: algoritmos.md
     # - Programação: programacao.md
     # - Estruturas de Dados: estruturas_de_dados.md
+    - Slides:  # link para md força um refresh
+        - Pensamento Computacional: slides/pensamento_computacional/index.html
+        - Programação: slides/programacao/index.html
 plugins:
     - search
     - markdown-exec

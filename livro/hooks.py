@@ -68,6 +68,7 @@ def on_page_read_source(page, config):
 
 
 def check_content(markdown, src_uri):
+    return
     sections = {'Citação': r'(!!! quote "\[(.*)\]\(.*\)"[\s\S])\n {4}\*(.*?)\*(?=\n\n)',
                 'Introdução': r'---\n\n([.\s\S]*?)(?=\n---\n)',
                 'Resumo': r'<h\d>Resumo</h\d>',
