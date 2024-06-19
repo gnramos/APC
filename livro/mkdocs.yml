@@ -4,7 +4,7 @@ copyright: <p><a href="https://gnramos.github.com/APC">Livro de APC</a> por <a h
 docs_dir: docs
 site_dir: html
 # repo_url: https://github.com/gnramos/APC
-# site_url: https://github.com/gnramos/APC/
+site_url: https://github.com/gnramos/APC/
 theme:
     name: material
     custom_dir: assets
