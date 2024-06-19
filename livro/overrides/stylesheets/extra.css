@@ -13,7 +13,12 @@
   --md-accent-fg-color: var(--green-unb);
   --md-footer-bg-color:  var(--blue-unb);
 
-  --md-admonition-icon--llm: url('data:image/svg+xml;charset=utf-8,<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 119.35"><title>chatbot</title><path d="M57.49,29.2V23.53a14.41,14.41,0,0,1-2-.93A12.18,12.18,0,0,1,50.44,7.5a12.39,12.39,0,0,1,2.64-3.95A12.21,12.21,0,0,1,57,.92,12,12,0,0,1,61.66,0,12.14,12.14,0,0,1,72.88,7.5a12.14,12.14,0,0,1,0,9.27,12.08,12.08,0,0,1-2.64,3.94l-.06.06a12.74,12.74,0,0,1-2.36,1.83,11.26,11.26,0,0,1-2,.93V29.2H94.3a15.47,15.47,0,0,1,15.42,15.43v2.29H115a7.93,7.93,0,0,1,7.9,7.91V73.2A7.93,7.93,0,0,1,115,81.11h-5.25v2.07A15.48,15.48,0,0,1,94.3,98.61H55.23L31.81,118.72a2.58,2.58,0,0,1-3.65-.29,2.63,2.63,0,0,1-.63-1.85l1.25-18h-.21A15.45,15.45,0,0,1,13.16,83.18V81.11H7.91A7.93,7.93,0,0,1,0,73.2V54.83a7.93,7.93,0,0,1,7.9-7.91h5.26v-2.3A15.45,15.45,0,0,1,28.57,29.2H57.49ZM82.74,47.32a9.36,9.36,0,1,1-9.36,9.36,9.36,9.36,0,0,1,9.36-9.36Zm-42.58,0a9.36,9.36,0,1,1-9.36,9.36,9.36,9.36,0,0,1,9.36-9.36Zm6.38,31.36a2.28,2.28,0,0,1-.38-.38,2.18,2.18,0,0,1-.52-1.36,2.21,2.21,0,0,1,.46-1.39,2.4,2.4,0,0,1,.39-.39,3.22,3.22,0,0,1,3.88-.08A22.36,22.36,0,0,0,56,78.32a14.86,14.86,0,0,0,5.47,1A16.18,16.18,0,0,0,67,78.22,25.39,25.39,0,0,0,72.75,75a3.24,3.24,0,0,1,3.89.18,3,3,0,0,1,.37.41,2.22,2.22,0,0,1,.42,1.4,2.33,2.33,0,0,1-.58,1.35,2.29,2.29,0,0,1-.43.38,30.59,30.59,0,0,1-7.33,4,22.28,22.28,0,0,1-7.53,1.43A21.22,21.22,0,0,1,54,82.87a27.78,27.78,0,0,1-7.41-4.16l0,0ZM94.29,34.4H28.57A10.26,10.26,0,0,0,18.35,44.63V83.18A10.26,10.26,0,0,0,28.57,93.41h3.17a2.61,2.61,0,0,1,2.41,2.77l-1,14.58L52.45,94.15a2.56,2.56,0,0,1,1.83-.75h40a10.26,10.26,0,0,0,10.22-10.23V44.62A10.24,10.24,0,0,0,94.29,34.4Z"/></svg>');
+  --md-admonition-icon--definicao: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"/></svg>');
+  --md-admonition-icon--dica: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm165.8 21.7c-7.6 8.1-20.2 8.5-28.3 .9s-8.5-20.2-.9-28.3c14.5-15.5 35.2-22.3 54.6-22.3s40.1 6.8 54.6 22.3c7.6 8.1 7.1 20.7-.9 28.3s-20.7 7.1-28.3-.9c-5.5-5.8-14.8-9.7-25.4-9.7s-19.9 3.8-25.4 9.7z"/></svg>');
+  --md-admonition-icon--chatbot: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32V96H472c39.8 0 72 32.2 72 72V440c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72H288V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H208zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H304zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H400zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224H64V416H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H576V224h16z"/></svg>');
+  --md-admonition-icon--resumo: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg>');
+  --md-admonition-icon--exercicios: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113C-2.3 103.6-2.3 88.4 7 79s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zM160 416c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>');
+  --md-admonition-icon--coding: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>');
 }
 
 a::hover, a::active {
@@ -44,16 +49,16 @@ p {
   font-size: medium;
 }
 
-.mermaid {
+/*.mermaid {
   text-align: center;
   --md-mermaid-node-bg-color: white;
   --md-mermaid-node-fg-color: black;
   /*--md-mermaid-edge-color: var(--green-unb);*/
   /*--md-mermaid-label-bg-color:*/
-  /*--md-mermaid-label-fg-color:red; */
-}
+  /*--md-mermaid-label-fg-color:red; * /
+}*/
 
-.md-typeset .admonition.info,
+/*.md-typeset .admonition.info,
 .md-typeset details.info {
   border-color: var(--green-unb);
 }
@@ -72,19 +77,23 @@ p {
 }
 .md-typeset .note > .admonition-title,
 .md-typeset .note > summary {
-  background-color: var(--blue-unb-transparent); /*rgba(0, 58, 122, 0.1);  /*--blue-unb*/*/
+  background-color: var(--blue-unb-transparent);
 }
 .md-typeset .note > .admonition-title::before,
 .md-typeset .note > summary::before {
   background-color: var(--blue-unb);
-}
+}*/
 
 .md-typeset .admonition.question,
-.md-typeset details.question {
+.md-typeset details.question,
+.admonition.exercícios,
+.md-typeset details.exercícios {
   border-color:  #000000;
 }
 .md-typeset .question > .admonition-title,
-.md-typeset .question > summary {
+.md-typeset .question > summary,
+.md-typeset .exercícios > .admonition-title,
+.md-typeset .exercícios > summary {
   background-color: #0000001a;
 }
 .md-typeset .question > .admonition-title::before,
@@ -92,17 +101,108 @@ p {
 .md-typeset .question > summary::after {
   background-color: #000000;
 }
-.md-typeset .admonition.llm,
-.md-typeset details.llm {
-  border-color: #7A0077;
+.md-typeset .exercícios > .admonition-title::before,
+.md-typeset .exercícios > summary::before {
+  background-color: #000000;
+  -webkit-mask-image: var(--md-admonition-icon--exercicios);
+          mask-image: var(--md-admonition-icon--exercicios);
 }
-.md-typeset .llm > .admonition-title,
-.md-typeset .llm > summary {
-  background-color: #7A00771a;
+
+.md-typeset .admonition.atenção,
+.md-typeset details.atenção {
+  border-color: #FF9100;
 }
-.md-typeset .llm > .admonition-title::before,
-.md-typeset .llm > summary::before {
-  background-color: #7A0077;
-  -webkit-mask-image: var(--md-admonition-icon--llm);
-          mask-image: var(--md-admonition-icon--llm);
+.md-typeset .atenção > .admonition-title,
+.md-typeset .atenção > summary {
+  background-color: #FF91001a;
+}
+.md-typeset .atenção > .admonition-title::before,
+.md-typeset .atenção > summary::before {
+  background-color: #FF9100;
+  -webkit-mask-image: var(--md-admonition-icon--tip);
+          mask-image: var(--md-admonition-icon--tip);
+}
+
+.md-typeset .admonition.chatbot,
+.md-typeset details.chatbot {
+  border-color: #FF1744;
+}
+.md-typeset .chatbot > .admonition-title,
+.md-typeset .chatbot > summary {
+  background-color: #FF17441a;
+}
+.md-typeset .chatbot > .admonition-title::before,
+.md-typeset .chatbot > summary::before {
+  background-color: #FF1744;
+  -webkit-mask-image: var(--md-admonition-icon--chatbot);
+          mask-image: var(--md-admonition-icon--chatbot);
+}
+
+.md-typeset .admonition.resumo,
+.md-typeset details.resumo {
+  border-color: #64DD17;
+}
+.md-typeset .resumo > .admonition-title,
+.md-typeset .resumo > summary {
+  background-color: #64DD171a;
+}
+.md-typeset .resumo > .admonition-title::before,
+.md-typeset .resumo > summary::before {
+  background-color: #64DD17;
+  -webkit-mask-image: var(--md-admonition-icon--resumo);
+          mask-image: var(--md-admonition-icon--resumo);
+}
+
+.md-typeset .highlight > span.filename::before {
+    position: absolute;
+    left: .8823529412em;
+    bottom: .6em;
+    width: 1.4705882353em;
+    height: 1.4705882353em;
+    background-color: var(--md-default-fg-color);
+    -webkit-mask-image: var(--md-admonition-icon--coding);
+            mask-image: var(--md-admonition-icon--coding);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    content: "";
+}
+.md-typeset .highlight > span.filename {
+  font-size: medium;
+  padding-left: 2.75em;
+}
+
+/*.admonition.danger, .md-typeset details.danger {
+    border-color: #FF1744;
+}*/
+
+.md-typeset .admonition.definição,
+.md-typeset details.definição {
+  border-color: var(--green-unb);
+}
+.md-typeset .definição > .admonition-title,
+.md-typeset .definição > summary {
+  background-color: var(--green-unb-transparent);
+}
+.md-typeset .definição > .admonition-title::before,
+.md-typeset .definição > summary::before {
+  background-color: var(--green-unb);
+  -webkit-mask-image: var(--md-admonition-icon--definicao);
+          mask-image: var(--md-admonition-icon--definicao);
+}
+
+.md-typeset .admonition.dica,
+.md-typeset details.dica {
+  border-color: var(--blue-unb);
+}
+.md-typeset .dica > .admonition-title,
+.md-typeset .dica > summary {
+  background-color: var(--blue-unb-transparent);
+}
+.md-typeset .dica > .admonition-title::before,
+.md-typeset .dica > summary::before {
+  background-color: var(--blue-unb);
+  -webkit-mask-image: var(--md-admonition-icon--dica);
+          mask-image: var(--md-admonition-icon--dica);
 }

@@ -1,24 +1,15 @@
 import logging
-import mkdocs.plugins
+# import mkdocs.plugins
 import os
 import re
 
 
-ADMONITION_PATTERN = re.compile(r'(!!! +(info|note) +"(.*?)".*?)')
 ANCHOR_PATTERN = re.compile(r'\[id> +(.*?)\](\(.*?\))?')
 CODE_BLOCK_NL_PATTERN = re.compile(r'``` +linguagem_natural +title="(.*?)".*?[\s\S]([.\s\S]*?)```')
 INCLUDE_PATTERN = re.compile(r'[\s\S]{! +(.*?) +!}(?=[\s\S])')
 MERMAID_PATTERN = re.compile(r'``` +mermaid +title="(.*?)"([.\s\S]*?)```')
-MY_ADMONITION_PATTERN = re.compile(r'(([!!!|???]) +(\w+)(.*)[\s\S](\s {4}[.\s\S]*?))(?=\n{2}[^\s])')
-
-
-def add_anchor_to_admonitions(markdown):
-    def repl(match):
-        content = match.group(1)
-        sub = match.group(3).strip()
-        return content.replace(sub, f'[id> {sub}]')
-
-    return ADMONITION_PATTERN.sub(repl, markdown)
+# ADMONITION_PATTERN = re.compile(r'((!!!|\?\?\?) +(\w+) (\w.*)[\s\S](\s {4}[.\s\S]*?))(?=\n{2}[^\s])')
+ADMONITION_PATTERN = re.compile(r'(!!!|\?\?\?) +(\w+)(.*?\n)\n([.\s\S]*?)(?=\n\n)')
 
 
 def code_block_NL(markdown):
@@ -29,33 +20,25 @@ def code_block_NL(markdown):
     return CODE_BLOCK_NL_PATTERN.sub(repl, markdown)
 
 
-def my_admonitions(markdown):
+def set_admonitions(markdown):
     def repl(match):
-        full, block_start, block_type, title, body = match.groups()
+        block_start, block_type, title, body = match.groups()
 
-        types = {'info': 'Definição',
-                 'note': 'Dica',
-                 'warning': 'Atenção',
-                 'llm': 'Chat-bot',
-                 }
+        title = title.strip()
+        if block_type == 'chatbot':
+            body = (f'{body}\n\n    Algumas opções são '
+                    '[ChatGPT](https://openai.com/chatgpt/), '
+                    '[Gemini](https://gemini.google.com/), '
+                    '[Claude](https://www.anthropic.com/claude) e '
+                    '[Llama](https://www.llama2.ai/)'
+                    '. **Estes modelos podem cometer erros!** Verifique as '
+                    'informações em fontes confiáveis.')
+        elif title and block_type in ('definição', 'dica'):
+            title = f'"[id> {title[1:-1]}]"'
 
-        if block_type not in types or title:
-            return full
+        return f'{block_start} {block_type} {title}\n{body}'
 
-        if block_type == 'llm':
-            llms = ', '.join(["[ChatGPT](https://openai.com/chatgpt/)",
-                              "[Gemini](https://gemini.google.com/)",
-                              "[Claude](https://www.anthropic.com/claude)",
-                              "[Llama](https://www.llama2.ai/)",
-                              ])
-            footer = (f'\n    Algumas opções são {llms}. **Estes modelos '
-                      'podem cometer erros!** Verifique as informações '
-                      'em fontes confiáveis.')
-            body = f'{body}\n{footer}'
-
-        return f'{block_start} {block_type} "{types[block_type]}"{body}'
-
-    return MY_ADMONITION_PATTERN.sub(repl, markdown)
+    return ADMONITION_PATTERN.sub(repl, markdown)
 
 
 def set_anchors(markdown):
@@ -63,7 +46,7 @@ def set_anchors(markdown):
         text = match.group(1).strip()
         id = text.replace('  ', ' ').replace(' ', '-')
         if match.group(2):
-            return f'[<span id="{id}">{text}</span>]{match.group(2)}'
+            return f'"[<span id="{id}">{text}</span>]{match.group(2)}'
         return f'<span id="{id}">{text}</span>'
 
     return ANCHOR_PATTERN.sub(repl, markdown)
@@ -78,9 +61,9 @@ def on_page_read_source(page, config):
     with open(os.path.join(docs_dir, page.file.src_uri)) as f:
         source = f.read()
 
-    if page.file.src_uri.endswith('.md'):
-        while INCLUDE_PATTERN.search(source):
-            source = INCLUDE_PATTERN.sub(repl, source)
+    while INCLUDE_PATTERN.search(source):
+        source = INCLUDE_PATTERN.sub(repl, source)
+
     return source
 
 
@@ -88,8 +71,8 @@ def check_content(markdown, src_uri):
     sections = {'Citação': r'(!!! quote "\[(.*)\]\(.*\)"[\s\S])\n {4}\*(.*?)\*(?=\n\n)',
                 'Introdução': r'---\n\n([.\s\S]*?)(?=\n---\n)',
                 'Resumo': r'<h\d>Resumo</h\d>',
-                'Exercícios': r'^#+ Exercícios$',
-                'Chat-bot': r'[!!!|???] llm ',
+                'Chat-bot': r'(!!!|\?\?\?) chatbot',
+                'Exercícios': r'^\?\?\? exercícios$',
                 }
 
     for section, regex in sections.items():
@@ -101,13 +84,12 @@ def check_content(markdown, src_uri):
 
 
 def on_page_markdown(markdown, page, config, files):
-    # markdown = include_files(markdown)
-    markdown = my_admonitions(markdown)
-    markdown = add_anchor_to_admonitions(markdown)
+    src_uri = page.file.src_uri
+    if src_uri != index_uri:
+        markdown = set_admonitions(markdown)
     markdown = set_anchors(markdown)
     markdown = code_block_NL(markdown)
     markdown = mermaid_title(markdown)
-    src_uri = page.file.src_uri
     if src_uri != index_uri:  # and '/' not in src_uri:
         check_content(markdown, src_uri)
     return markdown

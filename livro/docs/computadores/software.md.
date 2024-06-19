@@ -19,3 +19,7 @@ Os programas de *desenvolvimento* auxiliam o desenvolvimento de programas, como 
 <h3>Aplicações</h3>
 
 São os programas com fins específicos, como [navegadores](http://pt.wikipedia.org/wiki/Navegador_%28inform%C3%A1tica%29), [programa para escritório](http://pt.wikipedia.org/wiki/Su%C3%ADte_de_escrit%C3%B3rio), [entretenimento](http://pt.wikipedia.org/wiki/Jogo_de_computador), e muitos, muitos mais.
+
+As aplicações de maior interesse neste contexto são as de desenvolvimento de software. Durante o aprendizado, vale a pena entender como usar um editor de texto simples e a linha de comando, de modo a consolidar os conhecimentos e habilidades práticas de programação. Entretanto, certas IDEs são de grande valia no processo. Por exemplo, o [Thonny](https://thonny.org/).
+
+Esta IDE foi criada com o foco no aprendizado, com interface simples e intuitiva, disponibilizando uma série de informações como conteúdo de variáveis e, principalmente, de depuração integrada. Isso permite que se acompanhe a execução de cada instrução, passo a passo, visualização de chamadas de funções.

@@ -1,5 +1,7 @@
-# Leia os dados em uma lista
+# Leia os dados em uma lista.
 dados = list(map(int, input().split()))
+# Aqui são transformados em números, mas o algoritmo funciona para qualquer
+# tipo de dado que pode ser comparado.
 
 # Enquanto os dados não estiverem em ordem
 num_dados = len(dados)

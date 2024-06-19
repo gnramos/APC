@@ -13,7 +13,7 @@ Algoritmos são "métodos" ou instruções para realizar uma tarefa. Por exemplo
 
 Um algoritmo descreve o processo para se obter um resultado, e espera-se que este resultado seja alcançado independentemente de quem esteja seguindo os passos. Pessoas diferentes seguindo uma mesma receita deveriam produzir o mesmo bolo, chegar ao mesmo local e obter o mesmo valor. Entretanto, seres humanos são muito inteligentes, e conseguem abstrair detalhes e inferir uma série de informações ausentes em sua comunicação. Considere o algoritmo abaixo, a maioria dos recém ingressos à universidade não teria dificuldade em resolvê-lo com sucesso.
 
-``` linguagem_natural title="Média Aritmética"
+```linguagem_natural title="Média Aritmética"
 Leia quatro números e calcule a média aritmética.
 ```
 
@@ -23,13 +23,13 @@ Apesar da aparente simplicidade, ele apresenta diversas possíveis interpretaç�
 
 Esta variação (e outras possíveis) não parece ser a forma mais óbvia de se resolver o problema, mas nem por isso está errada considerando a forma como as instruções foram apresentadas no algoritmo. A ideia por trás do conceito de algoritmo é descrever um processo de modo que os mesmos resultados possam ser obtidos independentemente de que executa os passos. É fácil enxergar isso considerando uma receita de bolo sendo compartilhada: se for bem detalhada, mesmo uma pessoa que nunca cozinhou na vida consegue chegar ao resultado desejado. Portanto, buscamos essa descrição do processo que permite garantir o resultado e abstrair do contexto "quem" (ou "o que") realiza o esforço.
 
-!!! note
+!!! dica
 
     A principal característica de um algoritmo é sua corretude, ou seja, sua capacidade de realizar corretamente a tarefa conforme a especificação.
 
 O computador é uma ferramenta fantástica que faz, muito rapidamente, exatamente o que pedimos - desde que esta solicitação seja feita de um modo que a máquina consiga interpretar de forma inequívoca. O objetivo se torna, portanto, definir um *algoritmo computacional*, ou seja, descrever as instruções do algoritmo de um modo específico e detalhado o suficiente para que o computador possa interpretá-las para realizar a tarefa em questão[@Cormen2013].
 
-!!! info "Algoritmo Computacional"
+!!! definição "Algoritmo Computacional"
 
     Uma sequência finita de instruções bem definidas para realizar uma tarefa com um computador.
 

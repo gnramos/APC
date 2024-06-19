@@ -6,7 +6,7 @@
 
 ---
 
-*Este capítulo apresenta as principais ideias do pensamento computacional e como elas podem ser aplicadas. Ao final do texto, espera-se que se tenha uma noção de como elas podem ser utilizadas na resolução de problemas diferentes.*
+*Este capítulo apresenta as principais ideias do pensamento computacional e como elas podem ser aplicadas na resolução de problemas. Ao final do texto, espera-se que se tenha uma noção clara do que significa cada uma delas e aplicá-las em problemas simples.*
 
 ---
 
@@ -39,7 +39,12 @@ Essencialmente, o pensamento computacional envolve habilidades de converter prob
 
 {! pensamento_computacional/resumo.md. !}
 
-{! pensamento_computacional/llm.md. !}
+??? chatbot
+
+    * O que é pensamento computacional?
+    * O que é pensamento algorítmico?
+    * De forma simplificada, o que é corretude de um algoritmo?
+    * De forma simplificada, o que é eficiência de um algoritmo?
+    * De forma simplificada, o que é usabilidade de um algoritmo?
 
 {! pensamento_computacional/exercicios.md. !}
-

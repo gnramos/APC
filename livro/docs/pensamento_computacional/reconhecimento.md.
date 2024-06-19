@@ -10,9 +10,9 @@ Embora claramente diferentes, elas também têm similaridades. O comportamento d
 
 Considere o problema de definir um procedimento para desenhar um um triângulo equilátero. Sabe-se que ele tem os 3 ângulos internos iguais a 60° e as 3 linhas com o mesmo comprimento. Se o ângulo interno é de 60°, [o ângulo externo é de 120°](https://pt.wikipedia.org/wiki/%C3%82ngulos_internos_e_externos#Propriedades), e torna-se relativamente simples definir um algoritmo que desenhe uma destas formas. De modo similar, um quadrado tem os 4 ângulos internos iguais a 90° e as 4 linhas com o mesmo comprimento; sendo simples adaptar o algoritmo anterior para desenhar um quadrado. Desenvolvendo esta abordagem para um pentágono regular, é possível perceber que as soluções são muito similares... A solução proposta constrói o desenho de modo que cada linha continua a partir do fim da linha anterior, usando o ângulo externo do polígono para a rotação.
 
-![Ângulos interno/externo](img/AnguloExterno.png "Ângulos interno/externo"){ width="50%" } |
-:------:|
-Propriedade dos ângulos interno/externo. |
+| ![Ângulos interno/externo](img/AnguloExterno.png "Ângulos interno/externo"){ width="50%" } |
+|:------:|
+| Propriedade dos ângulos interno/externo. |
 
 === "Triângulo"
 

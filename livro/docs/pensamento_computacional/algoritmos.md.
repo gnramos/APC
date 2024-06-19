@@ -2,13 +2,13 @@
 
 O passo final do pensamento computacional é criar uma sequência de instruções que resolve o problema. O ponto chave é guiar o raciocínio para construir a solução. Para tanto, é preciso considerar uma série de coisas. Qual o objetivo principal? Como abstrair o contexto? Como decompô-lo em partes mais acessíveis? Em que ordem estas partes devem ser tratadas?
 
-!!! info "Pensamento Algorítmico"
+!!! definição "Pensamento Algorítmico"
 
     Processo de construir uma sequência de passos ordenados que pode ser seguida para obter uma solução para todos os problemas constituintes necessários para resolver o problema original[@Cansu2019].
 
 A aplicação do pensamento algorítmico depende de um bom entendimento do problema. É preciso saber claramente quais as informações fornecidas e o que se espera como resultado. Considere se há alguma parte que precisa ser repetida ou se há comportamentos diferentes dependendo de certas condições. São ponderações necessárias para desenvolver uma solução.
 
-!!! note
+!!! dica
 
     Duas ideias que ajudam este processo são: 1) se perguntar "E se eu fizesse desse jeito?" (explorando formas diferentes de resolver o problema); e 2) explicar a sua solução a alguém (ou a um [pato de borracha](https://pt.wikipedia.org/wiki/Debug_com_Pato_de_Borracha)), ao tentar ensinar uma solução [você estará efetivamente aprendendo sobre ela](https://degraucultural.com.br/noticia/ensinar-e-uma-das-melhores-formas-de-aprender-entenda).
 

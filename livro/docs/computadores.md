@@ -6,7 +6,7 @@
 
 ---
 
-*<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Introdução-red">*
+*Este capítulo apresenta os conceitos básico envolvidos na concepção, construção e uso do computador. Espera-se que o texto forneça uma noção superficial de como a parte física e lógica funcionam e servem de base para a construção de programas de computadores.*
 
 ---
 
@@ -55,17 +55,18 @@ Entender mais sobre esta máquina e como ela funciona é essencial para usá-la 
 
 {! computadores/software.md. !}
 
-<h2>Resumo</h2>
+??? resumo
 
-<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red">
+    <img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red">
 
-??? llm
+??? chatbot
 
     * Explique a arquitetura Von Neumann.
     * O que é hardware em um computador?
     * O que é software?
     * Explique os níveis de memória de um computador.
     * Explique as camadas de software de um computador.
-    * Explique o conceito de linguagem de programação
+    * Explique o conceito de linguagem de programação.
+    * Qual a diferença entre compilador e interpretador?
 
 {! computadores/exercicios.md. !}

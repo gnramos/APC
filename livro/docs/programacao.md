@@ -1,8 +1,8 @@
 # Programação
 
-!!! quote "[Larry O’Brien & Bruce Eckel](https://777russia.ru/book/uploads/%D0%9E%D0%A1%D0%9D%D0%9E%D0%92%D0%AB%20%D0%A0%D0%9E%D0%91%D0%9E%D0%A2%D0%9E%D0%A2%D0%95%D0%A5%D0%9D%D0%98%D0%9A%D0%98/Prentice%20Hall%20-%20Thinking%20In%20C%23.pdf)"
+!!! quote "Larry O’Brien & Bruce Eckel"
 
-    *Programação de computadores é muito divertida. Como música, é uma habilidade originada em um talento desconhecido e prática constantes.*
+    *Programação de computadores é muito divertida. Como música, é uma habilidade originada da mistura de um talento natural e prática constante.*
 
 ---
 

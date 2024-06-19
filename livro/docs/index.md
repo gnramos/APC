@@ -15,25 +15,33 @@ A ideia é familiarizar o leitor com os principais conceitos envolvidos na conce
 
 Este livro usa as seguintes convenções para destacar algumas informações.
 
-``` linguagem_natural title="Algoritmo / Programa"
+```linguagem_natural title="Algoritmo / Programa"
 Apresenta um algoritmo ou programa.
 ```
 
-!!! warning
+!!! atenção
 
     Apresenta um aviso sobre uma situação recorrente no contexto.
 
-!!! llm "Chat-bot"
+!!! chatbot
 
     Indica pontos que podem ser melhor desenvolvidos com o apoio de inteligência artificial.
 
-!!! info
+!!! definição
 
     Apresenta a definição de um conceito.
 
-!!! note
+!!! dica
 
     Apresenta uma informação ou sugestão relevante no contexto.
+
+!!! exercícios
+
+    Apresenta exercícios para prática e acompanhamento do conteúdo teórico.
+
+!!! resumo
+
+    Apresenta o resumo do conteúdo.
 
 <h2>Por fim...</h2>
 
