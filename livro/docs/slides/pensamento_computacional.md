@@ -124,15 +124,15 @@ Dentre as possíveis soluções, considere:
 
 --
 
-#### Encontrar a página **P** em um livro
+#### Encontrar a página P em um livro
 
-😫 Feche os olhos. <!-- .element: class="fragment" -->
+😫 Feche os olhos.<!-- .element: class="fragment" -->
 
-😐 Enquanto não encontrar a página **P**, escolha uma página qualquer. <!-- .element: class="fragment" -->
+😐 Enquanto não encontrar a página P, escolha uma página qualquer.<!-- .element: class="fragment" -->
 
-😌 Escolha a 1a página. Enquanto a escolhida não for **P**, escolha a página seguinte. <!-- .element: class="fragment" -->
+😌 Escolha a 1a página. Enquanto a escolhida não for P, escolha a página seguinte.<!-- .element: class="fragment" -->
 
-😀 Escolha a página do meio. Se for **P**, pare. Se for maior que **P**, descarte-a e todas as páginas anteriores. Caso contrário, descarte-a e todas as posteriores. Repita este processo. <!-- .element: class="fragment" -->
+😀 Escolha a página do meio. Se for P, pare. Se for maior que P, descarte-a e todas as páginas anteriores. Caso contrário, descarte-a e todas as posteriores. Repita este processo.<!-- .element: class="fragment" -->
 
 ---
 
