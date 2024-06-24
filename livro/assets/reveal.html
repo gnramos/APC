@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  {% if config.title %}<title>{{ config.title }}</title>{% endif %}
+  <title>{% if config.theme.reveal.title %}{{ config.theme.reveal.title }}{% else %}{{ config.theme.reveal.title }}{% endif %}</title>
+
   {%- if config.description -%}
   <meta name="description" content="{{ config.description }}">
   {%- endif -%}
@@ -16,10 +17,9 @@
   <base href="{{ config.site_url }}">
   <link rel="canonical" href="{{ config.site_url }}">
 
-  <link rel="stylesheet" href="{{ config.reveal.path }}/reset.css">
-  <link rel="stylesheet" href="{{ config.reveal.path }}/reveal.css">
-  <link rel="stylesheet" href="{{ config.reveal.path }}/{{ config.reveal.theme.path }}/{{ config.reveal.theme.name }}"
-        id="theme">
+  <link rel="stylesheet" href="{{ config.theme.reveal.path }}/reset.css">
+  <link rel="stylesheet" href="{{ config.theme.reveal.path }}/reveal.css">
+  <link rel="stylesheet" href="{{ config.theme.reveal.path }}/{{ config.theme.reveal.theme.path }}/{{ config.theme.reveal.theme.name }}" id="theme">
 
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="stylesheets/isotope.css" id="highlight-theme">
@@ -57,12 +57,12 @@
   </div>
 </div>
 
-<script src="{{ config.reveal.path }}/reveal.js"></script>
+<script src="{{ config.theme.reveal.path }}/reveal.js"></script>
 
-<script src="{{ config.reveal.plugin.path }}/markdown/markdown.js"></script>
-<script src="{{ config.reveal.plugin.path }}/highlight/highlight.js"></script>
-<script src="{{ config.reveal.plugin.path }}/zoom/zoom.js"></script>
-<script src="{{ config.reveal.plugin.path }}/notes/notes.js"></script>
+<script src="{{ config.theme.reveal.plugin.path }}/markdown/markdown.js"></script>
+<script src="{{ config.theme.reveal.plugin.path }}/highlight/highlight.js"></script>
+<script src="{{ config.theme.reveal.plugin.path }}/zoom/zoom.js"></script>
+<script src="{{ config.theme.reveal.plugin.path }}/notes/notes.js"></script>
 
 <script>
   // Full list of configuration options available here:
@@ -79,7 +79,7 @@
     slideNumber: true,  // https://revealjs.com/slide-numbers/
     navigationMode: 'linear', // https://revealjs.com/vertical-slides/
 
-    transition: '{{ config.reveal.transition }}', // default/cube/page/concave/zoom/linear/fade/none
+    transition: '{{ config.theme.reveal.transition }}', // default/cube/page/concave/zoom/linear/fade/none
     // Learn about plugins: https://revealjs.com/plugins/
     plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
   });

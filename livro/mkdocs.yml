@@ -19,14 +19,14 @@ theme:
         - toc.integrate
     language: pt
     logo: images/UnB/marca_unb.png
-reveal:
-  path: reveal.js/dist
-  transition: slide
-  theme:
-    name: white.css
-    path: theme
-  plugin:
-    path: reveal.js/plugin
+    reveal:
+        path: reveal.js/dist
+        transition: slide
+        theme:
+            name: white.css
+            path: theme
+        plugin:
+            path: reveal.js/plugin
 extra:
     generator: false
     mailto: gnramos@unb.br
