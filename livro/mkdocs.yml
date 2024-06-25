@@ -4,7 +4,7 @@ copyright: <p><a href="https://gnramos.github.com/APC">Livro de APC</a> por <a h
 docs_dir: docs
 site_dir: html
 # repo_url: https://github.com/gnramos/APC
-site_url: https://github.com/gnramos/APC/
+site_url: https://gnramos.github.io/APC/
 theme:
     name: material
     custom_dir: assets
@@ -69,7 +69,7 @@ nav:
     # - Programação: programacao.md
     # - Estruturas de Dados: estruturas_de_dados.md
     - Slides:  # link para md força um refresh
-        - Pensamento Computacional: slides/pensamento_computacional.md
+        - Pensamento Computacional: slides/pensamento_computacional/index.html
         - Programação: slides/programacao/index.html
 plugins:
     - search
