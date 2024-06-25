@@ -12,7 +12,7 @@ template: reveal.html
 
 **Albert Einstein**
 
-![Albert Einstein](slides/images/people/einstein.png "Albert Einstein") <!-- .element width="15%" -->
+![Albert Einstein](images/slides/people/einstein.png "Albert Einstein") <!-- .element width="15%" -->
 
 ---
 
@@ -109,7 +109,7 @@ Uso de mecanismos para realização de um algoritmo.
 
 --
 
-!["Braço robótico"](slides/images/manufacturing.png "Braço robótico") <!-- .element width="20%" -->
+!["Braço robótico"](images/slides/manufacturing.png "Braço robótico") <!-- .element width="20%" -->
 
 Produção, produtividade, eficiência, uniformidade, qualidade, liberação de recurso humano, etc.
 

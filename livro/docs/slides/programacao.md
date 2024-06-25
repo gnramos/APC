@@ -28,7 +28,7 @@ Processo de expressar um algoritmo como instruções em uma linguagem de program
 |:------:|:------------:|:-----------:|
 | 👁      | Português <!-- .element: class="fragment" data-fragment-index="1" -->    | Python <!-- .element: class="fragment" data-fragment-index="2" --> |
 | 👋      | English <!-- .element: class="fragment" data-fragment-index="1" -->      | C / C++ <!-- .element: class="fragment" data-fragment-index="2" --> |
-| 👃      | 日本語 <!-- .element: class="fragment" data-fragment-index="1" -->        | Assembly <!-- .element: class="fragment" data-fragment-index="2" --> |
+| 👃      | 日本語   <!-- .element: class="fragment" data-fragment-index="1" -->      | Assembly <!-- .element: class="fragment" data-fragment-index="2" --> |
 | 👂      | اَلْعَرَبِيَّةُ <!-- .element: class="fragment" data-fragment-index="1" --> ا    | Haskell <!-- .element: class="fragment" data-fragment-index="2" --> |
 | 🗲      | русский язык <!-- .element: class="fragment" data-fragment-index="1" --> | LISP <!-- .element: class="fragment" data-fragment-index="2" -->    |
 
@@ -106,7 +106,7 @@ Usa um vocabulário mais rico para facilitar programação.
 
 ---
 
-![Python](slides/images/python-logo-generic.svg "Python") <!-- .element width="50%" -->
+![Python](images/slides/python-logo-generic.svg "Python") <!-- .element width="50%" -->
 
 --
 
@@ -120,7 +120,7 @@ Usa um vocabulário mais rico para facilitar programação.
 
 --
 
-![UnB 'Real'](slides/images/python_os.svg) <!-- .element width="50%" -->
+![UnB 'Real'](images/slides/python_os.svg) <!-- .element width="50%" -->
 
 --
 

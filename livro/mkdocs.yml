@@ -69,7 +69,7 @@ nav:
     # - Programação: programacao.md
     # - Estruturas de Dados: estruturas_de_dados.md
     - Slides:  # link para md força um refresh
-        - Pensamento Computacional: slides/pensamento_computacional/index.html
+        - Pensamento Computacional: slides/pensamento_computacional.md
         - Programação: slides/programacao/index.html
 plugins:
     - search
