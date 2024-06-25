@@ -1,0 +1,1440 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+        <link rel="canonical" href="https://gnramos.github.io/APC/programacao/">
+      
+      
+      
+      <link rel="icon" href="../images/UnB/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Programação - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#programacao" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../images/UnB/marca_unb.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Programação
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../images/UnB/marca_unb.png" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pensamento_computacional/" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Slides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Slides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/pensamento_computacional/index.html" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/programacao/index.html" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="programacao">Programação</h1>
+<div class="admonition quote">
+<p class="admonition-title">Larry O’Brien &amp; Bruce Eckel</p>
+<p><em>Programação de computadores é muito divertida. Como música, é uma habilidade originada da mistura de um talento natural e prática constante.</em></p>
+</div>
+<hr />
+<p><em><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Introdução-red"></em></p>
+<hr />
+<p>Como o programa resultante determina o comportamento obtido, pode-se considerar a programação como a ação de instruir um computador sobre como realizar algum tipo de operação - é uma forma de se comunicar com a máquina.</p>
+<p>Um computador é utilizado na resolução de problemas, e geralmente um "usuário" fornece informações para isso enquanto um "programador" define novas operações (e tipos de dados)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> que resultam em novas soluções. O papel do programador é usar e orquestrar cada recurso (componentes do computador) para resolver um problema e analisar os dados que obtiver desta solução<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+<div class="admonition info">
+<p class="admonition-title">Programação</p>
+<p>Programação é o processo de expressar um algoritmo como instruções em uma linguagem de programação.</p>
+</div>
+<h2 id="linguagem-de-programacao">Linguagem de Programação</h2>
+<p>A linguagem de programação é um conjunto de termos (vocabulário) e regras (sintaxe) que permite a formulação de instruções para um computador, viabilizando a expressão de um algoritmo de tal modo que possa ser executado pela máquina. O vocabulário determina o conjunto de termos que têm significado especificado na linguagem e que deve ser usado na composição das instruções. A sintaxe determina como usar o vocabulário para formar instruções (gramaticalmente) corretas na linguagem. O significado computacional de uma instrução válida é a semântica.</p>
+<p>Esses conceitos existem também na língua portuguesa. Pode-se construir uma frase com vocabulário inexistente como "Mxyzptlk zxcvbnm", ou uma com termos conhecidos mas sintática e semanticamente incorreta como "pão ela navegou"; sintaticamente correta mas semanticamente incorreta como "ela navegou pão" e também a frase correta "ela comeu pão".</p>
+<div class="admonition info">
+<p class="admonition-title">Programação / Linguagem de programação</p>
+<p>Programação é o processo de transformar o algoritmo em instruções em uma linguagem de programação, que permite a formulação de instruções a um computador. A linguagem de programação é um conjunto de termos (vocabulário) e regras (sintaxe) que permite a formulação de instruções para um computador.</p>
+</div>
+<p>Toda linguagem de programação é baseada em instruções <em>primitivas</em>, as entidades mais simples que ela trata; em <em>formas de combinação</em> destes elementos simples, e em <em>formas de abstração</em> destas combinações de modo que possam também ser consideradas como primitivas<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>. Por exemplo, pode-se combinar muitas instruções primitivas necessárias para exibir uma mensagem na saída padrão de tal forma que este processo seja fácil e intuitivamente obtido por uma nova primitiva: <code>print</code>.</p>
+<p><a href="http://pt.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> mostrou que 6 primitivas são suficientes para computar qualquer coisa [computável]. Assim, uma linguagem de programação [<a href="http://pt.wikipedia.org/wiki/Turing_completude"><em>Turing-completa</em></a>] define tanto a <a href="http://pt.wikipedia.org/wiki/Sintaxe_%28l%C3%B3gica%29">sintaxe</a> quanto a <a href="http://pt.wikipedia.org/wiki/Sem%C3%A2ntica">semântica</a> necessárias para traduzir o pensamento computacional em passos que um computador pode executar.</p>
+<p>As linguagens modernas têm um conjunto maior e mais conveniente de primitivas que as 6 de Turing, e permitem que você as agrupe para elaborar programas mais complexos. Estas novas abstrações também podem ser agrupadas, e assim sucessivamente. Por exemplo, as primitivas mais comuns são: números (<span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(-2\)</span>, <span class="arithmatex">\(3.14\)</span>), símbolos ("@", "Alan M. Turing", ":)"), e operações simples (<span class="arithmatex">\(+\)</span>, <span class="arithmatex">\(-\)</span>, <span class="arithmatex">\(\times\)</span>, <span class="arithmatex">\(\div\)</span>).</p>
+<p>A sintaxe da linguagem indica quais expressões são simbolicamente corretas (<code>1 + 1</code>), ou não (<code>João ÷</code>). A semântica lida com o significado associado a uma expressão sintaticamente correta, que pode ser logicamente correto (<code>dois = 1 + 1</code>) ou não (<code>area_do_quadrado = lado + lado</code>). Erros sintáticos são relativamente fáceis de se encontrar, mas o mesmo não pode ser dito sobre erros semânticos.</p>
+<p>A <strong>linguagem de máquina</strong> é a que o hardware [específico] entende (código binário). A vantagem é que não é preciso gastar esforços traduzindo instruções, mas é praticamente incompreensível para humanos [normais].</p>
+<p>Uma <strong>linguagem de baixo nível</strong> usa <a href="http://pt.wikipedia.org/wiki/Assembly">instruções mnemônicas</a> para tentar facilitar a programação. A vantagem é ser muito mais inteligível que a de máquina, mas também é pouco amigável e, dependendo do hardware utilizado, precisa ser traduzida para linguagem de máquina.</p>
+<p>Já uma <strong>linguagem de alto nível</strong> usa um vocabulário mais rico para facilitar programação. É "facilmente" aprendida e independente do hardware, mas precisa ser traduzida para linguagem de máquina. As linguagens de alto nível claramente possibilitam programas mais breves e legíveis, mas o fazem pela composição e abstração das primitivas da máquina. Conhecendo uma linguagem de programação, pode-se elaborar programas bem interessantes.</p>
+<p>O exemplo tradicional é o "<a href="http://pt.wikipedia.org/wiki/Programa_Ol%C3%A1_Mundo">Olá mundo!</a>".</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">Rust</label><label for="__tabbed_1_3">C</label><label for="__tabbed_1_4">Assembly</label><label for="__tabbed_1_5">Código Binário</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ola mundo!&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-Rust highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Ola mundo!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>section .data
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>msg     db      &#39;Ola mundo!&#39;, 0AH
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>len     equ     $-msg
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>section .text
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>global  _start
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>_start: mov     edx, len
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        mov     ecx, msg
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        mov     ebx, 1
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        mov     eax, 4
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        int     80h
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        mov     ebx, 0
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        mov     eax, 1
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        int     80h
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>0111 1111 0100 0101 0100 1100 0100 0110
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>0000 0010 0000 0001 0000 0001 0000 0000
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>0000 0000 0000 0000 0000 0000 0000 0000
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>0000 0000 0000 0000 0000 0000 0000 0000
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>0000 0010 0000 0000 0011 1110 0000 0000
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>0000 0001 0000 0000 0000 0000 0000 0000
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>0100 0000 0000 0100 0100 0000 0000 0000
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>0000 0000 0000 0000 0000 0000 0000 0000
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>(continua por mais 2120 linhas)
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Compreender os fundamentos e técnicas de programação é mais importante que dominar uma linguagem específica.</p>
+</div>
+<p>Havendo um programa sintaticamente correto, é preciso traduzi-lo da linguagem de alto nível para a linguagem de máquina para que haja instruções que o computador usado consiga interpretar (cada dispositivo fala sua própria linguagem). Neste processo, o código fonte é <em>verificado</em> para garantir que não contém erros sintáticos. Dependendo da implementação da linguagem, este código é <em>compilado</em>, gerando um <em><a href="http://pt.wikipedia.org/wiki/C%C3%B3digo_objeto">objeto</a></em> (a versão das instruções originais em binário) que, por sua vez, é interpretado por um programa gerando um arquivo que pode ser executado.</p>
+<p>Qualquer linguagem de programação pode ser interpretada ou compilada, estas são formas de <em>implementação</em> (e não características da linguagem) que não são, necessariamente, exclusivas. A <em>interpretação</em> é realizada por um programa específico (o interpretador) que realiza as instruções pelo programa sendo interpretado de modo que este seja executado. Imagine que, a cada passo, uma instrução é interpretada e executada. Já a <em>compilação</em> (realizada pelo programa compilador) traduz completamente o programa original em código objeto que pode ser executado pela máquina.</p>
+<p>A interpretação tende a ser mais portátil, e tem a "vantagem" de realizar um passo de cada vez, já a compilação pode a gerar código otimizado e que não precisa ser interpretado a cada instrução. Outra diferença é que interpretadores são mais simples de se construir que compiladores.</p>
+<p>Existem diversas ferramentas para realizar este processo, como o compilador <a href="http://pt.wikipedia.org/wiki/GNU_Compiler_Collection">GCC</a> para linguagem C ou o interpretador Python 3. No caso do exemplo abaixo, supondo que se esteja no diretório do arquivo com código fonte, bastaria executar na linha de comando:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Python</label><label for="__tabbed_2_2">C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>python<span class="w"> </span>ola_mundo.py
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><span class="filename">Olá mundo!</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>gcc<span class="w"> </span>ola_mundo.c<span class="w"> </span>-o<span class="w"> </span>ola_mundo
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$<span class="w"> </span>./ola_mundo
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="conceitos-basicos">Conceitos Básicos</h3>
+<p>A execução do programa passa pela interpretação das instruções apresentadas. Uma <em>instrução</em> <code>&lt;instr&gt;</code> é um comando sintaticamente correto que pode ser diretamente executado. Já uma <em>expressão</em> <code>&lt;expr&gt;</code> é uma instrução que precisa ser interpretada e que produz um resultado (que pode ser armazenado). Por exemplo, ao interagir com um agente humano como executor do algoritmo, ele entende a instrução <code>&lt;Levante&gt;</code> e a realiza, mas não há uma informação produzida como resultado disto. Em seguida, podemos passar a expressão <code>&lt;Fale seu nome&gt;</code>, cujos termos precisam ser analisados e interpretados no contexto para que o agente possa reconhecer quem deve executar (o próprio agente), qual a ação  a ser executada (falar) e sobre o que ela deve executar (o nome) - só então ele pode executar o que foi solicitado e produzir uma nova informação (o nome falado), que se pode ser armazenado (ou não) para uma necessidade futura.</p>
+<p>Uma expressão pode ser composta por apenas um valor, como <code>&lt;Pedro&gt;</code> ou <code>&lt;42&gt;</code>, e também por diferentes valores e operadores. A expressão <code>2 + 3</code> produz o resultado 5 ao ser executada.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Instruções</label><label for="__tabbed_3_2">Expressões</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">pass</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">21</span> <span class="o">*</span> <span class="mi">2</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="mi">42</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">20</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="mi">7</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">4</span> <span class="o">*</span> <span class="mf">2.5</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="o">-</span><span class="mf">9.5</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="constantes-variaveis">Constantes &amp; Variáveis</h3>
+<div class="admonition info">
+<p class="admonition-title">Constante</p>
+<p>Uma <em>constante</em> <code>&lt;C&gt;</code> é um valor armazenado que não é alterado no decorrer do processamento.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Variável</p>
+<p>Uma <em>variável</em> <code>&lt;v&gt;</code> é um valor armazenado que pode ser alterado no decorrer do processamento.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Constantes</label><label for="__tabbed_4_2">Variáveis</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="mf">3.141592653589793</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">13</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">123</span>  <span class="c1"># o valor de x não foi alterado, mas o de y sim.</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Variáveis e constantes exigem um pouco mais de...</p>
+<h3>Resumo</h3>
+
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red"></p>
+<details class="llm">
+<summary>Llm</summary>
+<ul>
+<li>O que faz um programador?</li>
+<li>Explique o conceito de linguagem de programação.</li>
+<li>Qual a diferença entre instrução e expressão em uma linguagem de programação?</li>
+</ul>
+</details>
+<h3>Exercícios</h3>
+
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-bool-red"></p>
+<h2 id="tipos-de-dados">Tipos de Dados</h2>
+<div class="admonition quote">
+<p class="admonition-title"><a href="https://en.wikipedia.org/wiki/Daniel_Keys_Moran">Daniel Keys Moran</a></p>
+<p><em>Você pode ter dados sem informação, mas não pode ter informação sem dados.</em></p>
+</div>
+<hr />
+<p><em><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Introdução-red"></em></p>
+<hr />
+<p>Todo processo no computador gerencia a execução de um programa armazenado, a implementação de um algoritmo computacional nãos sendo, portanto, possível dissociar um algoritmo de dados manipulados - o próprio programa é um conjunto de dados (as instruções). Além disso, praticamente todos os programas manipulas dados fornecidos e gerados no processamento, na forma de variáveis ou constantes, que são os objetos de dados básicos manipulados em um programa<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
+<p>O forma como organizamos estes dados tem impacto direto no desempenho do computador. Ao executar um algoritmo computacional, estamos exigindo esforço da máquina para realizar o trabalho de processamento. Este esforço depende da quantidade de instruções sendo executadas, e do custo de cada instruções (podemos ter instruções mais simples e baratas, e instruções mais complexas e caras). A organização dos dados tem impacto direto neste esforço, e buscamos deixá-los organizados de forma a tornar o processo menos custoso. Por exemplo, imagine que seu problema é interpretar números e somá-los, é muito mais fácil<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> fazer isso se lhe forem apresentados os números estruturados como <span class="arithmatex">\(49\)</span> e <span class="arithmatex">\(1\)</span> (com resultado <span class="arithmatex">\(50\)</span>) que se fossem como <span class="arithmatex">\(XLIX\)</span> e <span class="arithmatex">\(I\)</span> (também com resultado <span class="arithmatex">\(L\)</span>).</p>
+<p>A memória do computador é um conjunto ordenado de bits, ou seja, toda informação é armazenada como zeros e uns e há uma ordem posicional entre eles (existe um primeiro bit, que pode ser <code>0/1</code>, um segundo bit que também pode ser <code>0/1</code>, e assim sucessivamente até um último bit). Para facilitar, há uma <a href="http://pt.wikipedia.org/wiki/Byte">nomenclatura específica</a> para lidar com a quantidade de bits sendo 1 byte (8 bits) a unidade mais comum para quantificá-lo. A composição de bits permite representar mais estados; 2 bits são 4 estados (<code>00/01/11/10</code>), 3 bits definem 8 estados, e assim sucessivamente - havendo <span class="arithmatex">\(n\)</span> bits podemos definir <span class="arithmatex">\(2^n\)</span> estados distintos. O significado da informação armazenada depende da forma de interpretar estes bits, um mesmo conjunto de bits tem significados diferentes se for interpretado como um número, um símbolo ou outra coisa. Por exemplo, um byte pode assumir um de 256 valores numéricos diferentes, mas também pode representar inúmeras informações diferentes se mudarmos a forma de interpretá-lo.</p>
+<p><img alt="Diferentes interpretações para 1 byte" src="../images/byte_interpretacao.png" title="Diferentes interpretações para 1 byte" width="75%" /></p>
+<p>A representação do dado é necessariamente binária mas a interpretação dos bits é o que define a informação. Esta interpretação é determinada pelo <em>tipo de dado</em>, e cada tipo tem suas características específicas definidas pela linguagem de programação. Por exemplo, o conjunto de bits <code>01000001001000000000000000000000</code> pode ser interpretado como o valor numérico do tipo inteiro 1092616192, como o valor numérico do tipo real 10.0 ou como um tipo simbólico <code>A</code> (<a href="https://pt.wikipedia.org/wiki/ascii">ASCII</a>). Estes três tipos de dados, entre outros, geralmente estão presentes em qualquer linguagem de programação.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Como um mesmo conjunto de bits pode ser interpretado de diferentes formas, é preciso saber que tipo de dado foi armazenado na memória para interpretá-lo corretamente.</p>
+</div>
+<p>Um <em><span id="tipo-abstrato-de-dado">tipo abstrato de dado</span></em> (TAD) determina um tipo de dado e as operações definidas sobre ele, delimitando assim a quantidade de informação necessária para manipulação dos valores pelo computador e, consequentemente, facilitando a programação. Por exemplo, o conjunto de números naturais <span class="arithmatex">\(\mathbb{N}\)</span> e suas operações (como <span class="arithmatex">\(+, -, /, *\)</span>) é um TAD.</p>
+<div class="admonition info">
+<p class="admonition-title">Estrutura de Dados</p>
+<p>Forma concreta de se implementar um tipo abstrato de dados em uma linguagem de programação, de modo a organizar os dados na memória para facilitar o acesso e a manipulação destes.</p>
+</div>
+<p>Portanto, para cada linguagem de programação específica, o tipo do dado determina:</p>
+<ol>
+<li>o significado do valor armazenado;</li>
+<li>como o valor é armazenado nos bits;</li>
+<li>quais os possíveis valores que podem ser armazenados; e</li>
+<li>quais as operações podem ser realizadas com o valor.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As características de uma estrutura de dados específica são importantes pois determinam o que pode e também o que <strong>não</strong> pode ser feito com ela.</p>
+</div>
+<h3>Resumo</h3>
+
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red"></p>
+<details class="llm">
+<summary>Llm</summary>
+<ul>
+<li>Explique o conceito de tipo de dados em programação.</li>
+<li>O que é o fluxo de controle de um programa?</li>
+</ul>
+</details>
+<h3>Exercícios</h3>
+
+<details class="question">
+<summary>Dado um número não negativo qualquer na base hexadecimal, descreva o algoritmos para transformá-lo em um número binário.</summary>
+<p>Como a base 16 é múltipla de 2, o processo manual é bem simples. Cada algarismo hexadecimal pode ser diretamente mapeado para seu valor binário de 4 bits, na mesma ordem. Por exemplo, para <span class="arithmatex">\(2A_{16}\)</span> temos que <span class="arithmatex">\(2_{16} \rightarrow 0010_2\)</span> e <span class="arithmatex">\(A_{16} \rightarrow 1010_2\)</span>, portanto <span class="arithmatex">\(2A_{16}\rightarrow 00101010_2\)</span>.</p>
+</details>
+<h3 id="numeros">Números</h3>
+<p>Um <em>número</em> é um objeto matemático usado para descrever uma quantidade, e uma <em>base numérica</em> é um conjunto de algarismos utilizados para representar um número. Quais são os símbolos e as regras de como utilizá-los são definidos pelos sistema de numeração usado. O valor de um número é único, mas sua representação pode variar conforme o sistema utilizado - é fácil ilustrar isso comparando o abordagem usamos normalmente, com <a href="https://pt.wikipedia.org/wiki/Algarismos_ar%C3%A1bicos">algarismos arábicos</a> e a <a href="https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_posicional">notação posicional</a>, à abordagem que os <a href="https://pt.wikipedia.org/wiki/Numera%C3%A7%C3%A3o_romana">antigos romanos</a> usavam. Para o valor quarenta e nove, temos as representações <span class="arithmatex">\(49\)</span> e <span class="arithmatex">\(XLIX\)</span>, respectivamente.</p>
+<p>Na notação posicional, o valor representado por um algarismo depende da posição em que ele se encontra no conjunto de símbolos que representa o número, sendo valores a esquerda mais influentes que os a direita. O valor deste número é determinado pela soma dos valores relativos de cada algarismo. Por exemplo: 123 = 100 + 20 + 3, o algarismo mais a esquerda (1) tem uma influência maior que os demais no valor, e é considerado o mais significativo. O algarismo seguinte (2) tem uma influência menor que o anterior, mas maior que o seguinte. Isso se sucede até o último algarismo, o mais a direita, que é chamado de menos significativo. Podemos reescrever a informação da seguinte forma:</p>
+<div class="arithmatex">\[123 = 100 + 20 + 3 = 1·10^2+ 2·10^1+ 3·10^0\]</div>
+<p>Nesta representação, duas coisas se destacam. A primeira é que a influência de cada algarismo é determinada por uma potência de 10, que é a base numérica. A segunda, é que esta potência é uma sequência crescente da posição menos significativa para a mais significativa, iniciando-se por 0. De forma mais genérica, um algarismo <span class="arithmatex">\(A\)</span> tem uma influência proporcional a sua posição <span class="arithmatex">\(i\)</span> para uma base numérica <span class="arithmatex">\(B\)</span>.</p>
+<div class="arithmatex">\[A·{B^i}\]</div>
+<p>No valor 123, na <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_decimal">base decimal</a>, entendemos seu valor pela soma de seus componentes. O algarismo 3 está na posição mais a direita, considerada como posição <span class="arithmatex">\(i = 0\)</span>, portanto seu peso no valor resultante é de 3·10<span class="arithmatex">\(^0\)</span>. A posição seguinte (a esquerda) é i = 1 com o algarismo 2, acrescentando 2·10<span class="arithmatex">\(^1\)</span> ao resultado. O último algarismo (mais a esquerda) é 1 e está na posição 2, acrescentando 1·10<span class="arithmatex">\(^2\)</span>. De forma genérica, o valor de um número em uma base numérica <span class="arithmatex">\(B\)</span> qualquer, representado com <span class="arithmatex">\(n\)</span> algarismos <span class="arithmatex">\(A_i : A \in [0, B), i \in [0, n)\)</span>, é calculado com a seguinte fórmula:</p>
+<div class="arithmatex">\[A_{n-1}A_{n-2}…{A_2}A_1A_0 = \sum\limits_{i=0}^{n - 1}{A_i·{B^i}}\]</div>
+<p>Para representar a informação numérica na memória do computador, ela necessariamente deve ser representada como um conjunto de bits. Isto é relativamente simples, o bit tem dois estados, 0/1 que são os algarismos da <em><a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_bin%C3%A1rio">base numérica binária</a></em>. Portanto, podemos usar esta base na notação posicional para basta representar um valor numérico qualquer como bits na memória. Como também usaremos algarismos arábicos, para diferenciar as bases numéricas acrescentamos um sufixo ao número.</p>
+<div class="arithmatex">\[1101_2 = 1·2^3+ 1·2^2+ 0·2^1+ 1·2^0 = 8 + 4 + 0 + 1 = 13_{10}\]</div>
+<p>Por ser uma base de valor baixo, são poucos os algarismos e, portanto, as representações dos números se tornam extensas. Outras bases de valor mais elevado permitem compactar isso, e as mais úteis são as múltiplas de 2 já que a <a href="https://pt.wikipedia.org/wiki/Convers%C3%A3o_de_base_num%C3%A9rica">conversão</a> delas para a binária é simplificada. A tabela abaixo mostra alguns valores nas bases mais comuns na computação: binária, <a href="https://pt.wikipedia.org/wiki/Sistema_octal">octal</a>, decimal e <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_hexadecimal">hexadecimal</a>. Note que, como a notação posicional utiliza apenas um símbolo por posição, a base hexadecimal define os valores superiores a 9 (o maior algarismo arábico) para letras do alfabeto latino.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>binária</th>
+<th>octal</th>
+<th>decimal</th>
+<th>hexadecimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>11</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>100</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>101</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>110</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>111</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>10</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>11</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr>
+<td>1010</td>
+<td>12</td>
+<td>10</td>
+<td>A</td>
+</tr>
+<tr>
+<td>1011</td>
+<td>13</td>
+<td>11</td>
+<td>B</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>14</td>
+<td>12</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>15</td>
+<td>13</td>
+<td>D</td>
+</tr>
+<tr>
+<td>1110</td>
+<td>16</td>
+<td>14</td>
+<td>E</td>
+</tr>
+<tr>
+<td>1111</td>
+<td>17</td>
+<td>15</td>
+<td>F</td>
+</tr>
+<tr>
+<td>101010</td>
+<td>52</td>
+<td>42</td>
+<td>2A</td>
+</tr>
+<tr>
+<td>1111011</td>
+<td>173</td>
+<td>123</td>
+<td>7B</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<h4 id="numeros-inteiros">Números Inteiros</h4>
+<p>Já vimos a representação dos <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_natural">números naturais</a> em binário. Entretanto, muitas problemas lidam com os <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_inteiro">números inteiros</a>, que podem ter valores negativos. Felizmente, um número só pode ser negativo ou não, ou seja, a informação do sinal é facilmente representada em um bit. A convenção é que o bit mais a esquerda armazena a informação se o número é negativo (ligado/1) ou se é positivo (desligado/0), e os demais bits armazenam a informação do valor do número. Há formas distintas de se interpretar este último conjunto de bits, como listadas a seguir.</p>
+<p><a href="https://pt.wikipedia.org/wiki/Representa%C3%A7%C3%A3o_de_n%C3%BAmeros_com_sinal#M.C3.A9todo_sinal-e-magnitude">Sinal e Magnitude</a>, onde o bit mais significativo indica o sinal e os demais bits determinam o valor diretamente pela notação posicional (como um número natural). Esta abordagem é intuitivamente simples para entendermos.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>sinal</th>
+<th>notação posicional</th>
+<th>decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong>00</td>
+<td>+00</td>
+<td><span class="arithmatex">\(+(0·2^1+ 0·2^0)\)</span></td>
+<td>+0</td>
+</tr>
+<tr>
+<td><strong>0</strong>01</td>
+<td>+01</td>
+<td><span class="arithmatex">\(+(0·2^1+ 1·2^0)\)</span></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>0</strong>10</td>
+<td>+10</td>
+<td><span class="arithmatex">\(+(1·2^1+ 0·2^0)\)</span></td>
+<td>+2</td>
+</tr>
+<tr>
+<td><strong>0</strong>11</td>
+<td>+11</td>
+<td><span class="arithmatex">\(+(1·2^1+ 1·2^0)\)</span></td>
+<td>+3</td>
+</tr>
+<tr>
+<td><strong>1</strong>00</td>
+<td>-00</td>
+<td><span class="arithmatex">\(-(0·2^1+ 0·2^0)\)</span></td>
+<td>-0</td>
+</tr>
+<tr>
+<td><strong>1</strong>01</td>
+<td>-01</td>
+<td><span class="arithmatex">\(-(0·2^1+ 1·2^0)\)</span></td>
+<td>-1</td>
+</tr>
+<tr>
+<td><strong>1</strong>10</td>
+<td>-10</td>
+<td><span class="arithmatex">\(-(1·2^1+ 0·2^0)\)</span></td>
+<td>-2</td>
+</tr>
+<tr>
+<td><strong>1</strong>11</td>
+<td>-11</td>
+<td><span class="arithmatex">\(-(1·2^1+ 1·2^0)\)</span></td>
+<td>-3</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p><a href="https://pt.wikipedia.org/wiki/Representa%C3%A7%C3%A3o_de_n%C3%BAmeros_com_sinal#Complemento_para_um">Complemento de um</a> também considera o bit mais a esquerda como indicador de sinal e os demais para o valor, conforme o sinal. Se <em>positivo</em>, os bits restantes indicam o valor pela notação posicional (como na abordagem de sinal e magnitude); se <em>negativo</em>, é preciso inverter todos os bits antes de considerar a notação posicional. Esta variação é um pouco mais complexa para entendermos, mas tem vantagens quanto à anterior para algumas operações. Uma delas é que precisa-se de menos esforço para para inverter o sinal de um valor, uma operação muito frequente em problemas computacionais. Usando complemento de um, basta inverter todos os bits.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>sinal</th>
+<th>inverte?</th>
+<th></th>
+<th>notação posicional</th>
+<th>decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong>00</td>
+<td>+00</td>
+<td>não</td>
+<td>+00</td>
+<td><span class="arithmatex">\(+(0·2^1+ 0·2^0)\)</span></td>
+<td>+0</td>
+</tr>
+<tr>
+<td><strong>0</strong>01</td>
+<td>+01</td>
+<td>não</td>
+<td>+01</td>
+<td><span class="arithmatex">\(+(0·2^1+ 1·2^0)\)</span></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>0</strong>10</td>
+<td>+10</td>
+<td>não</td>
+<td>+10</td>
+<td><span class="arithmatex">\(+(1·2^1+ 0·2^0)\)</span></td>
+<td>+2</td>
+</tr>
+<tr>
+<td><strong>0</strong>11</td>
+<td>+11</td>
+<td>não</td>
+<td>+11</td>
+<td><span class="arithmatex">\(+(1·2^1+ 1·2^0)\)</span></td>
+<td>+3</td>
+</tr>
+<tr>
+<td><strong>1</strong>00</td>
+<td>-00</td>
+<td>sim</td>
+<td>-11</td>
+<td><span class="arithmatex">\(-(1·2^1+ 1·2^0)\)</span></td>
+<td>-3</td>
+</tr>
+<tr>
+<td><strong>1</strong>01</td>
+<td>-01</td>
+<td>sim</td>
+<td>-10</td>
+<td><span class="arithmatex">\(-(1·2^1+ 0·2^0)\)</span></td>
+<td>-2</td>
+</tr>
+<tr>
+<td><strong>1</strong>10</td>
+<td>-10</td>
+<td>sim</td>
+<td>-01</td>
+<td><span class="arithmatex">\(-(0·2^1+ 1·2^0)\)</span></td>
+<td>-1</td>
+</tr>
+<tr>
+<td><strong>1</strong>11</td>
+<td>-11</td>
+<td>sim</td>
+<td>-00</td>
+<td><span class="arithmatex">\(-(0·2^1+ 0·2^0)\)</span></td>
+<td>-0</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Por fim, a forma mais utilizada é <a href="https://pt.wikipedia.org/wiki/Complemento_para_dois">complemento de dois</a>. Nela, também o bit mais a esquerda define o sinal e os demais determinam o valor conforme o sinal. Se <em>positivo</em>, os bits restantes indicam o valor pela notação posicional; se <em>negativo</em>, é preciso inverter todos os bits e incrementar em 1 o resultado antes de considerar a notação posicional. Embora mais complicada para nós, esta abordagem tem vantagens sobre as demais, como quantidade de valores distintos que se pode armazenar e facilidade na computação de operações aritméticas.</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>sinal</th>
+<th>inverte?</th>
+<th></th>
+<th>+1</th>
+<th></th>
+<th>notação posicional</th>
+<th>decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong>00</td>
+<td>+00</td>
+<td>não</td>
+<td>+00</td>
+<td>não</td>
+<td>+00</td>
+<td><span class="arithmatex">\(+(0·2^1+ 0·2^0)\)</span></td>
+<td>+0</td>
+</tr>
+<tr>
+<td><strong>0</strong>01</td>
+<td>+01</td>
+<td>não</td>
+<td>+01</td>
+<td>não</td>
+<td>+01</td>
+<td><span class="arithmatex">\(+(0·2^1+ 1·2^0)\)</span></td>
+<td>+1</td>
+</tr>
+<tr>
+<td><strong>0</strong>10</td>
+<td>+10</td>
+<td>não</td>
+<td>+10</td>
+<td>não</td>
+<td>+10</td>
+<td><span class="arithmatex">\(+(1·2^1+ 0·2^0)\)</span></td>
+<td>+2</td>
+</tr>
+<tr>
+<td><strong>0</strong>11</td>
+<td>+11</td>
+<td>não</td>
+<td>+11</td>
+<td>não</td>
+<td>+11</td>
+<td><span class="arithmatex">\(+(1·2^1+ 1·2^0)\)</span></td>
+<td>+3</td>
+</tr>
+<tr>
+<td><strong>1</strong>00</td>
+<td>-00</td>
+<td>sim</td>
+<td>-11</td>
+<td>sim</td>
+<td>-100</td>
+<td><span class="arithmatex">\(-(1·2^2+ 0·2^1+ 0·2^0)\)</span></td>
+<td>-4</td>
+</tr>
+<tr>
+<td><strong>1</strong>01</td>
+<td>-01</td>
+<td>sim</td>
+<td>-10</td>
+<td>sim</td>
+<td>-011</td>
+<td><span class="arithmatex">\(-(0·2^2+ 1·2^1+ 1·2^0)\)</span></td>
+<td>-3</td>
+</tr>
+<tr>
+<td><strong>1</strong>10</td>
+<td>-10</td>
+<td>sim</td>
+<td>-01</td>
+<td>sim</td>
+<td>-010</td>
+<td><span class="arithmatex">\(-(0·2^2+ 1·2^1+ 0·2^0)\)</span></td>
+<td>-2</td>
+</tr>
+<tr>
+<td><strong>1</strong>11</td>
+<td>-11</td>
+<td>sim</td>
+<td>-00</td>
+<td>sim</td>
+<td>-001</td>
+<td><span class="arithmatex">\(-(0·2^2+ 0·2^1+ 1·2^0)\)</span></td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Geralmente, valores inteiros são armazenados em um tipo de dado <code>inteiro</code> de 32 ou 64 bits. Considerando o primeiro caso, a estrutura de dados para complemento de dois determina:</p>
+<ol>
+<li>O significado é de um valor numérico inteiro, que pode ser negativo.</li>
+<li>O valor é armazenado como Complemento de 2 nos 32 bits.</li>
+<li>Os possíveis valores armazenados estão no intervalo <span class="arithmatex">\([-2^{31}, 2^{31})\)</span>.</li>
+<li>As operações aritméticas básicas (<span class="arithmatex">\(+, -, \times\ e\ \div\)</span>) estão definidas na linguagem de programação - e possivelmente outras.</li>
+</ol>
+<h4 id="numeros-reais">Números Reais</h4>
+<p>Os <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_real">números reais</a> também podem ser representados como binários pelo sistema posicional, basta estender a lógica da notação posicional. Por exemplo, considere o seguinte número decimal:</p>
+<div class="arithmatex">\[13,125 = 1\cdot{10^1} + 3\cdot{10^0} + 1\cdot{10^{-1}} + 2\cdot{10^{-2}} + 5\cdot{10^{-3}}\]</div>
+<p>Este valor pode ser representado com a mesma lógica em 7 bits:</p>
+<div class="arithmatex">\[1\cdot2^3 + 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 0\cdot2^{-2} + 1\cdot2^{-3} = 1101,001_2\]</div>
+<p>Neste caso usamos 4 bits para o valor inteiro e 3 para o valor fracionário.</p>
+<h5>Ponto Fixo</h5>
+
+<p>A representação com <a href="https://en.wikipedia.org/wiki/Fixed-point_arithmetic">ponto fixo</a> define que, dada uma quantidade <span class="arithmatex">\(Q\)</span> de bits para representar o número, há uma quantidade fixa <span class="arithmatex">\(m\)</span> de bits que armazenam a parte inteira e outra quantidade <span class="arithmatex">\(f\)</span> que armazena a parte fracionária do número (tais que <span class="arithmatex">\(Q = m + f\)</span>). Por exemplo, supondo <span class="arithmatex">\(Qm.f = Q5.3\)</span>, o número 13,125 seria representado pelos bits <code>01101001</code> cujo valor é interpretado como <code>01101,001</code>. Supondo <span class="arithmatex">\(Q4.4\)</span>, este mesmo valor é representado por <code>11010010</code>.</p>
+<p>O ponto fixo é uma convenção interessante, mas pouco flexível. Como toda estrutura de dados, a quantidade de bits limita os valores que podem ser armazenado, portanto uma configuração <span class="arithmatex">\(Qm.f\)</span> que pode ser adequada para uma aplicação específica pode ser inadequada para outra. Por exemplo, considerando que <span class="arithmatex">\(Q=8\)</span>, uma representação <span class="arithmatex">\(Q0.7\)</span> é mais interessante para lidar com o tamanho de componentes eletrônicos que a <span class="arithmatex">\(Q5.3\)</span>. Desta forma, fica inviável determinar um padrão para ponto fixo que seja suficiente para a maioria das aplicações.</p>
+<h5>Ponto Flutuante</h5>
+
+<p>Como alternativa mas flexível, temos a representação em <a href="https://pt.wikipedia.org/wiki/Ponto_flutuante">ponto flutuante</a> que se baseia na ideia da <a href="https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_cient%C3%ADfica">notação científica</a> onde qualquer número pode ser representado no mesmo formato em duas componentes, separando valor numérico de sua grandeza. Dada uma <em>mantissa</em> (<span class="arithmatex">\(m\)</span>) composta por algarismos que determinam o valor do número e um <em>expoente</em> (<span class="arithmatex">\(e\)</span>) que determina sua grandeza, um número qualquer na base <span class="arithmatex">\(B\)</span> pode ser representado da seguinte forma:</p>
+<div class="arithmatex">\[m\cdot{B}^{e}\]</div>
+<p>Por exemplo:</p>
+<div class="arithmatex">\[0,13125\cdot10^2 = 13,125_{10} \Longleftrightarrow 1101,001_2 = 0,1101001\cdot2^4\]</div>
+<p>Esta representação oferece maior flexibilidade e alcance de valores. O padrão usado nos computadores modernos é o <a href="https://pt.wikipedia.org/wiki/Instituto_de_Engenheiros_Eletricistas_e_Eletr%C3%B4nicos#IEEE_754">IEEE 754</a>, que define o valor armazenado considerando um conjunto de bits de tamanho fixo em três partes: um bit para determinar o sinal, seguido de <span class="arithmatex">\(e\)</span> bits para o valor do expoente, seguido de <span class="arithmatex">\(m\)</span> bits para a mantissa. Esta abordagem permite que se use quaisquer quantidades de bits mas usualmente temos a precisão simples (32 bits em blocos de 1/8/23) e dupla (64 bits, em blocos de 1/11/52). O valor armazenado pode ser obtido pelo valor numérico simples de cada bloco desta forma:</p>
+<div class="arithmatex">\[(-1)^{s}\cdot1,m\cdot2^{e-offset}\]</div>
+<p>O <em>offset</em> depende da quantidade de bits de <em>e</em>, sendo calculado como <span class="arithmatex">\(2^{e-1}-1\)</span>. Para as precisões simples e dupla, temos os valores 127 e 1023, respectivamente. Por exemplo, para precisão simples temos que:</p>
+<table>
+<thead>
+<tr>
+<th>sinal</th>
+<th>expoente</th>
+<th>mantissa</th>
+<th>fórmula</th>
+<th>valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>01111110</td>
+<td>10000000000000000000000</td>
+<td><span class="arithmatex">\((-1)^{1}\cdot1,1\cdot2^{-1}\)</span></td>
+<td><span class="arithmatex">\(-0,75_{10}\)</span></td>
+</tr>
+<tr>
+<td>0</td>
+<td>10000010</td>
+<td>10100100000000000000000</td>
+<td><span class="arithmatex">\((-1)^{0}\cdot1,101001\cdot2^3\)</span></td>
+<td><span class="arithmatex">\(13,125_{10}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>O uso de ponto flutuante oferece diversas vantagens, principalmente a representação de valores absolutos muito grandes ou pequenos<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>, mas há limitações. O conjunto de números reais é infinitamente grande, e não pode ser completamente representado com a quantidade finita de bits disponível na memória, portanto é muito comum que valores em ponto flutuante sejam arredondados ao serem armazenados na quantidade fixa de bits disponível<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>.</p>
+<p>Por exemplo, considere a expressão <span class="arithmatex">\(1 / 3 = 0,33333\dots\)</span>. O valor resultante é uma dízima periódica, podemos mostrar matematicamente que <span class="arithmatex">\(0,\overline{3} + 0,\overline{3} + 0,\overline{3} = 1\)</span>. Entretanto, <span class="arithmatex">\(0,\overline{3}\)</span> é uma expressão matemática com mais informação que "apenas" algarismos, ela determina um valor que não pode ser exatamente representado por uma quantidade fixa de algarismos (ou bits na memória). O que se pode fazer é usar toda a capacidade disponível para armazenar o valor mais próximo possível. Considere que só podemos usar 3 algarismos, então a expressão <span class="arithmatex">\(0,\overline{3} + 0,\overline{3} + 0,\overline{3}\)</span> se torna <span class="arithmatex">\(0,33 + 0,33 + 0,33 = 0,99 \neq 1\)</span>.</p>
+<p>Esta <a href="http://pt.stackoverflow.com/a/11328">imprecisão</a> tem implicações interessantes pois, para um programa de computador, a expressão <span class="arithmatex">\(0,1 + 0,1 + 0,1\)</span> não resulta no valor <span class="arithmatex">\(0,3\)</span>! O valor decimal <span class="arithmatex">\(0,1\)</span> é representado em binário como <span class="arithmatex">\(0,1\overline{0011}\)</span> até o limite de bits reservados, que é insuficiente para o valor exato. Abaixo, podemos ver as diferenças escolhendo precisões arbitrárias para mostrar um mesmo valor armazenado de <span class="arithmatex">\(0,1\)</span>, bem como o efeito da propagação desta diferença ao longo de diversas operações:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Valor</label><label for="__tabbed_5_2">Somatório</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p>1 casa de precisão: 0.1</p>
+<p>5 casas de precisão: 0.10000</p>
+<p>15 casas de precisão: 0.100000000000000</p>
+<p>28 casas de precisão: 0.1000000000000000055511151231</p><div class="markdown-exec"></div>
+</p>
+</div>
+<div class="tabbed-block">
+<p><p><span class="arithmatex">\(\sum\limits_{i=1}^{1}0.1 = 0.1000000000000000055511151231\)</span></p>
+<p><span class="arithmatex">\(\sum\limits_{i=1}^{3}0.1 = 0.3000000000000000444089209850\)</span></p>
+<p><span class="arithmatex">\(\sum\limits_{i=1}^{10}0.1 = 1.0000000000000000000000000000\)</span></p>
+<p><span class="arithmatex">\(\sum\limits_{i=1}^{100}0.1 = 10.0000000000000000000000000000\)</span></p><div class="markdown-exec"></div>
+</p>
+</div>
+</div>
+</div>
+<p>Os efeitos da imprecisão tendem a não ser considerados na maioria das aplicações (que não lidem com isso como as de engenharia/finanças/computação científica). Entretanto, deve-se ter atenção especial pois, apesar da diferença para o valor exato ser "pequena", ela existe e pode causar dificuldades se seu programa liga com algo simples como verificar se <span class="arithmatex">\(0,1 + 0,2 = 0,3\)</span> (algo bem provável de ocorrer em muitas aplicações). É papel do programador entender a situação e lidar com ela.</p>
+<p>Algumas abordagens para com isso são trabalhar com inteiros e evitar comparar diretamente variáveis do tpo <code>float</code>. Se necessário, podemos realizar a comparação considerando uma tolerância razoável para a diferença entre os valores: ao invés de <span class="arithmatex">\(a &lt; b\)</span>, usamos <span class="arithmatex">\(|a - b| &lt; \epsilon\)</span>. Também é preciso atentar para acúmulo de imprecisões ao longo de múltiplas computações, pois <a href="https://www-users.cse.umn.edu/~arnold/disasters/disasters.html">podem ser realmente significativos</a>.</p>
+<h3>Resumo</h3>
+
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red"></p>
+<details class="llm">
+<summary>Llm</summary>
+<ul>
+<li>Explique o conceito de tipo de dados em programação.</li>
+<li>Explique "complemento de 2" na programação de computadores.</li>
+<li>Como funciona o padrão IEEE754?</li>
+<li>Por que usar int se float pode representar valores inteiros?</li>
+<li>Por que é preciso cuidado a usar o tipo de dados float?</li>
+<li>O que são estruturas de dados?</li>
+</ul>
+</details>
+<h3>Exercícios</h3>
+
+<details class="question">
+<summary>Dado um número não negativo qualquer na base hexadecimal, descreva o algoritmos para transformá-lo em um número binário.</summary>
+<p>Como a base 16 é múltipla de 2, o processo manual é bem simples. Cada algarismo hexadecimal pode ser diretamente mapeado para seu valor binário de 4 bits, na mesma ordem. Por exemplo, para <span class="arithmatex">\(2A_{16}\)</span> temos que <span class="arithmatex">\(2_{16} \rightarrow 0010_2\)</span> e <span class="arithmatex">\(A_{16} \rightarrow 1010_2\)</span>, portanto <span class="arithmatex">\(2A_{16}\rightarrow 00101010_2\)</span>.</p>
+</details>
+<h3 id="simbolos">Símbolos</h3>
+<p>Símbolos são uma forma extremamente versátil de comunicar informações; o <a href="https://pt.wikipedia.org/wiki/Alfabeto">alfabeto</a> define um pequeno conjunto de símbolos que, juntos, podem expressar <a href="https://pt.wikipedia.org/wiki/Emoticon">quase</a> tudo que se deseja. Símbolos, como toda informação no computador, são representados por bits.</p>
+<h5>ASCII</h5>
+
+<p>O padrão ASCII<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> (<em>American Standard Code for Information Interchange</em>) foi desenvolvido nos anos 60, sendo composto por 95 símbolos gráficos (letras do alfabeto latino, algarismos arábicos, sinais de pontuação e sinais matemáticos) e 33 de controle.</p>
+<p><center></p>
+<h6>Controle</h6>
+
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00</td>
+<td>NUL</td>
+<td>0x08</td>
+<td>BS</td>
+<td>0x10</td>
+<td>DLE</td>
+<td>0x18</td>
+<td>CAN</td>
+</tr>
+<tr>
+<td>0x01</td>
+<td>SOH</td>
+<td>0x09</td>
+<td>HT</td>
+<td>0x11</td>
+<td>DC1</td>
+<td>0x19</td>
+<td>EM</td>
+</tr>
+<tr>
+<td>0x02</td>
+<td>STX</td>
+<td>0x0A</td>
+<td>LF</td>
+<td>0x12</td>
+<td>DC2</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x03</td>
+<td>ETX</td>
+<td>0x0B</td>
+<td>VT</td>
+<td>0x13</td>
+<td>DC3</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>EOT</td>
+<td>0x0C</td>
+<td>FF</td>
+<td>0x14</td>
+<td>DC4</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x05</td>
+<td>ENQ</td>
+<td>0x0D</td>
+<td>CR</td>
+<td>0x15</td>
+<td>NAK</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>ACK</td>
+<td>0x0E</td>
+<td>SO</td>
+<td>0x16</td>
+<td>SYN</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x07</td>
+<td>BEL</td>
+<td>0x0F</td>
+<td>SI</td>
+<td>0x17</td>
+<td>ETB</td>
+<td>0x7F</td>
+<td>DEL</td>
+</tr>
+</tbody>
+</table>
+<h6>Gráficos (Parcial)</h6>
+
+<table>
+<thead>
+<tr>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+<th>bits</th>
+<th>Símbolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x20</td>
+<td>espaço</td>
+<td>0x30</td>
+<td>0</td>
+<td>0x41</td>
+<td>A</td>
+<td>0x61</td>
+<td>a</td>
+</tr>
+<tr>
+<td>0x21</td>
+<td>!</td>
+<td>0x31</td>
+<td>1</td>
+<td>0x42</td>
+<td>B</td>
+<td>0x62</td>
+<td>b</td>
+</tr>
+<tr>
+<td>0x22</td>
+<td>"</td>
+<td>0x32</td>
+<td>2</td>
+<td>0x43</td>
+<td>C</td>
+<td>0x63</td>
+<td>c</td>
+</tr>
+<tr>
+<td>0x23</td>
+<td>#</td>
+<td>0x33</td>
+<td>3</td>
+<td>0x44</td>
+<td>D</td>
+<td>0x64</td>
+<td>d</td>
+</tr>
+<tr>
+<td>0x24</td>
+<td>$</td>
+<td>0x34</td>
+<td>4</td>
+<td>0x45</td>
+<td>E</td>
+<td>0x65</td>
+<td>e</td>
+</tr>
+<tr>
+<td>0x25</td>
+<td>%</td>
+<td>0x35</td>
+<td>5</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+<tr>
+<td>0x26</td>
+<td>&amp;</td>
+<td>0x36</td>
+<td>6</td>
+<td>0x57</td>
+<td>W</td>
+<td>0x77</td>
+<td>w</td>
+</tr>
+<tr>
+<td>0x27</td>
+<td>'</td>
+<td>0x37</td>
+<td>7</td>
+<td>0x58</td>
+<td>X</td>
+<td>0x78</td>
+<td>x</td>
+</tr>
+<tr>
+<td>0x28</td>
+<td>(</td>
+<td>0x38</td>
+<td>8</td>
+<td>0x59</td>
+<td>Y</td>
+<td>0x79</td>
+<td>y</td>
+</tr>
+<tr>
+<td>0x29</td>
+<td>)</td>
+<td>0x39</td>
+<td>9</td>
+<td>0x5A</td>
+<td>Z</td>
+<td>0x7A</td>
+<td>z</td>
+</tr>
+<tr>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+<td>⋮</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Cada um dos 128 símbolos é associado à uma sequência arbitrária e única de 7 de bits. É bem comum associar esta sequência a um número inteiro, por exemplo o número 65 ao símbolo 'A' ("um mesmo conjunto de bits pode ser interpretado de diferentes formas"). Além disso, o padrão ASCII tem algumas características interessantes. Os algarismos são listados em ordem de valor, e as letras são organizadas em ordem alfabética, o que facilita os processos de comparação entre eles. As letras minúsculas estão deslocadas em 32 posições em relação às maiúsculas, então a diferença entre os bits que as representam é apenas no sexto bit!</p>
+<p>Por conta de como as máquinas eram construídas, era muito comum usar um byte para armazenar cada símbolo, o que viabilizou definir outros 128 símbolos arbitrários. Entretanto, não houve maior consenso em quais seriam os símbolos, afinal cada grupo tinha seus próprios interesses. No Brasil, o mais comum era o <a href="https://pt.wikipedia.org/wiki/ISO/IEC_8859-1">ISO/IEC 8859-1</a>. Com o avanço da internet, a necessidade de comunicação entre máquinas e grupos distintos forçou a incorporação de um padrão internacional. Entretanto, algumas dificuldades deveriam ser consideradas...</p>
+<p>Uma solução "simples" seria usar mais bits e ampliar o tamanho da tabela, mas isso implicaria que toda informação já representada num padrão como ASCII ocuparia mais memória que o necessário. Por exemplo, supondo que fossem usados 3 bytes (possibilitando mais de 16 milhões de símbolos), uma mensagem com 10 símbolos ASCII passa a ocupar 30 bytes, 200% a mais do que necessário. Também seria necessário lidar com informações armazenadas que usam o símbolo <code>NUL</code> para indicar o término de uma sequência de símbolos - uma sequência de 8 bits com valor 0 não seria rara considerando 3 bytes. Outro ponto relevante era lidar com os documentos existentes, gerar uma cópia de todo arquivo existente com esta nova codificação seria uma tarefa inviável. A solução encontrada foi uma forma elegante de lidar com tudo isso, além de viabilizar a incorporação de quaisquer novos símbolos que possam ser criados.</p>
+<h5>Unicode</h5>
+
+<p>Uma vez estabelecido um padrão de <em>codificação de caracteres</em> (associação [arbitrária] de bits a certos caracteres), pode-se armazenar estes símbolos na memória (e recuperá-los). Há diversar formas de se codificar caracteres: <a href="https://pt.wikipedia.org/wiki/Extended_Binary_Coded_Decimal_Interchange_Code">EBCDIC</a>, <a href="https://pt.wikipedia.org/wiki/Unicode">Unicode</a> (veja <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">isso</a>), ente outros.</p>
+<h3>Resumo</h3>
+
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red"></p>
+<details class="llm">
+<summary>Llm</summary>
+<ul>
+<li>Explique o conceito de tipo de dados em programação.</li>
+<li>Explique o padrão ASCII.</li>
+<li>Explique o padrão UniCode.</li>
+<li>Quais as vantagens do padrão UTF-8?</li>
+<li>Como compactar dados UTF-8  para comunicação em rede?</li>
+</ul>
+</details>
+<h3>Exercícios</h3>
+
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red"></p>
+<h3 id="booleanos">Booleanos</h3>
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-bool-red"></p>
+<h3>Resumo</h3>
+
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red"></p>
+<details class="llm">
+<summary>Llm</summary>
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-bool-red"></p>
+</details>
+<h3>Exercícios</h3>
+
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-bool-red"></p>
+<h2 id="fluxo-de-controle">Fluxo de Controle</h2>
+<div class="admonition quote">
+<p class="admonition-title"><a href="http://www"></a></p>
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Quote-red"></p>
+</div>
+<hr />
+<p><em><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Introdução-red"></em></p>
+<hr />
+<h3 id="sequencial">Sequencial</h3>
+<p><em><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Sequencial-red"></em></p>
+<h3 id="funcoes">Funções</h3>
+<div class="admonition quote">
+<p class="admonition-title"><a href="https://www.linkedin.com/in/joesondow">Joe Sondow</a></p>
+<p><em>Um computador é como um gênio travesso. Te dá exatamente o que você pede dele, mas nem sempre o que você quer.</em></p>
+</div>
+<p>Programas de computadores geralmente usam procedimentos que especificam como fazer algo<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>. Nas linguagens de programação, estes são chamados de funções (ou métodos), e são chamados para serem executados. Ao chamar um procedimento, pode-se fornecer informações necessárias para a computação ao definir parâmetros, e receber (ou não) resultados como um valor de retorno.</p>
+<details class="llm">
+<summary>Chat-bot Funções</summary>
+<ul>
+<li>O que é uma função em programação?</li>
+<li>Quais as vantagens de usar funções em um programa?</li>
+<li>O que é o escopo de uma função?</li>
+<li>Quais os componentes de uma função em Python?</li>
+<li>Quais as funções mais úteis em Python?</li>
+</ul>
+</details>
+<h3 id="condicional">Condicional</h3>
+<p>exemplo do imc (implicações matemáticas de se não é &lt; x, necessariamente é &gt;= x)</p>
+<div class="language-python highlight"><span class="filename">Índice de Massa Corporal</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">avalia_imc</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="n">imc</span> <span class="o">=</span> <span class="n">calcula_imc</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="k">if</span> <span class="n">imc</span> <span class="o">&lt;</span> <span class="mf">18.5</span><span class="p">:</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação de magreza!&#39;</span><span class="p">)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="k">elif</span> <span class="n">imc</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">:</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação normal.&#39;</span><span class="p">)</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="k">elif</span> <span class="n">imc</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">:</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação de sobrepeso.&#39;</span><span class="p">)</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="k">elif</span> <span class="n">imc</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação de obesidade!&#39;</span><span class="p">)</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Situação de obesidade grave!!&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>O uso de condicionais é baseado no valores booleanos <span class="arithmatex">\(verdadeiro\)</span> e <span class="arithmatex">\(falso\)</span>. Estes são os valores verdade da lógica matemática, e indicam o grau de verdade de uma proposição. Por exemplo, considerando os números inteiros 42 e 100, podemos a propor que <span class="arithmatex">\(42 &lt; 100\)</span> e verificar que isto é verdadeiro.
+As linguagens de programação podem oferecer um tipo de dado específico para estes valores ou interpretar outros tipos de dados como um dos dois resultados possíveis. Por exemplo, a linguagem C não tem um tipo primitivo e interpreta o valor numérico zero como o valor booleano <span class="arithmatex">\(falso\)</span>, e qualquer valor diferente disso como <span class="arithmatex">\(verdadeiro\)</span>. Já Python tem o tipo <a href="https://docs.python.org/pt-br/3/c-api/bool.html">bool</a>, mas também interpreta uma série de outros tipos de dados.</p>
+<p><code>&lt;expr&gt;</code> é uma expressão cujo valor resultante tem um significado booleano, ou seja, é <strong>verdadeiro</strong> ou <strong>falso</strong>.</p>
+<p>Se <code>&lt;expr&gt;</code> é <strong>verdadeiro</strong> ("truthy"), então <code>&lt;instr&gt;</code> é executada; caso contrário, <code>&lt;instr&gt;</code> é ignorada.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Python</label><label for="__tabbed_6_2">C</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Estrutura condicional</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">if</span> <span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">:</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="o">&lt;</span><span class="n">instr</span><span class="o">&gt;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-C highlight"><span class="filename">Estrutura condicional</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">expr</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">instr</span><span class="o">&gt;</span><span class="p">;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<details class="llm">
+<summary>Chat-bot Condicionais</summary>
+<ul>
+<li>Explique a estrutura condicional no fluxo de controle de um programa.</li>
+<li>Explique os operadores lógicos em Python.</li>
+<li>Como portas lógicas compõem uma CPU?</li>
+<li>O que é curto-circuito em Python?</li>
+</ul>
+</details>
+<h3 id="repeticao">Repetição</h3>
+<p><em><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Sequencial-red"></em></p>
+<details class="llm">
+<summary>Chat-bot Repetição</summary>
+<ul>
+<li>Explique as estruturas de repetição no fluxo de controle de um programa.</li>
+<li>Quais as diferenças entre while e for em Python?</li>
+<li>Dê um exemplo de código em que while seja preferível ao for.</li>
+<li>Dê um exemplo de código em que for seja preferível ao while</li>
+</ul>
+</details>
+<h2>Resumo</h2>
+
+<p><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Resumo-red"></p>
+<details class="llm">
+<summary>Chat-bot Fluxo de Controle</summary>
+<ul>
+<li>O que é o fluxo de controle de um programa?</li>
+</ul>
+</details>
+<h2>Exercícios</h2>
+
+<details class="question">
+<summary>Implemente o código que leia a quantidade máxima N de elefantes e apresente a letra da música até que N (≥1) elefantes incomodem muita gente. Por exemplo, para N = 4: <strong>1 elefante incomoda muita gente... 2 elefantes incomodam, incomodam muito mais! 2 elefantes incomodam muita gente... 3 elefantes incomodam, incomodam, incomodam muito mais! 3 elefantes incomodam muita gente... 4 elefantes incomodam, incomodam, incomodam, incomodam muito mais!</strong></summary>
+<p>Uma possível solução é:
+<div class="language-python highlight"><span class="filename">Elefantes</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Digite a quantidade de elefantes: &#39;</span><span class="p">))</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1 elefante incomoda muita gente...&#39;</span><span class="p">)</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 elefantes incomodam, incomodam muito mais!&#39;</span><span class="p">)</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1"> elefantes incomodam muita gente...&#39;</span><span class="p">)</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="n">incomodam</span> <span class="o">=</span> <span class="s1">&#39;, incomodam&#39;</span> <span class="o">*</span> <span class="n">e</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1"> elefantes incomodam</span><span class="si">{</span><span class="n">incomodam</span><span class="si">}</span><span class="s1"> muito mais!&#39;</span><span class="p">)</span>
+</span></code></pre></div></p>
+</details>
+<details class="question">
+<summary>Considerando um comprimento <em>L</em>, implemente o código que desenha um quadrado de lado <em>L</em>.</summary>
+<p>Uma possível solução é:
+<div class="language-python highlight"><span class="filename">Quadrado</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">from</span> <span class="nn">tartaruga</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="n">frente</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="n">direita</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</span></code></pre></div></p>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Peter Norvig. <em>Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp</em>. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edition, 1992. ISBN 1558601910. URL: <a href="https://github.com/norvig/paip-lisp">https://github.com/norvig/paip-lisp</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Charles Russell Severance, Sue Blumenberg, and Elliott Hauser. <em>Python for Everybody: Exploring Data in Python 3</em>. CreateSpace Independent Publishing Platform, USA, 2016. ISBN 1530051126, 9781530051120.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Harold Abelson, Gerald Jay Sussman, and Julie Sussman. <em>Structure and Interpretation of Computer Programs</em>. MIT Press, Cambridge, MA, USA, 1985. ISBN 0262010771.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Brian W. Kernighan and Dennis M. Ritchie. <em>C: a linguagem de programação padrão ANSI</em>. Campus, Rio de Janeiro, 1989. ISBN 8570015860 9788570015860.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Aaron M Tenenbaum, Yedidyah Langsam, and Moshe Augenstein. <em>Estruturas de dados usando C</em>. Pearson Makron Books, São Paulo (SP), 1995. ISBN 8534603480 : 9788534603485.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>David Goldberg. What every computer scientist should know about floating-point arithmetic. <em>ACM Comput. Surv.</em>, 23(1):5–48, mar 1991. URL: <a href="https://doi.org/10.1145/103162.103163">https://doi.org/10.1145/103162.103163</a>, <a href="https://doi.org/10.1145/103162.103163">doi:10.1145/103162.103163</a>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>American National Standards Institute. American National Standard for Information Systems — Coded Character Sets — 7-Bit American National Standard Code for Information Interchange (7-Bit ASCII), ANSI X3.4-1986. Technical Report, American National Standards Institute, 1896. URL: <a href="http://sliderule.mraiow.com/w/images/7/73/ASCII.pdf">http://sliderule.mraiow.com/w/images/7/73/ASCII.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Thomas H. Cormen. <em>Algorithms Unlocked</em>. The MIT Press, 2013. ISBN 9780262518802. URL: <a href="https://mitpress.mit.edu/9780262518802/algorithms-unlocked/">https://mitpress.mit.edu/9780262518802/algorithms-unlocked/</a>.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p><a href="https://gnramos.github.com/APC">Livro de APC</a> por <a href="https://gnramos.github.io">Guilherme N. Ramos</a> <a href="https://github.com/gnramos/APC/blob/main/LICENSE" target="_blank" style="display:inline-block;"><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/license-MIT-green"></a></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "navigation.footer", "search.highlight", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

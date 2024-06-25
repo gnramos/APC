@@ -1,0 +1,24 @@
+## Hardware
+
+O hardware é um conjunto de componentes e equipamentos que compõem um sistema computacional, que seguem a arquitetura von Neumann. Os componentes físicos têm diferentes propósitos.
+
+[![Computador pessoal](images/wikimedia/Personal_computer.svg "Computador pessoal - Imagem de Gustavb"){ width="50%" } ](https://commons.wikimedia.org/wiki/File:Personal_computer,_exploded_5.svg)
+
+* ③ **Unidade Central de Processamento** (UCP) é o dispositivo que interpreta e executa e instruções, lê e escreve a memória. Seus componentes básicos são a [UC](http://pt.wikipedia.org/wiki/Unidade_de_controle) (que determina quais operações serão realizadas e em que ordem) e a [ULA](http://pt.wikipedia.org/wiki/Unidade_l\%C3\%B3gica_e_aritm\%C3\%A9tica) (que realiza operações aritméticas e lógicas). Os [registradores](http://pt.wikipedia.org/wiki/Registrador_%28inform%C3%A1tica%29), que armazenam os dados sendo processados no momento, também podem ser considerado parte da UCP, mas são conceitualmente parte da memória. O desempenho da UCP era ligado a sua [velocidade](http://pt.wikipedia.org/wiki/Frequ%C3%AAncia_de_rel%C3%B3gio), mas [certos limites](http://pt.wikipedia.org/wiki/Lei_de_Moore) já foram alcançados e, atualmente, os esforços são direcionados a outras formas de melhoria.
+* ④, ⑧ **memória** é o dispositivo que permite armazenar dados em um conjunto ordenado de *bits*. A armazenagem pode ser *volátil* (perde seus dados com ausência de energia) ou *não voláteis*. Além disso, há certa [hierarquia](http://pt.wikipedia.org/wiki/Hierarquia_de_mem%C3%B3ria) de tipos, pois o custo é inversamente proporcional a velocidade de acesso. A chamada *memória principal* contém os dados sendo manipulados na tarefa em execução (na memória volátil), portanto é mais rápida e intermedia o acesso aos dados da *memória secundária*. Esta serve para armazenamento permanente de dados, tem maior capacidade mas desempenho inferior. A característica mais interessante da memória principal é o [*acesso aleatório*](http://pt.wikipedia.org/wiki/Acesso_aleat%C3%B3rio), em que posições específicas de memória são acessadas diretamente, utilizando uma lógica de endereçamento. Isto, e a velocidade do acesso, contrastam com a memória secundária.
+* ①, ⑦, ⑨ e ⑩ **Entrada/Saída** os dispositivos de entrada e saída de dados (E/S ou I/O) permitem a comunicação com o computador, de modo que ele possa receber dados para realizar uma tarefa, e fornecer os resultados desta. Existem diversas formas de transmitir os dados:
+
+    * Entrada: teclado, mouse, microfone, scanner, leitor de código de barras, câmera, joystick, etc.;
+    * Saída: monitor, caixas de som, impressora, etc.;
+    * E/S: disco rígido, monitor sensível a toques, pendrive, etc.
+
+Além destes componentes "básicos" da arquitetura von Neumann, diversos outros são necessários.
+
+* ② **placa mãe** [conecta os componentes do computador](http://pt.wikipedia.org/wiki/Placa-m%C3%A3e) de modo que possam funcionar em conjunto, possibilitando a comunicação entre eles e a distribuição de energia.
+* ⑤ **placas de expansão** que possibilitam o [uso de outros componentes periféricos](https://pt.wikipedia.org/wiki/Placa_de_expans%C3%A3o), ampliando as aplicações.
+* ⑥ **fonte de alimentação** que [regula a distribuição de energia](http://pt.wikipedia.org/wiki/Fonte_de_alimenta%C3%A7%C3%A3o) para os componentes.
+* **barramento** é o [sistema de comunicação](http://pt.wikipedia.org/wiki/Barramento) que transfere dados entre os componentes do computador. A taxa de transferência do barramento é o que define seu desempenho. Barramentos: processador, cache, memória, dispositivos de entrada/saída, dados.
+* **mainFrame/supercomputador** [são computadores](http://pt.wikipedia.org/wiki/Supercomputador) [grande porte](http://pt.wikipedia.org/wiki/Mainframe), geralmente dedicados a aplicações específicas que demandam o processamento de grandes volumes de informação.
+* **a "nuvem"** é o uso de [computadores e servidores compartilhados e interligados por meio da Internet](http://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_em_nuvem), seguindo o princípio da [computação em grade](http://pt.wikipedia.org/wiki/Computa%C3%A7%C3%A3o_em_grelha).
+
+O funcionamento de um computador ocorre pela manipulação e comunicação de sinais elétricos entre seus componentes, como um processo físico, sendo os sinais mais simples são os sinais "ligado" e "desligado"[@Patterson1998]. Esse estado binário de um sinal pode ser representado por um *binary digit* (um bit), um valor que pode ser um de dois estados distintos e mutuamente exclusivos[@Tenenbaum1995]: `0` (desligado) ou `1` (ligado). Os conjuntos de bits determinam as informações armazenadas, inclusive os programas que determinam o que a máquina deve fazer.

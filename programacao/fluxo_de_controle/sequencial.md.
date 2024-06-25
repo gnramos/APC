@@ -1,0 +1,20 @@
+### Sequencial
+
+*<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Sequencial-red">*
+
+### Funções
+
+!!! quote "[Joe Sondow](https://www.linkedin.com/in/joesondow)"
+
+    *Um computador é como um gênio travesso. Te dá exatamente o que você pede dele, mas nem sempre o que você quer.*
+
+
+Programas de computadores geralmente usam procedimentos que especificam como fazer algo[@Cormen2013]. Nas linguagens de programação, estes são chamados de funções (ou métodos), e são chamados para serem executados. Ao chamar um procedimento, pode-se fornecer informações necessárias para a computação ao definir parâmetros, e receber (ou não) resultados como um valor de retorno.
+
+??? llm "Chat-bot Funções"
+
+    * O que é uma função em programação?
+    * Quais as vantagens de usar funções em um programa?
+    * O que é o escopo de uma função?
+    * Quais os componentes de uma função em Python?
+    * Quais as funções mais úteis em Python?

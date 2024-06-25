@@ -1,0 +1,845 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Guilherme N. Ramos">
+      
+      
+        <link rel="canonical" href="https://gnramos.github.io/APC/pensamento_computacional/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      <link rel="icon" href="../images/UnB/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Pensamento Computacional - Algoritmos e Programação de Computadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pensamento-computacional" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Algoritmos e Programação de Computadores" class="md-header__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../images/UnB/marca_unb.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmos e Programação de Computadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pensamento Computacional
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Algoritmos e Programação de Computadores" class="md-nav__button md-logo" aria-label="Algoritmos e Programação de Computadores" data-md-component="logo">
+      
+  <img src="../images/UnB/marca_unb.png" alt="logo">
+
+    </a>
+    Algoritmos e Programação de Computadores
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Início
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Pensamento Computacional
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Pensamento Computacional
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#decomposicao" class="md-nav__link">
+    Decomposição
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconhecimento-de-padroes" class="md-nav__link">
+    Reconhecimento de Padrões
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstracao" class="md-nav__link">
+    Abstração
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projeto-de-algoritmos" class="md-nav__link">
+    Projeto de Algoritmos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avaliacao" class="md-nav__link">
+    Avaliação
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Slides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Slides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/pensamento_computacional/index.html" class="md-nav__link">
+        Pensamento Computacional
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/programacao/index.html" class="md-nav__link">
+        Programação
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="pensamento-computacional">Pensamento Computacional</h1>
+<div class="admonition quote">
+<p class="admonition-title"><a href="https://pt.wikipedia.org/wiki/Albert_Einstein">Albert Einstein</a></p>
+<p><em>Não podemos resolver um problema usando o mesmo tipo de pensamento que usamos quando os criamos.</em></p>
+</div>
+<hr />
+<p><em>Este capítulo apresenta as principais ideias do pensamento computacional e como elas podem ser aplicadas na resolução de problemas. Ao final do texto, espera-se que se tenha uma noção clara do que significa cada uma delas e aplicá-las em problemas simples.</em></p>
+<hr />
+<p>No dia a dia é muito comum lidar com algum problema inesperado cuja solução é desconhecida. Nesse caso, uma abordagem comum é considerar os diversos aspectos do problema para tentar reconhecer as ações necessárias para resolver cada, organizar essas ações em uma ordem que faça sentido de modo que se tenha uma plano para resolvê-lo. Por exemplo, se estiver em uma cidade desconhecida e quiser chegar a casa de um parente, você pode obter um mapa, identificar a sua posição e a rua onde ele mora e, com isso, definir uma sequência de movimentações para sair da origem e chegar ao destino. A melhor parte é que essa rota deve servir para qualquer pessoa que queira ir desse ponto de partida para o mesmo local de chegada.</p>
+<p>Esse fluxo de atividades, de se ter um objetivo em mente, ponderar sobre como atingi-lo para, então, elaborar uma sequência de passos que o atinjam é uma situação cotidiana. Pode-se considerar que chegar ao objetivo é um <em>problema</em> a ser resolvido, e que os passos adequados compõem sua <em>solução</em>. Uma vez determinada a solução para um problema específico, espera-se que ela funcione para toda instância do problema. Por exemplo, uma receita é uma solução para se obter um bolo, e toda vez que se quiser o bolo, bastaria seguir a receita. Esta solução resolve até o problema de outras pessoas! Desde que elas queiram este mesmo bolo...</p>
+<p>A obtenção de uma solução pode ser um processo criativo complexo, com etapas de elaboração, implementação e verificação. Quando funciona, este processo pode ser muito satisfatório, afinal quem não gosta de bolo? Claro, esta ideia também se aplica a outros problemas. É possível definir os passos para montar um móvel (manual de instruções), para conseguir lidar com a demanda de clientes em uma instituição (filas e prioridades), e muito mais.</p>
+<p>Um <em>algoritmo</em> pode ser considerado como uma descrição dos passos necessários para resolver o problema, ou seja, representa uma solução que poderia ser executada por um agente qualquer. O <em>computador</em> é uma máquina capaz de interpretar e executar certas instruções, podendo ser o agente que executa o algoritmo, desde que este seja representado com as instruções específicas que o computador entenda. Assim, para que a máquina resolva nossos problemas, devemos guiar o processo de elaboração de soluções como uma atividade de criação de um algoritmo computacional, que é a descrição precisa de um procedimento para realizar uma tarefa, de modo que um computador possa executá-la<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>O <em>pensamento computacional</em> é o processo envolvido na formulação de problemas de modo que suas soluções possam ser representadas como etapas computacionais e algoritmos<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. São os processos mentais envolvidos na descrição de um problema de tal forma que a solução possa ser executada por uma pessoa ou por um computador<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>. Como a computação tem permeado cada vez mais nossa vida, e a noção do pensamento computacional tem sido incorporada como conhecimento desejável para uma pessoa. Uma proposta é que o aluno se torne um "pensador computacional"<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> e, neste caso, espera-se que ele aprenda a:</p>
+<ul>
+<li>desenvolver e usar estratégias para resolver problemas com tecnologia;</li>
+<li>formular problemas para serem resolvidos com a ajuda da tecnologia como coleta e análise de dados, abstração e aplicação de algoritmos;</li>
+<li>decompor problemas, extrair as informações relevantes e conseguir produzir modelos que facilitem a resolução d problemas;</li>
+<li>entender como a automação funciona junto ao pensamento algorítmico para juntar etapas manuais em soluções automatizadas.</li>
+</ul>
+<p>Essencialmente, o pensamento computacional envolve habilidades de converter problemas reais, que são complexos, confusos e mal definidos, em algo que um autômato sem inteligência (o computador) consiga resolver sem auxílio de alguém<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>. Há muitos conceitos envolvidos<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>, como coleta e análise de dados, representação de dados e paralelização - vale a pena procurar saber mais sobre eles! Os principais conceitos do processo são apresentados a seguir.</p>
+<h2 id="decomposicao">Decomposição</h2>
+<p>A decomposição é o processo de separar o problema em partes, ou subproblemas, de modo que cada um deles seja menor e mais simples - portanto mais fácil de ser resolvido. Esse processo pode ser repetido até que se tenha um problema simples o suficiente para elaborar uma solução. Depois, basta juntar as soluções de cada subproblema de forma coesa para obter a solução do problema original.</p>
+<p>Por exemplo, é mais fácil entender isoladamente o funcionamento de cada um dos diversos sistemas do corpo humano para depois analisar como eles trabalham em conjunto do que tentar entender o seu funcionamento considerando todos os órgãos em ação de uma só vez. Também é mais fácil organizar sua coleção de músicas se ela for reestruturada em gêneros musicais - e a organização de cada gênero é mais simples ao lidar com um estilo de cada vez.</p>
+<p>O primeiro passo para decompor um problema é entendê-lo corretamente de modo a identificar e descrever os processos (e subproblemas) envolvidos na sua resolução. Com essa informação, é possível particionar os processos (e subproblemas) em passos distintos, que então são organizados de forma estruturada para que possam ser executados.</p>
+<p>Considere a seguinte equação: <span class="arithmatex">\(213 \times 21\)</span>. A multiplicação é uma repetição de somas, então o resultado pode ser obtido somando o primeiro 21 vezes (ou o segundo 213 vezes). Entendendo como o sistema de numeração funciona, pode-se decompor esta operação complexa como um conjunto de operações de soma mais simples, basta considerar que 21 é, na verdade, a soma de 20 com 1. Buscando um processo mais simples, podemos considerar ainda que <span class="arithmatex">\(20 = 10 + 10\)</span>, e resolver a multiplicação da seguinte forma:</p>
+<div class="arithmatex">\[
+\begin{align}
+21 \times 213 &amp; = (20 + 1) \times 213 \\
+&amp; = (20 \times 213) + (1 \times 213) \\
+&amp; = ((10 + 10) \times 213) + (1 \times 213) \\
+&amp; = ((10 \times 213) + (10 \times 213)) + (1 \times 213) \\
+&amp; = (2130 + 2130) + 213 \\
+&amp; = 4260 + 213 \\
+&amp; = 4473
+\end{align}
+\]</div>
+<p>Apesar da impressão de que esta decomposição cria um processo mais longo, as tarefas que são efetivamente resolvidas são bem mais simples que a tarefa original - é mais rápido lidar com estas muitas tarefas fáceis que lidar com uma tarefa complexa.</p>
+<h2 id="reconhecimento-de-padroes">Reconhecimento de Padrões</h2>
+<p>Se você observa seguinte sequência: <span class="arithmatex">\(2, 4, 6, 8, 10, 12, 14, 16, 18\)</span> e <span class="arithmatex">\(20\)</span>, pode reconhecer o padrão que todos os números são pares e aumentam de 2 em 2 - portanto poderia prever que o próximo número seria <span class="arithmatex">\(22\)</span>. De modo similar, ao separar o problema em partes, é comum perceber que há similaridades entre elas. Reconhecer estes padrões permite que se crie abordagens mais genéricas que se adequem à uma classe de problemas, e não a somente uma ocorrência dele.</p>
+<p>Por exemplo, considere as seguintes retas em um plano cartesiano que descrevem fenômenos físicos observados.</p>
+<p><img alt="Equações lineares" src="../images/eq_linear.svg" title="Equações lineares" width="60%" /></p>
+<p>Embora claramente diferentes, elas também têm similaridades. O comportamento de cada uma pode ser descrito de forma genérica pela equação <span class="arithmatex">\(y = a\cdot{x} + b\)</span>. As implicações (e aplicações) disso são muito interessantes, esta abordagem simples pode ser utilizada para qualquer instância do problema!</p>
+<p>Considere o problema de definir um procedimento para desenhar um um triângulo equilátero. Sabe-se que ele tem os 3 ângulos internos iguais a 60° e as 3 linhas com o mesmo comprimento. Se o ângulo interno é de 60°, <a href="https://pt.wikipedia.org/wiki/%C3%82ngulos_internos_e_externos#Propriedades">o ângulo externo é de 120°</a>, e torna-se relativamente simples definir um algoritmo que desenhe uma destas formas. De modo similar, um quadrado tem os 4 ângulos internos iguais a 90° e as 4 linhas com o mesmo comprimento; sendo simples adaptar o algoritmo anterior para desenhar um quadrado. Desenvolvendo esta abordagem para um pentágono regular, é possível perceber que as soluções são muito similares... A solução proposta constrói o desenho de modo que cada linha continua a partir do fim da linha anterior, usando o ângulo externo do polígono para a rotação.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Ângulos interno/externo" src="../images/AnguloExterno.png" title="Ângulos interno/externo" width="50%" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Propriedade dos ângulos interno/externo.</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Triângulo</label><label for="__tabbed_1_2">Quadrado</label><label for="__tabbed_1_3">Pentágono</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Gire a caneta em 120° no sentido anti-horário.
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Gire a caneta em 120° no sentido anti-horário.
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Desenhe uma linha de comprimento L.
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Gire a caneta em 90° no sentido anti-horário.
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Gire a caneta em 90° no sentido anti-horário.
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Gire a caneta em 90° no sentido anti-horário.
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Desenhe uma linha de comprimento L.
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Gire a caneta em 118° no sentido anti-horário.
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Gire a caneta em 118° no sentido anti-horário.
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Gire a caneta em 118° no sentido anti-horário.
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Gire a caneta em 118° no sentido anti-horário.
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Desenhe uma linha de comprimento L.
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Nos algoritmos, os ângulos e a quantidade de linhas são diferentes, mas também é possível reconhecer dois padrões nos processos:</p>
+<ol>
+<li>Para um polígono regular de <span class="arithmatex">\(n\)</span> lados, tem-se <span class="arithmatex">\(n\)</span> linhas desenhadas.</li>
+<li>Cada linha forma um ângulo externo de <span class="arithmatex">\(^{360°}/_n\)</span> com outra linha.</li>
+</ol>
+<p>Desta forma, é possível ajustar os procedimentos de desenho e angulação das linhas para formar triângulos, quadrados e pentágonos apenas em função da quantidade de lados destas formas. Melhor ainda, pode-se determinar uma solução genérica que atende qualquer polígono regular.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Triângulo</label><label for="__tabbed_2_2">Quadrado</label><label for="__tabbed_2_3">Pentágono</label><label for="__tabbed_2_4">Polígono</label><label for="__tabbed_2_5">Python + Turtle</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><span class="filename">Triângulo Equilátero</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ângulo_externo = 360 / 3
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a># 3 repetições
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><span class="filename">Retângulo Regular</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ângulo_externo = 360 / 4
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a># 4 repetições
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><span class="filename">Pentágono Regular</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ângulo_externo = 360 / 5
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a># 5 repetições
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>Desenhe uma linha de comprimento L.
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><span class="filename">Polígono Regular</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ângulo_externo = 360 / número_de_lados
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Repita número_de_lados vezes:
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    Desenhe uma linha de comprimento L.
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    Gire a caneta em ângulo_externo graus no sentido anti-horário.
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Polígono Regular</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">angulo_externo</span> <span class="o">=</span> <span class="mi">360</span> <span class="o">/</span> <span class="n">num_lados</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_lados</span><span class="p">):</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">linha</span><span class="p">(</span><span class="n">comprimento</span><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">esquerda</span><span class="p">(</span><span class="n">angulo_externo</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="abstracao">Abstração</h2>
+<p>Abstrair é o processo de identificar um conjunto de características invariantes fundamentais a algo<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>. É reconhecer similaridades entre objetos ou situações de um problema e focar apenas nelas, ignorando as especificidades para facilitar a forma como tratar o problema<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>, escondendo informações que não sejam necessárias<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>,</p>
+<p>Por exemplo, o problema de cultivar uma rosa vermelha. Como buscamos o processo de mantê-la saudável, podemos assumir que este processo independe da cor e, portanto, abstrair este detalhe para cultivar uma rosa. Se for uma espécie de rosa mais robusta, podemos abstrair novamente e simplificar o problema para o cultivo de uma flor. Dependendo da espécie, talvez possamos dar um passo além e reduzir o problema para "como cultivar uma planta?" (dar mais um passo e considerar como manter um ser vivo é possível, mas excessivo neste contexto).</p>
+<p>A abstração é um processo inerente no contexto de pensamento computacional, pois é preciso transformar o problema e sua solução em representações abstratas em um programa de computador. Por exemplo, podemos ter todos os inúmeros detalhes de uma cidade, como distribuição de casas e lojas, tamanhos de construções, cores, população, consumo energético, formas de movimentação, etc. Entretanto, para descobrir a rota da sua posição até uma loja, podemos abstrair quase tudo e considerar apenas com uma representação de certas localizações e dos acesso entre elas.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="UnB &quot;Real&quot;" src="../images/unb_mapa.png" title="Mapa da UnB" /></th>
+<th align="center"><img alt="Abstração do mapa da UnB" src="../images/unb_modelo.png" title="Abstração do mapa da UnB" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">UnB "Real"</td>
+<td align="center">Abstração</td>
+</tr>
+</tbody>
+</table>
+<h2 id="projeto-de-algoritmos">Projeto de Algoritmos</h2>
+<p>O passo final do pensamento computacional é criar uma sequência de instruções que resolve o problema. O ponto chave é guiar o raciocínio para construir a solução. Para tanto, é preciso considerar uma série de coisas. Qual o objetivo principal? Como abstrair o contexto? Como decompô-lo em partes mais acessíveis? Em que ordem estas partes devem ser tratadas?</p>
+<div class="admonition definição">
+<p class="admonition-title"><span id="Pensamento-Algorítmico">Pensamento Algorítmico</span></p>
+<p>Processo de construir uma sequência de passos ordenados que pode ser seguida para obter uma solução para todos os problemas constituintes necessários para resolver o problema original<sup id="fnref2:8"><a class="footnote-ref" href="#fn:8">8</a></sup>.</p>
+</div>
+<p>A aplicação do pensamento algorítmico depende de um bom entendimento do problema. É preciso saber claramente quais as informações fornecidas e o que se espera como resultado. Considere se há alguma parte que precisa ser repetida ou se há comportamentos diferentes dependendo de certas condições. São ponderações necessárias para desenvolver uma solução.</p>
+<div class="admonition dica">
+<p class="admonition-title">Dica</p>
+<p>Duas ideias que ajudam este processo são: 1) se perguntar "E se eu fizesse desse jeito?" (explorando formas diferentes de resolver o problema); e 2) explicar a sua solução a alguém (ou a um <a href="https://pt.wikipedia.org/wiki/Debug_com_Pato_de_Borracha">pato de borracha</a>), ao tentar ensinar uma solução <a href="https://degraucultural.com.br/noticia/ensinar-e-uma-das-melhores-formas-de-aprender-entenda">você estará efetivamente aprendendo sobre ela</a>.</p>
+</div>
+<p>Com um entendimento adequado do problema e seu contexto, pode-se projetar o algoritmo. O grande <a href="https://pt.wikipedia.org/wiki/Richard_Feynman">Richard Feynman</a> tem um abordagem muito interessante para a resolução de problemas:</p>
+<p><img alt="Abordagem Feynman de Resolução de Problemas" src="../images/feynman.svg" width="50%" /></p>
+<p>Alguns problemas <a href="https://pt.wikipedia.org/wiki/Lista_de_problemas_em_aberto">não têm solução</a>, neles geralmente se aplica a abordagem "consigo mostrar que ele não pode ser resolvido?". Se sim, efetivamente ele está resolvido: não há solução possível. Mesmo assim, a parte mais importante do processo é o raciocínio aplicado no projeto do algoritmo.</p>
+<h3>Automação</h3>
+
+<p>Considerando que muitas das atividades cotidianas são repetitivas e poderiam ser realizadas por um computador dadas as instruções corretas<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup>, o uso de mecanismos para automação de um algoritmo possibilita uma série de vantagens. Pode aumentar a eficiência na produção dos resultados e a uniformidade destes, reduzir a incidência de erros e liberar recursos humanos para lidar com outras atividades.</p>
+<p>Parte importante deste processo é o entendimento do que pode ou não ser computado. O computador existe como entidade física e opera dentro de certos limites. Portanto, apesar de podermos planejar soluções lógica e matematicamente corretas, é possível que estas não possam ser executadas na máquina. Por exemplo, é preciso compor um algoritmo baseado em instruções existentes no computador, algo como <em>realize estas operações matemáticas sobre números</em> é viável enquanto <em>faça uma pizza</em> não é. Mas pode ser mais complicado do que isso.</p>
+<p>Considere o problema de computar o valor de <span class="arithmatex">\(\pi\)</span>. Há <a href="https://pt.wikipedia.org/wiki/Pi#M%C3%A9todos_de_s%C3%A9ries_infinitas">métodos para calcular o valor exato</a>, mas ainda assim o resultado é um valor irracional , ou seja, um número infinamente longo que a máquina não consegue processar. Ainda que conseguisse, seria necessário armazenar todos estes dígitos, o que impossível em um dispositivo com memória limitada. Além disso, este processo envolve uma quantidade infinitamente grande de operações, algo que a máquina não poderá realizar (nem o usuário esperar o resultado).</p>
+<div class="arithmatex">\[\pi = 4\cdot\sum\limits_{n=0}^{\infty}\frac{(-1)^n}{2n+1}\]</div>
+<p>O processo de formulação de uma solução algorítmica para ser automatizada necessariamente deve considerar essas limitações de modo a chegar a uma opção que seja realizável.</p>
+<h2 id="avaliacao">Avaliação</h2>
+<p>A avaliação visa garantir que a solução algorítmica é adequada, ou seja, que resolve o problema. Há diversas propriedades que podem/devem ser verificadas.</p>
+<ul>
+<li>Corretude: o algoritmo é correto se fornece o resultado correto para toda entrada válida<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup>.</li>
+<li>Eficiência: o algoritmo é eficiente se consome o mínimo de recursos possíveis para fornecer um resultado; geralmente o foco é em <em>tempo</em> (o quão rápido é sua execução).</li>
+<li>Usabilidade: o quão fácil é para usar, lembrar e aprender o algoritmo<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup>.</li>
+</ul>
+<p>A corretude é a principal característica, afinal as demais não têm importância para uma solução que não resolve o problema. Também é um conceito ardiloso<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> pois pode depender do contexto. Por exemplo, um algoritmo que aproxima o valor de <span class="arithmatex">\(\pi\)</span> pode ser correto num contexto em que a precisão de 2 casas decimais é suficiente (por exemplo, apresentando resultados simples à pessoas), mas incorreto em outro onde a precisão necessariamente deve ser bem maior (como calculando trajetórias de naves espaciais). A eficiência não é o foco da parte inicial mas será discutida no futuro, e pode ser uma característica fundamental da solução em certos contexto (como o piloto automático de uma aeronave). Noções de usabilidade e legibilidade do código permeiam o texto e serão destacadas quando apropriado.</p>
+<p>Esta verificação é um processo complexo, que pode ser feita de diversas formas. A mais simples é testar o resultado obtido para situações conhecidas, e fazer isso na totalidade das condições possíveis ou numa abrangência adequada. Quando isto não é possível (talvez por que demore demais), há outras formas, como verificar as situações antes (pré-condição) e depois (pós-condição) de cada passo no algoritmo, ele será correto se e somente se ambas forem verdadeiras.</p>
+<details class="resumo">
+<summary>Resumo</summary>
+<p>O <em>pensamento computacional</em> é o processo de formulação de problemas e soluções como algoritmos que podem ser tratados por um computador. Envolve a noção de quebrar o problema em partes menores, reconhecer similaridades entre elas e abstrair os pontos mais relevantes. Uma solução algorítmica permite que a solução seja aplicada por um agente qualquer, preferencialmente um automatizado computador. É sempre importante avaliar se a solução atende o problema em seu contexto.</p>
+<p>Por exemplo, dado o problema de ordenar uma lista de números em ordem crescente, tem-se:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:6"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><input id="__tabbed_3_6" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Decomposição</label><label for="__tabbed_3_2">Reconhecimento de Padrões</label><label for="__tabbed_3_3">Abstração</label><label for="__tabbed_3_4">Projeto do Algoritmo</label><label for="__tabbed_3_5">Automação</label><label for="__tabbed_3_6">Avaliação</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Obter o primeiro número do usuário.</li>
+<li>Escrever este número em um papel.</li>
+<li><em>(repetir este processo para armazenar os números seguintes)</em></li>
+<li>Obter o último número do usuário, se houver.</li>
+<li>Escrever este número em um papel ao lado do último número lido, se houver.</li>
+<li>Comparar o primeiro número com o segundo.</li>
+<li>Se estiverem fora de ordem, trocar suas posições.</li>
+<li>Se houve troca, registrar isto.</li>
+<li><em>(repetir este processo para comparar/trocar os números seguintes)</em></li>
+<li>Comparar o penúltimo número com o último.</li>
+<li>Se estiverem fora de ordem, trocar suas posições.</li>
+<li>Se houve troca, registrar isto.</li>
+<li><em>(repetir este processo de comparação/troca de todos os números até que não haja mais trocas - a lista está ordenada)</em></li>
+<li>Apresentar a lista ordenada.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Obter um número do usuário.</li>
+<li>Escrever este número em um papel ao lado do último número lido (se houver).</li>
+<li>Repetir os passos 1 e 2 até ter todos os números.</li>
+<li>Comparar o primeiro número com o segundo.</li>
+<li>Se estiverem fora de ordem, trocar suas posições.</li>
+<li>Se houve troca, registrar isto.</li>
+<li>Repetir esse processo de comparação/troca com pares de números sucessivos até lidar com os dois últimos números.</li>
+<li>Repetir os passos 4 a 7 até que não haja mais trocas (a lista está ordenada).</li>
+<li>Apresentar a lista ordenada.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Entrada de dados</li>
+<li>Organização dos dados</li>
+<li>Enquanto os dados não estiverem em ordem<ol>
+<li>Comparação dos dados dois a dois</li>
+<li>Trocar dados fora de ordem</li>
+</ol>
+</li>
+<li>Saída de dados</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Leia os dados em uma lista</li>
+<li>Enquanto a lista não estiver ordenada<ol>
+<li>Compare os dados dois a dois</li>
+<li>Troque dados fora de ordem</li>
+</ol>
+</li>
+<li>Apresente a lista</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">Programa em Python</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Leia os dados em uma lista.</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">dados</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># Aqui são transformados em números, mas o algoritmo funciona para qualquer</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># tipo de dado que pode ser comparado.</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># Enquanto os dados não estiverem em ordem</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">num_dados</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">houve_troca</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="k">while</span> <span class="n">houve_troca</span><span class="p">:</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="n">houve_troca</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="c1"># Compare dos dados dois a dois</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="k">for</span> <span class="n">primeiro</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_dados</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>        <span class="n">segundo</span> <span class="o">=</span> <span class="n">primeiro</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>        <span class="c1"># Troque dados fora de ordem</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>        <span class="k">if</span> <span class="n">dados</span><span class="p">[</span><span class="n">segundo</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">dados</span><span class="p">[</span><span class="n">primeiro</span><span class="p">]:</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>            <span class="n">aux</span> <span class="o">=</span> <span class="n">dados</span><span class="p">[</span><span class="n">segundo</span><span class="p">]</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>            <span class="n">dados</span><span class="p">[</span><span class="n">segundo</span><span class="p">]</span> <span class="o">=</span> <span class="n">dados</span><span class="p">[</span><span class="n">primeiro</span><span class="p">]</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>            <span class="n">dados</span><span class="p">[</span><span class="n">primeiro</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>            <span class="n">houve_troca</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="c1"># Apresente a lista</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>A avaliação pode ser feita feita matematicamente para cada passo, e verificada com testes abrangentes. Por exemplo:</p>
+<ul>
+<li>Se fornecermos os números 1 a saída é 1 (correto).</li>
+<li>Se fornecermos os números 2, 1 a saída é 1, 2 (correto).</li>
+<li>Se fornecermos os números 1, 2 a saída é 1, 2 (correto).</li>
+<li>Se fornecermos os números 2, 1, 3 a saída é 1, 2, 3 (correto).</li>
+<li>Se fornecermos os números 1, 2, 3 a saída é 1, 2, 3 (correto).</li>
+<li>Se fornecermos os números 2, 3, 1 a saída é 1, 2, 3 (correto).</li>
+<li>Se fornecermos os números 3, 2, 1 a saída é 1, 2, 3 (correto).</li>
+<li>Se fornecermos os números 1, 5, 2, 4, 3 a saída é 1, 2, 3, 4, 5 (correto).</li>
+<li>Se fornecermos os números 5, 4, 3, 2, 1 a saída é 1, 2, 3, 4, 5 (correto).</li>
+<li>Se fornecermos os números 1, 2, 3, 4, 5 a saída é 1, 2, 3, 4, 5 (correto).</li>
+<li>Se fornecermos os números 1, 2, 1, 1, 1 a saída é 1, 1, 1, 1, 2 (correto).</li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+<details class="chatbot">
+<summary>Chatbot</summary>
+<ul>
+<li>O que é pensamento computacional?</li>
+<li>O que é pensamento algorítmico?</li>
+<li>De forma simplificada, o que é corretude de um algoritmo?</li>
+<li>De forma simplificada, o que é eficiência de um algoritmo?</li>
+<li>De forma simplificada, o que é usabilidade de um algoritmo?</li>
+</ul>
+<p>Algumas opções são <a href="https://openai.com/chatgpt/">ChatGPT</a>, <a href="https://gemini.google.com/">Gemini</a>, <a href="https://www.anthropic.com/claude">Claude</a> e <a href="https://www.llama2.ai/">Llama</a>. <strong>Estes modelos podem cometer erros!</strong> Verifique as informações em fontes confiáveis.</p>
+</details>
+<details class="exercícios">
+<summary>Exercícios</summary>
+<details class="question">
+<summary>Há dois cubos aparentemente idênticos, sendo um um pouco mais leve que o outro. Aplique o pensamento computacional para elaborar uma solução para o problema de, tendo acesso a uma balança digital, encontrar o mais pesado.</summary>
+<p>O processo pode ser decomposto em duas etapas: análise de um cubo e comparação dos resultados da análise. A solução pode ser descrita nos seguintes passos:</p>
+<ol>
+<li>por o primeiro cubo na balança,</li>
+<li>anotar sua massa,</li>
+<li>por o segundo cubo na balança,</li>
+<li>anotar sua massa</li>
+<li>comparar os valores anotados</li>
+<li>identificar qual o de maior massa, e</li>
+<li>apresentar do cubo mais pesado.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Há dois bolos aparentemente idênticos, sendo um pouco mais leve que o outro. Aplique o pensamento computacional para elaborar uma solução para o problema de, tendo acesso a uma balança de dois pratos (que não indica a massa, mas apenas qual dos pratos tem mais peso), encontrar o bolo mais leve.</summary>
+<p>Este é um problema diferente do anterior, mas alguns detalhes podem ser abstraídos: ao invés de bolos ou cubos, considera-se que há objetos a serem pesados; e em vez de um valor específico para a massa de cada objeto, tem-se um mecanismo que fornece o resultado direto da comparação entre eles. Novamente o processo pode ser decomposto em: disposição dos objetos na balança e análise da inclinação dos pratos. A solução pode ser descrita como:</p>
+<ol>
+<li>por cada objeto em um prato na balança,</li>
+<li>comparar a altura dos pratos, e</li>
+<li>apresentar o objeto que estiver no prato mais alto.</li>
+</ol>
+<p>Isso poderia ser facilmente adaptado para o problema de achar o objeto mais pesado.</p>
+</details>
+<details class="question">
+<summary>Considere 1024 cubos aparentemente idênticos, sendo um deles um pouco mais pesado que os demais. Aplique o pensamento computacional para elaborar uma solução para o problema de encontrar o cubo mais pesado com uma balança de dois pratos.</summary>
+<p>Uma abordagem é aproveitar o comportamento descrito na questão anterior. Ao comparar dois cubos, se os pratos estiverem desalinhados sabe-se que o que estiver no prato mais baixo é o desejado. Caso contrário, basta descartar um deles e substituí-lo por outro cubo ainda não avaliado. Estes passos são repetidos até que se ache o mais pesado, o que pode levar até 1023 comparações na balança.</p>
+<p>Alternativamente, retomando a abstração de que é um "cubo" pode ser considerado como um "objeto", a solução descrita acima continua aplicável. Ao abstrair um pouco mais, considera-se que o "objeto" a ser pesado é, na verdade, um conjunto de cubos, e é simples encontrar qual conjunto é mais pesado comparando dois conjuntos com a mesma quantidade de objetos. Embora isso não forneça ainda qual o cubo mais pesado, permite identificar em qual dos pratos ele está e, portanto, que se descarte os cubos do outro prato (o conjunto onde ele <em>não</em> está). Assim, pode-se separar o conjunto em duas metades, compará-los e descartar o mais leve. Sobra, então, um novo conjunto de cubos que pode ser novamente separado em duas partes iguais para comparação na balança e subsequente descarte da parte mais leve. Esse processo é repetido até que torne possível identificar inequivocadamente o cubo mais pesado. No caso de 1024 cubos, seriam necessárias, no máximo, 10 comparações na balança!</p>
+</details>
+<details class="question">
+<summary>Considere uma quantidade ímpar de cubos aparentemente idênticos, sendo um deles um pouco mais leve que os demais. Como encontrar o cubo mais leve usando uma balança de dois pratos.</summary>
+<p>Pode-se aproveitar a ideia anterior para separá-los em três partes, dois conjuntos com a mesma quantidade de cubos e um cubo a parte. Aos posicionar os conjuntos nos pratos, se não houver desnível, o cubo separado é o mais leve do conjunto. Se houver, pode-se descartar os cubos do prato mais pesado e também o que foi separado, e repetir o processo com os cubos remanescentes.</p>
+</details>
+<details class="question">
+<summary>Nas soluções anteriores, como é possível verificar que o processo é correto?</summary>
+<p>Há algumas possibilidades. É possível que a objeto mais pesado possa ser identificado de outra forma (por exemplo, com uma marcação invisível a olho nu), que possa ser verificada ao final do processo. Outra forma é avaliando se cada passo está correto. No caso da balança de dois pratos, sempre que houver pelo menos um objeto, o prato mais baixo indica aquele mais pesado (mesmo que haja dois com o mesmo peso!). Isso também é verdade se forem dois conjuntos de objetos, um em cada prato, ou seja, cada pesagem corretamente indica o conjunto mais pesado. Se este passo é avaliado como correto, diferentes repetições dele também o serão. Ou seja, ao pesar uma vez e descartar o conjunto mais leve, tem-se novamente o problema de achar o objeto mais pesado em um conjunto menor de objetos - uma versão menor do mesmo problema de antes! O processo de comparação e descarte, que é correto, pode ser repetido até que haja somente dois objetos, situação que já foi mostrada que pode ser resolvida corretamente.</p>
+</details>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Thomas H. Cormen. <em>Algorithms Unlocked</em>. The MIT Press, 2013. ISBN 9780262518802. URL: <a href="https://mitpress.mit.edu/9780262518802/algorithms-unlocked/">https://mitpress.mit.edu/9780262518802/algorithms-unlocked/</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Alfred V. Aho. Ubiquity symposium: computation and computational thinking. <em>Ubiquity</em>, jan 2011. URL: <a href="https://doi.org/10.1145/1922681.1922682">https://doi.org/10.1145/1922681.1922682</a>, <a href="https://doi.org/10.1145/1922681.1922682">doi:10.1145/1922681.1922682</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Jeannette M Wing. Computational thinking benefits society. 2014. URL: <a href="http://socialissues.cs.toronto.edu/index.html%3Fp=279.html">http://socialissues.cs.toronto.edu/index.html%3Fp=279.html</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>International Society for Technology in Education. Iste standards. 2018. URL: <a href="https://www.iste.org/standards">https://www.iste.org/standards</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>The Chartered Institute for IT. Call for evidence - UK Digital Skills Taskforce. 2014.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Computational Thinking Concepts Guide. URL: <a href="https://docs.google.com/document/d/1Hyb2WKJrjT7TeZ2ATq6gsBhkQjSZwTH-xfpVMFEn2F8/edit?pli=1">https://docs.google.com/document/d/1Hyb2WKJrjT7TeZ2ATq6gsBhkQjSZwTH-xfpVMFEn2F8/edit?pli=1</a>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Erin Burgoon, Marlone Henderson, and Arthur Markman. There are many ways to see the forest for the trees a tour guide for abstraction. <em>Perspectives on Psychological Science</em>, 8:501&ndash;520, 09 2013. <a href="https://doi.org/10.1177/1745691613497964">doi:10.1177/1745691613497964</a>.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Fatih Kursat Cansu and Sibel Kilicarslan Cansu. An overview of computational thinking. <em>International Journal of Computer Science Education in Schools</em>, 3(1):17–30, Apr. 2019. URL: <a href="https://www.ijcses.org/index.php/ijcses/article/view/53">https://www.ijcses.org/index.php/ijcses/article/view/53</a>, <a href="https://doi.org/10.21585/ijcses.v3i1.53">doi:10.21585/ijcses.v3i1.53</a>.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>Timothy Colburn and Gary Shute. Abstraction in computer science. <em>Minds and Machines</em>, 17:169–184, 2007. URL: <a href="https://www.d.umn.edu/~tcolburn/papers/Abstraction.pdf">https://www.d.umn.edu/~tcolburn/papers/Abstraction.pdf</a>.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>Al Sweigart. <em>Automate the Boring Stuff with Python</em>. William Pollock, 2020. ISBN 978-1-59327-992-9. URL: <a href="https://automatetheboringstuff.com/">https://automatetheboringstuff.com/</a>.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. <em>Introduction to Algorithms</em>. The MIT Press, 2009. ISBN 0-262-03384-4.&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>Rajat Jain, Tania Joseph, Anvita Saxena, Deepak Gupta, Ashish Khanna, Kalpna Sagar, and Anil K. Ahlawat. Feature selection algorithm for usability engineering: a nature inspired approach. <em>Complex &amp; Intelligent Systems</em>, 9(4):3487–3497, 2023. <a href="https://doi.org/10.1007/s40747-021-00384-z">doi:10.1007/s40747-021-00384-z</a>.&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Início" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Início
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p><a href="https://gnramos.github.com/APC">Livro de APC</a> por <a href="https://gnramos.github.io">Guilherme N. Ramos</a> <a href="https://github.com/gnramos/APC/blob/main/LICENSE" target="_blank" style="display:inline-block;"><img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/license-MIT-green"></a></p>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "navigation.footer", "search.highlight", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

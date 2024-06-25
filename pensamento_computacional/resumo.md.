@@ -1,0 +1,74 @@
+??? resumo
+
+    O *pensamento computacional* é o processo de formulação de problemas e soluções como algoritmos que podem ser tratados por um computador. Envolve a noção de quebrar o problema em partes menores, reconhecer similaridades entre elas e abstrair os pontos mais relevantes. Uma solução algorítmica permite que a solução seja aplicada por um agente qualquer, preferencialmente um automatizado computador. É sempre importante avaliar se a solução atende o problema em seu contexto.
+
+
+    Por exemplo, dado o problema de ordenar uma lista de números em ordem crescente, tem-se:
+
+    === "Decomposição"
+
+        * Obter o primeiro número do usuário.
+        * Escrever este número em um papel.
+        * *(repetir este processo para armazenar os números seguintes)*
+        * Obter o último número do usuário, se houver.
+        * Escrever este número em um papel ao lado do último número lido, se houver.
+        * Comparar o primeiro número com o segundo.
+        * Se estiverem fora de ordem, trocar suas posições.
+        * Se houve troca, registrar isto.
+        * *(repetir este processo para comparar/trocar os números seguintes)*
+        * Comparar o penúltimo número com o último.
+        * Se estiverem fora de ordem, trocar suas posições.
+        * Se houve troca, registrar isto.
+        * *(repetir este processo de comparação/troca de todos os números até que não haja mais trocas - a lista está ordenada)*
+        * Apresentar a lista ordenada.
+
+    === "Reconhecimento de Padrões"
+
+        1. Obter um número do usuário.
+        1. Escrever este número em um papel ao lado do último número lido (se houver).
+        1. Repetir os passos 1 e 2 até ter todos os números.
+        1. Comparar o primeiro número com o segundo.
+        1. Se estiverem fora de ordem, trocar suas posições.
+        1. Se houve troca, registrar isto.
+        1. Repetir esse processo de comparação/troca com pares de números sucessivos até lidar com os dois últimos números.
+        1. Repetir os passos 4 a 7 até que não haja mais trocas (a lista está ordenada).
+        1. Apresentar a lista ordenada.
+
+    === "Abstração"
+
+        1. Entrada de dados
+        1. Organização dos dados
+        1. Enquanto os dados não estiverem em ordem
+            1. Comparação dos dados dois a dois
+            1. Trocar dados fora de ordem
+        1. Saída de dados
+
+    === "Projeto do Algoritmo"
+
+        1. Leia os dados em uma lista
+        1. Enquanto a lista não estiver ordenada
+            1. Compare os dados dois a dois
+            1. Troque dados fora de ordem
+        1. Apresente a lista
+
+    === "Automação"
+
+        ```python title="Programa em Python"
+        --8<-- "bubblesort.py"
+        ```
+
+    === "Avaliação"
+
+        A avaliação pode ser feita feita matematicamente para cada passo, e verificada com testes abrangentes. Por exemplo:
+
+        * Se fornecermos os números 1 a saída é 1 (correto).
+        * Se fornecermos os números 2, 1 a saída é 1, 2 (correto).
+        * Se fornecermos os números 1, 2 a saída é 1, 2 (correto).
+        * Se fornecermos os números 2, 1, 3 a saída é 1, 2, 3 (correto).
+        * Se fornecermos os números 1, 2, 3 a saída é 1, 2, 3 (correto).
+        * Se fornecermos os números 2, 3, 1 a saída é 1, 2, 3 (correto).
+        * Se fornecermos os números 3, 2, 1 a saída é 1, 2, 3 (correto).
+        * Se fornecermos os números 1, 5, 2, 4, 3 a saída é 1, 2, 3, 4, 5 (correto).
+        * Se fornecermos os números 5, 4, 3, 2, 1 a saída é 1, 2, 3, 4, 5 (correto).
+        * Se fornecermos os números 1, 2, 3, 4, 5 a saída é 1, 2, 3, 4, 5 (correto).
+        * Se fornecermos os números 1, 2, 1, 1, 1 a saída é 1, 1, 1, 1, 2 (correto).

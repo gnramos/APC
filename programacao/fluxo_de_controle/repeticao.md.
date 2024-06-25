@@ -1,0 +1,10 @@
+### Repetição
+
+*<img style="height:20px!important;margin-left:3px;display:inline-block;vertical-align:middle;" src="https://img.shields.io/badge/TODO-Sequencial-red">*
+
+??? llm "Chat-bot Repetição"
+
+    * Explique as estruturas de repetição no fluxo de controle de um programa.
+    * Quais as diferenças entre while e for em Python?
+    * Dê um exemplo de código em que while seja preferível ao for.
+    * Dê um exemplo de código em que for seja preferível ao while
